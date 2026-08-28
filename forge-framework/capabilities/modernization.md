@@ -4,6 +4,16 @@
 
 The ability to upgrade, migrate, or refactor existing systems to improve maintainability, performance, security, or alignment with current technologies.
 
+## Proficiency Levels
+
+| Level | Title | Description |
+|-------|-------|-------------|
+| 1 | Novice | Can make small improvements but struggles with migration planning |
+| 2 | Competent | Can assess systems, plan incremental improvements, refactor code |
+| 3 | Proficient | Can design migration strategies, execute phased migrations |
+| 4 | Expert | Can handle complex migrations, mentor others, improve processes |
+| 5 | Master | Can establish modernization practices, create frameworks, handle novel domains |
+
 ## Scope
 
 ### In Scope
@@ -15,6 +25,7 @@ The ability to upgrade, migrate, or refactor existing systems to improve maintai
 - Platform migration
 - Data migration
 - Architecture evolution
+- Coexistence planning
 
 ### Out of Scope
 - New feature development (see Implementation capability)
@@ -30,6 +41,7 @@ The ability to upgrade, migrate, or refactor existing systems to improve maintai
 - Performance baseline measurement
 - Security posture assessment
 - Dependency mapping
+- Code quality analysis
 
 ### Strategy
 - Migration approach selection
@@ -38,6 +50,7 @@ The ability to upgrade, migrate, or refactor existing systems to improve maintai
 - Coexistence planning
 - Rollback planning
 - Success criteria definition
+- Cost-benefit analysis
 
 ### Execution
 - Incremental migration
@@ -46,6 +59,7 @@ The ability to upgrade, migrate, or refactor existing systems to improve maintai
 - Infrastructure modernization
 - Integration migration
 - Testing at phase boundaries
+- Feature flag management
 
 ### Validation
 - Functional equivalence verification
@@ -54,6 +68,37 @@ The ability to upgrade, migrate, or refactor existing systems to improve maintai
 - Integration testing
 - User acceptance testing
 - Rollback testing
+
+## Assessment Criteria
+
+### Level 1 (Novice)
+- [ ] Can identify obvious technical debt
+- [ ] Can make small code improvements
+- [ ] Can document current system state
+
+### Level 2 (Competent)
+- [ ] Can assess system quality and identify pain points
+- [ ] Can plan incremental improvements
+- [ ] Can refactor code following best practices
+- [ ] Can measure performance baselines
+
+### Level 3 (Proficient)
+- [ ] Can design migration strategies for complex systems
+- [ ] Can execute phased migrations with minimal disruption
+- [ ] Can plan and execute data migrations
+- [ ] Can validate functional equivalence after migration
+
+### Level 4 (Expert)
+- [ ] Can handle complex multi-system migrations
+- [ ] Can design coexistence strategies
+- [ ] Can mentor others in modernization techniques
+- [ ] Can improve team modernization processes
+
+### Level 5 (Master)
+- [ ] Can establish organizational modernization practices
+- [ ] Can create modernization frameworks for new domains
+- [ ] Can evaluate and improve modernization methodologies
+- [ ] Can synthesize modernization across projects
 
 ## Inputs
 - Current system documentation
@@ -91,3 +136,13 @@ The ability to upgrade, migrate, or refactor existing systems to improve maintai
 - Defect rate change
 - Migration phase success rate
 - Rollback frequency
+
+## Development Path
+
+To improve modernization capability:
+1. Study legacy system assessment techniques
+2. Learn migration strategies and patterns
+3. Practice refactoring techniques
+4. Study data migration best practices
+5. Practice incremental migration approaches
+6. Seek feedback on modernization quality
