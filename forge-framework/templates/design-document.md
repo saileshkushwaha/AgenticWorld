@@ -10,15 +10,21 @@
 
 ## Executive Summary
 
+*Guidance: 2-3 sentences covering what was designed, key architectural decisions, and rationale.*
+
 [2-3 sentence overview of the design, key decisions, and rationale]
 
 ## Design Objectives
+
+*Guidance: List 3-5 specific design objectives derived from requirements.*
 
 - Objective 1: [description]
 - Objective 2: [description]
 - Objective 3: [description]
 
 ## Requirements Traceability
+
+*Guidance: Every requirement must map to a design element. This ensures nothing is missed.*
 
 | Requirement | Design Element | Status |
 |-------------|----------------|--------|
@@ -29,23 +35,33 @@
 
 ### Architectural Style
 
+*Guidance: State the chosen style and why it was selected over alternatives.*
+
 [Selected style and rationale]
 
 ### System Context
+
+*Guidance: Show the system and its external dependencies at a high level.*
 
 [Diagram and description of system boundaries]
 
 ### Component Architecture
 
+*Guidance: Show major components and their interactions.*
+
 [Diagram and description of major components]
 
 ### Deployment Architecture
+
+*Guidance: Show how components are deployed to infrastructure.*
 
 [Diagram and description of deployment topology]
 
 ## Component Designs
 
 ### Component 1: [Name]
+
+*Guidance: Each component should have a single, clear responsibility.*
 
 **Responsibility**: [single responsibility description]
 
@@ -81,11 +97,15 @@
 
 ### Entity-Relationship Diagram
 
+*Guidance: Include all entities and their relationships. Use standard ER notation.*
+
 [ER diagram]
 
 ### Entity Definitions
 
 #### Entity 1: [Name]
+
+*Guidance: Define all attributes with types and constraints.*
 
 | Attribute | Type | Constraints | Description |
 |-----------|------|-------------|-------------|
@@ -99,6 +119,8 @@
 
 ### Indexes
 
+*Guidance: Define indexes based on query patterns, not just primary keys.*
+
 | Entity | Index | Type | Purpose |
 |--------|-------|------|---------|
 | [entity] | [columns] | [type] | [purpose] |
@@ -106,6 +128,8 @@
 ## API Specification
 
 ### API 1: [Name]
+
+*Guidance: Document request, response, and all possible error codes.*
 
 **Endpoint**: `[METHOD] /path/to/resource`
 
@@ -133,6 +157,8 @@
 [Repeat format above]
 
 ## Architecture Decision Records
+
+*Guidance: Create an ADR for each significant design decision. ADRs are immutable once accepted.*
 
 ### ADR-001: [Title]
 
@@ -168,12 +194,18 @@
 ## Performance Design
 
 ### Scalability Approach
+*Guidance: Describe how the system scales (horizontal, vertical, both).*
+
 [How the system scales]
 
 ### Caching Strategy
+*Guidance: Describe what is cached, where, and invalidation strategy.*
+
 [What is cached and how]
 
 ### Performance Targets
+
+*Guidance: Targets should be measurable and derived from requirements.*
 
 | Metric | Target | Measurement |
 |--------|--------|-------------|
@@ -198,17 +230,23 @@
 
 ## Design Principles Applied
 
+*Guidance: Show how each principle was applied in the design.*
+
 1. **[Principle 1]**: [how it was applied]
 2. **[Principle 2]**: [how it was applied]
 3. **[Principle 3]**: [how it was applied]
 
 ## Trade-offs Accepted
 
+*Guidance: Document what was gained and sacrificed for each trade-off.*
+
 | Trade-off | What Was Gained | What Was Sacrificed |
 |-----------|-----------------|---------------------|
 | [trade-off] | [benefit] | [cost] |
 
 ## Open Issues
+
+*Guidance: List design decisions that are still pending.*
 
 - [Issue 1]: [description and impact]
 - [Issue 2]: [description and impact]

@@ -10,6 +10,8 @@
 
 ## Executive Summary
 
+*Guidance: 2-3 sentences covering what will be deployed, strategy, and status.*
+
 [2-3 sentence overview of the deployment scope, strategy, and status]
 
 ## Deployment Scope
@@ -36,10 +38,13 @@
 **Rationale**: [Why this strategy was chosen]
 
 ### Strategy Details
+*Guidance: Describe how the strategy will be executed.*
 
 [Description of how the strategy will be executed]
 
 ## Pre-Deployment Checklist
+
+*Guidance: All items must be checked before deployment begins.*
 
 - [ ] All quality gates passed
 - [ ] Code reviewed and approved
@@ -91,6 +96,8 @@
 ## Rollback Plan
 
 ### Rollback Triggers
+*Guidance: Define specific, measurable triggers for rollback.*
+
 - [Trigger 1]: [description]
 - [Trigger 2]: [description]
 - [Trigger 3]: [description]
@@ -106,6 +113,8 @@
 - [Verification 2]
 
 ### Rollback Time Limit
+*Guidance: Maximum time before rollback is automatically triggered.*
+
 [Maximum time before rollback is triggered]
 
 ## Post-Deployment Verification
