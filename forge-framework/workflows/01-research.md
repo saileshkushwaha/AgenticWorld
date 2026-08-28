@@ -1,245 +1,164 @@
 # Workflow 01: Research
 
-## Phase Overview
+**Duration**: 2-8 hours (quick) / 8-40 hours (deep) | **Outputs**: Research report, comparison matrix, best practices
 
-The Research phase gathers information, evaluates technologies, identifies best practices, and synthesizes findings to inform subsequent SDLC phases.
+## Trigger
 
-**Estimated Duration**: 2-8 hours (depending on scope)
-**Typical Outputs**: Research report, technology comparison matrix, best practices document
+- New technology evaluation needed
+- Best practices identification
+- Competitive analysis required
+- Industry trend understanding
+- Technical feasibility investigation
+- Knowledge gap blocking progress
 
-## Trigger Conditions
+## Research Modes
 
-This workflow is triggered when:
-- A new technology needs to be evaluated
-- Best practices need to be identified for a domain
-- Competitive analysis is required
-- Industry trends need to be understood
-- Technical feasibility needs preliminary investigation
-- A knowledge gap exists that blocks progress
+### Quick Research (2-8 hours)
+For time-constrained decisions. Focus on top 3-5 sources, surface-level comparison, single-pass analysis.
+
+### Deep Research (8-40 hours)
+For critical decisions. Comprehensive source coverage, multi-pass analysis, expert consultation, iterative investigation.
 
 ## Steps
 
 ### Step 1: Define Research Objectives
+**Actions**: Clarify question, define scope, identify success criteria, determine depth/breadth, set constraints.
+**Output**: Research objectives | **Time**: 15-30 min | **Tools**: Note-taking, mind mapping
+**Deep Research Additions**:
+- Define sub-questions and investigation threads
+- Identify known unknowns and knowledge gaps
+- Set minimum source count threshold (≥10 for deep)
+- Define accuracy targets (e.g., ≥3 independent sources per claim)
 
-**Actions**:
-- Clarify the research question or problem statement
-- Define scope (what is in scope, what is out of scope)
-- Identify success criteria for the research
-- Determine required depth and breadth
-- Set timeline and resource constraints
-
-**Output**: Research objectives document
-
-**Time Estimate**: 15-30 minutes
-
-**Tools**: Note-taking app, mind mapping tool (Miro, XMind)
-
-**Example**:
-```
-Research Question: "What is the best message queue for a high-throughput
-event processing system handling 100K events/second?"
-
-Scope:
-- In scope: Kafka, RabbitMQ, AWS SQS, Google Pub/Sub, Redis Streams
-- Out of scope: Custom solutions, non-message-queue approaches
-
-Success Criteria:
-- Compare on: throughput, latency, durability, cost, operational complexity
-- Provide recommendation with evidence
-- Include migration considerations if switching from existing system
-```
-
-**Edge Cases**:
-- Research question is too broad → Narrow by adding constraints
-- Research question is too narrow → Expand to include alternatives
-- No clear success criteria → Define measurable criteria with stakeholder
+**Edge Cases**: Too broad → narrow; too narrow → expand; no criteria → define with stakeholder
 
 ### Step 2: Information Gathering
-
-**Actions**:
-- Search academic sources (papers, journals, conferences)
-- Search industry sources (blogs, documentation, case studies)
-- Search community sources (forums, Stack Overflow, GitHub)
-- Identify subject matter experts and their work
-- Collect quantitative data (benchmarks, statistics)
-- Collect qualitative data (opinions, experiences)
-
+**Actions**: Search academic, industry, community sources. Collect quantitative and qualitative data. Cross-reference findings.
 **Research methodology**:
-- Use systematic search strategies
-- Document search queries and sources
+- Use systematic search strategies with documented queries
 - Evaluate source credibility and recency
 - Cross-reference findings across multiple sources
 - Maintain a source bibliography
+- **Source Quality Hierarchy**:
+  1. Peer-reviewed papers, official documentation
+  2. Reputable industry publications, established blogs
+  3. Expert opinions, conference talks
+  4. Community forums, social media
+  5. Vendor materials (bias-aware)
 
-**Output**: Raw research data collection
+**Output**: Raw research data | **Time**: 1-3 hours (quick) / 4-16 hours (deep)
+**Tools**: Google Scholar, GitHub, Stack Overflow, tech blogs, documentation, benchmark databases
+**Deep Research Additions**:
+- Snowball sampling from reference lists
+- Expert identification and consultation
+- Historical trend analysis
+- Primary research (surveys, interviews) if needed
 
-**Time Estimate**: 1-3 hours
+**Edge Cases**: Too few sources → broaden search; conflicting → document both; outdated → prioritize recent; paywalled → use abstracts
 
-**Tools**: Google Scholar, GitHub, Stack Overflow, tech blogs, documentation sites, benchmark databases
+### Step 3: Fact-Checking and Verification
+**Actions**: Verify claims across independent sources, identify consensus vs disagreement, assess source bias, validate quantitative data.
+**Verification protocol**:
+- Each key claim must have ≥2 independent sources
+- Quantitative data must be reproducible or from authoritative sources
+- Conflicting claims must be investigated and resolved
+- Source bias must be documented and accounted for
+**Output**: Verified findings with confidence ratings | **Time**: 30-60 min (quick) / 2-4 hours (deep)
+**Edge Cases**: Unverifiable claims → mark as unverified; consensus unclear → document range of opinions
 
-**Example Sources**:
-```
-Academic: "Kafka: a Distributed Messaging System for Log Processing" (Neild et al.)
-Industry: Confluent blog, AWS documentation, Google Cloud blog
-Community: Stack Overflow tags, GitHub issues, Reddit r/programming
-Benchmarks: CloudAMQP benchmarks, LinkedIn engineering blog
-```
-
-**Edge Cases**:
-- Too few sources → Broaden search terms, try different source types
-- Conflicting information → Document both sides, assess source credibility
-- Outdated information → Prioritize recent sources, note deprecation
-- Paywalled content → Use abstracts, preprints, or alternative sources
-
-### Step 3: Technology Evaluation
-
-**Actions**:
-- Identify candidate technologies/solutions
-- Define evaluation criteria (performance, maturity, community, licensing, etc.)
-- Score each candidate against criteria
-- Conduct proof-of-concept if needed
-- Document strengths and weaknesses of each option
-- Identify integration considerations
-
+### Step 4: Technology Evaluation
+**Actions**: Identify candidates, define criteria, score options, document strengths/weaknesses, identify integration needs.
 **Evaluation criteria categories**:
 - **Technical**: Performance, scalability, reliability, security
 - **Ecosystem**: Community size, documentation quality, tooling, libraries
 - **Operational**: Deployment complexity, monitoring, maintenance
 - **Business**: Licensing, cost, vendor lock-in, support
 - **Organizational**: Team skills, learning curve, hiring availability
+**Output**: Comparison matrix | **Time**: 1-2 hours | **Tools**: Spreadsheet
+**Deep Research Additions**:
+- Weighted scoring with sensitivity analysis
+- Proof-of-concept for top candidates
+- Total cost of ownership (TCO) modeling
+- Risk-adjusted scoring
 
-**Output**: Technology comparison matrix
+**Edge Cases**: Equal scores → add criteria or PoC; no fit → document trade-offs; new tech → note risk; vendor lock-in → evaluate exit cost
 
-**Time Estimate**: 1-2 hours
+### Step 5: Best Practices Identification
+**Actions**: Identify patterns, document approaches, note pitfalls, identify standards, document tuning recommendations.
+**Output**: Best practices document | **Time**: 30-60 min | **Tools**: Documentation, case studies, talks
+**Edge Cases**: Conflicts → document context; no practices → note as emerging; outdated → verify
 
-**Tools**: Spreadsheet (Google Sheets, Excel), comparison matrix template
+### Step 6: Competitive Analysis (if applicable)
+**Actions**: Identify competitors, compare features, analyze strengths/weaknesses, identify differentiation.
+**Output**: Competitive analysis matrix | **Time**: 30-60 min | **Tools**: Product sites, review sites
+**Edge Cases**: No direct competitors → analyze adjacent; proprietary → use docs; rapid change → note date
 
-**Example Matrix**:
-```
-| Criteria (Weight)    | Kafka | RabbitMQ | AWS SQS |
-|----------------------|-------|----------|---------|
-| Throughput (30%)     | 5     | 3        | 4       |
-| Latency (20%)        | 4     | 5        | 3       |
-| Durability (20%)     | 5     | 4        | 4       |
-| Operational (15%)    | 3     | 4        | 5       |
-| Cost (15%)           | 3     | 4        | 4       |
-| Weighted Total       | 4.1   | 3.95     | 3.95    |
-```
+### Step 7: Iterative Deepening (Deep Research Only)
+**Actions**: Review initial findings, identify gaps and follow-up questions, conduct secondary investigation, validate emerging conclusions, refine recommendations.
+**Iteration triggers**:
+- Contradictory findings that need resolution
+- New questions raised by initial findings
+- Stakeholder feedback requiring additional investigation
+- Emerging patterns needing validation
+**Output**: Refined findings | **Time**: 2-8 hours | **Tools**: Follow-up searches, expert consultation
 
-**Edge Cases**:
-- Two options score equally → Add more criteria or conduct PoC
-- No option meets all requirements → Document trade-offs, consider hybrid
-- New/unproven technology → Note risk, suggest PoC
-- Vendor lock-in concerns → Evaluate exit cost and alternatives
-
-### Step 4: Best Practices Identification
-
-**Actions**:
-- Identify patterns across successful implementations
-- Document recommended approaches
-- Note common pitfalls and anti-patterns
-- Identify industry standards and conventions
-- Document configuration and tuning recommendations
-- Note scalability and performance patterns
-
-**Output**: Best practices document
-
-**Time Estimate**: 30-60 minutes
-
-**Tools**: Documentation sites, case studies, conference talks
-
-**Example Best Practices**:
-```
-1. Use idempotent consumers to handle duplicate messages
-2. Implement dead-letter queues for failed message processing
-3. Monitor consumer lag as a key health metric
-4. Partition keys should distribute evenly across partitions
-5. Set retention policies based on business requirements, not defaults
-```
-
-**Edge Cases**:
-- Best practices conflict → Document context where each applies
-- No established best practices → Note as emerging area, suggest experimentation
-- Best practices outdated → Verify against current documentation
-
-### Step 5: Competitive Analysis (if applicable)
-
-**Actions**:
-- Identify competitors or alternative solutions
-- Compare features, approaches, and trade-offs
-- Analyze strengths and weaknesses
-- Identify differentiation opportunities
-- Document market positioning insights
-
-**Output**: Competitive analysis matrix
-
-**Time Estimate**: 30-60 minutes
-
-**Tools**: Product websites, review sites (G2, Capterra), analyst reports
-
-**Edge Cases**:
-- No direct competitors → Analyze adjacent solutions
-- Proprietary solutions → Use available documentation and reviews
-- Rapidly changing market → Note date of analysis, suggest re-evaluation
-
-### Step 6: Synthesis and Reporting
-
-**Actions**:
-- Synthesize findings into coherent narrative
-- Identify key insights and recommendations
-- Document confidence levels for each finding
-- Note areas of uncertainty or disagreement
-- Create executive summary
-- Prepare detailed findings report
-
-**Output**: Research report (using research-report template)
-
-**Time Estimate**: 30-60 minutes
-
-**Tools**: Research report template, diagram tools (draw.io, Lucidchart)
-
-**Edge Cases**:
-- Findings inconclusive → Recommend further research or PoC
-- Stakeholders disagree with recommendation → Document dissent and rationale
-- Scope changed during research → Update objectives, note impact
+### Step 8: Synthesis and Reporting
+**Actions**: Synthesize findings, identify insights, document confidence levels, note uncertainties, create summary, prepare report.
+**Accuracy validation**:
+- All key claims traceable to sources
+- Confidence levels justified by evidence quality
+- Limitations and uncertainties explicitly stated
+- Recommendations supported by evidence chain
+**Output**: Research report | **Time**: 30-60 min (quick) / 2-4 hours (deep)
+**Tools**: Report template, diagram tools
+**Edge Cases**: Inconclusive → recommend further research; disagreement → document dissent; scope changed → update
 
 ## Quality Gates
 
-| Gate | Criteria | Check |
-|------|----------|-------|
-| QG1 | Research objectives are clear and scoped | |
-| QG2 | Multiple credible sources consulted (≥3) | |
-| QG3 | Source credibility assessed | |
-| QG4 | Evaluation criteria defined and applied | |
-| QG5 | Findings supported by evidence | |
-| QG6 | Uncertainties and limitations documented | |
-| QG7 | Recommendations are actionable | |
-| QG8 | Best practices identified | |
-| QG9 | Report follows template format | |
+| Gate | Criteria |
+|------|----------|
+| QG1 | Research objectives clear and scoped |
+| QG2 | Multiple credible sources consulted (≥3 quick, ≥10 deep) |
+| QG3 | Source credibility assessed and documented |
+| QG4 | Claims verified across independent sources |
+| QG5 | Evaluation criteria defined and applied |
+| QG6 | Findings supported by evidence |
+| QG7 | Uncertainties and limitations documented |
+| QG8 | Recommendations actionable with confidence levels |
+| QG9 | Best practices identified |
+| QG10 | Report follows template format |
+| QG11 | (Deep) Iterative investigation completed |
+
+## Accuracy Metrics
+
+| Metric | Target | Measurement |
+|--------|--------|-------------|
+| Source diversity | ≥3 source types | Count of source categories |
+| Verification rate | ≥80% claims verified | % claims with ≥2 sources |
+| Confidence accuracy | ≥90% | High-confidence claims validated |
+| Recommendation support | 100% | Recommendations with evidence chain |
+| Completeness | ≥90% objectives addressed | % objectives with findings |
 
 ## Decision Points
 
 | Point | Options | Criteria |
 |-------|---------|----------|
-| DP1: Sufficient information found? | Continue to analysis / Extend research | Coverage of objectives, confidence in findings |
-| DP2: Multiple viable options? | Recommend top option / Present all options | Stakeholder preference, decision complexity |
-| DP3: Need proof-of-concept? | Create PoC / Proceed with analysis | Risk level, uncertainty, cost of being wrong |
-| DP4: Scope needs adjustment? | Expand scope / Reduce scope / Maintain | New information, stakeholder feedback |
+| DP1: Sufficient info? | Continue / Extend research | Coverage, confidence |
+| DP2: Multiple options? | Recommend top / Present all | Stakeholder preference |
+| DP3: Need PoC? | Create PoC / Proceed | Risk, uncertainty, cost |
+| DP4: Scope adjustment? | Expand / Reduce / Maintain | New information |
+| DP5: (Deep) Further iteration? | Iterate / Conclude | Gap severity, time |
 
-## Common Anti-Patterns
+## Anti-Patterns
 
-1. **Confirmation bias**: Only seeking information that confirms pre-existing beliefs
-2. **Single source reliance**: Making recommendations based on one source
-3. **Shallow research**: Surface-level research without depth
-4. **Ignoring recency**: Using outdated sources without verification
-5. **No confidence levels**: Presenting all findings with equal certainty
+1. **Confirmation bias** — Only seeking confirming information
+2. **Single source reliance** — One source for recommendations
+3. **Shallow research** — Surface-level without depth
+4. **Ignoring recency** — Outdated sources
+5. **No confidence levels** — Equal certainty for all findings
+6. **Unverified claims** — Assertions without source backing
+7. **False precision** — Overconfident conclusions from limited data
 
-## Output Artifact
+## Output
 
-Use template: `templates/research-report.md`
-
-## References
-
-- Related workflow: `02-analyze.md` (next phase)
-- Related capability: `capabilities/research.md`
-- Anti-patterns: `ANTI-PATTERNS.md` (Research section)
+Use: `templates/research-report.md` | Next: `02-analyze.md` | Capability: `capabilities/research.md`
