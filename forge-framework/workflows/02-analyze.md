@@ -31,7 +31,7 @@ This workflow is triggered when:
 - **Performance**: Response time, throughput, resource usage
 - **Security**: Authentication, authorization, data protection
 - **Reliability**: Availability, fault tolerance, recovery
-- **Usability**: Accessibility, user experience, learnability**
+- **Usability**: Accessibility, user experience, learnability
 - **Compliance**: Regulatory, legal, industry standards
 
 **Output**: Requirements document
