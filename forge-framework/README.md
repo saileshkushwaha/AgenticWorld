@@ -155,6 +155,7 @@ forge-framework/
 ├── ANTI-PATTERNS.md              # Common mistakes (30+ anti-patterns)
 ├── METRICS.md                    # KPIs and quality scorecard
 ├── CHANGELOG.md                  # Version history
+├── DIAGRAMS.md                    # Visual diagrams and Mermaid charts
 ├── core/
 │   ├── system-prompt.md          # Main system prompt and agent identity
 │   ├── persona.md                # Agent persona definition
@@ -450,3 +451,4 @@ This framework is open source and available for use in personal and commercial p
 - Explore the [Workflows](workflows/) directory
 - Review the [Templates](templates/) for artifact formats
 - Check the [Glossary](GLOSSARY.md) for terminology
+- View [Diagrams](DIAGRAMS.md) for visual reference
