@@ -39,7 +39,7 @@ The ability to identify, isolate, and resolve defects through systematic investi
 
 ### Root Cause Analysis
 - 5 Whys technique
-- Fishbone (Ishbone) analysis
+- Fishbone (Ishikawa) analysis
 - Fault tree analysis
 - Change analysis
 - Pattern recognition
