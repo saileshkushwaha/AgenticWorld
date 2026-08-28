@@ -151,13 +151,14 @@ your-project/
 forge-framework/
 ├── README.md                     # This file
 ├── QUICK-REFERENCE.md            # One-page quick reference card
-├── GLOSSARY.md                   # Terms and definitions
-├── ANTI-PATTERNS.md              # Common mistakes and how to avoid them
-├── METRICS.md                    # KPIs and measurement guide
+├── GLOSSARY.md                   # Terms and definitions (100+ terms)
+├── ANTI-PATTERNS.md              # Common mistakes (30+ anti-patterns)
+├── METRICS.md                    # KPIs and quality scorecard
+├── CHANGELOG.md                  # Version history
 ├── core/
 │   ├── system-prompt.md          # Main system prompt and agent identity
 │   ├── persona.md                # Agent persona definition
-│   └── principles.md             # Core operating principles
+│   └── principles.md             # Core operating principles (10 principles)
 ├── workflows/
 │   ├── 01-research.md            # Research phase workflow
 │   ├── 02-analyze.md             # Analysis phase workflow
@@ -169,29 +170,31 @@ forge-framework/
 │   ├── 08-modernize.md           # Modernization phase workflow
 │   └── 09-communication.md       # Communication phase workflow
 ├── capabilities/
-│   ├── research.md               # Research capability definition
-│   ├── analysis.md               # Analysis capability definition
-│   ├── design.md                 # Design capability definition
-│   ├── implementation.md         # Implementation capability definition
-│   ├── testing.md                # Testing capability definition
-│   ├── debugging.md              # Debugging capability definition
-│   ├── deployment.md             # Deployment capability definition
-│   └── modernization.md          # Modernization capability definition
+│   ├── research.md               # Research capability (5 proficiency levels)
+│   ├── analysis.md               # Analysis capability (5 proficiency levels)
+│   ├── design.md                 # Design capability (5 proficiency levels)
+│   ├── implementation.md         # Implementation capability (5 proficiency levels)
+│   ├── testing.md                # Testing capability (5 proficiency levels)
+│   ├── debugging.md              # Debugging capability (5 proficiency levels)
+│   ├── deployment.md             # Deployment capability (5 proficiency levels)
+│   └── modernization.md          # Modernization capability (5 proficiency levels)
 ├── templates/
-│   ├── research-report.md        # Research report template
-│   ├── analysis-report.md        # Analysis report template
-│   ├── design-document.md        # Design document template
-│   ├── implementation-plan.md   # Implementation plan template
-│   ├── test-plan.md             # Test plan template
-│   ├── debug-report.md          # Debug report template
-│   ├── deployment-plan.md       # Deployment plan template
-│   └── modernization-plan.md    # Modernization plan template
+│   ├── research-report.md        # Research report template (with examples)
+│   ├── analysis-report.md        # Analysis report template (with examples)
+│   ├── design-document.md        # Design document template (with examples)
+│   ├── implementation-plan.md   # Implementation plan template (with examples)
+│   ├── test-plan.md             # Test plan template (with examples)
+│   ├── debug-report.md          # Debug report template (with examples)
+│   ├── deployment-plan.md       # Deployment plan template (with examples)
+│   └── modernization-plan.md    # Modernization plan template (with examples)
 ├── artifacts/
 │   └── output-format.md          # Artifact output format specification
-└── guides/
-    ├── integration-guide.md      # How workflows connect
-    ├── configuration-guide.md    # Configuration options
-    └── troubleshooting.md        # Common issues and solutions
+├── guides/
+│   ├── integration-guide.md      # How workflows connect
+│   ├── configuration-guide.md    # Configuration options reference
+│   └── troubleshooting.md        # Common issues and solutions
+└── examples/
+    └── research-report-example.md # Complete filled artifact example
 ```
 
 ## Usage Guide
