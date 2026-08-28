@@ -4,6 +4,9 @@
 
 The Communication phase creates reports, documentation, and stakeholder updates to ensure clear information flow throughout the SDLC.
 
+**Estimated Duration**: 30 minutes - 4 hours (depending on scope)
+**Typical Outputs**: Status reports, technical reports, presentations, decision documents
+
 ## Trigger Conditions
 
 This workflow is triggered when:
@@ -38,6 +41,28 @@ This workflow is triggered when:
 
 **Output**: Audience analysis document
 
+**Time Estimate**: 15-30 minutes
+
+**Tools**: Stakeholder mapping, audience personas, communication plan template
+
+**Example Audience Analysis**:
+```
+Audience: Executive team (CTO, CEO, CFO)
+Technical Level: Low to medium
+Key Concerns: Cost, timeline, risk, business impact
+Preferred Format: 1-page summary with key metrics
+Key Messages:
+- Migration will reduce operational costs by 30%
+- Timeline: 6 months with monthly milestones
+- Risk: Medium, mitigated by incremental approach
+- ROI: 18 months payback period
+```
+
+**Edge Cases**:
+- Multiple audiences with different needs → Create versions for each
+- Conflicting stakeholder interests → Address concerns proactively
+- Unknown audience → Default to balanced technical/business level
+
 ### Step 2: Content Planning
 
 **Actions**:
@@ -58,6 +83,39 @@ This workflow is triggered when:
 - Appendix (supporting details)
 
 **Output**: Content outline
+
+**Time Estimate**: 15-30 minutes
+
+**Tools**: Mind mapping, outline tools, content templates
+
+**Example Content Outline**:
+```
+Purpose: Communicate architecture decision to use microservices
+
+Key Messages:
+1. Microservices chosen for scalability and team autonomy
+2. Migration will be incremental over 6 months
+3. No disruption to current operations during migration
+
+Structure:
+1. Executive Summary (3 bullets)
+2. Background (current monolith limitations)
+3. Decision (microservices with API gateway)
+4. Rationale (scalability, team structure, technology fit)
+5. Migration Plan (phased approach)
+6. Risks and Mitigations
+7. Next Steps (approval needed, Phase 1 kickoff)
+
+Visuals:
+- Current architecture diagram
+- Target architecture diagram
+- Migration timeline Gantt chart
+```
+
+**Edge Cases**:
+- Too much content → Prioritize key messages, move details to appendix
+- Sensitive information → Consider audience clearance, redact as needed
+- Controversial decisions → Present multiple perspectives, document rationale
 
 ### Step 3: Report Writing
 
@@ -81,6 +139,36 @@ This workflow is triggered when:
 
 **Output**: Draft report/document
 
+**Time Estimate**: 30-120 minutes
+
+**Tools**: Markdown editors, Google Docs, Notion, Confluence
+
+**Example Executive Summary**:
+```
+Architecture Decision: Adopt Microservices for E-commerce Platform
+
+After evaluating monolithic, microservices, and serverless architectures,
+we recommend adopting a microservices architecture for the following reasons:
+
+1. Scalability: Independent scaling of high-traffic services (product catalog,
+   order processing) will reduce infrastructure costs by an estimated 30%.
+
+2. Team Autonomy: Microservices align with our team structure, enabling
+   independent development and deployment.
+
+3. Technology Flexibility: Each service can use the best technology for its
+   specific requirements.
+
+Migration will follow an incremental approach over 6 months, with no
+disruption to current operations. Approval is requested to proceed with
+Phase 1 (User Service extraction).
+```
+
+**Edge Cases**:
+- Technical topic for non-technical audience → Use analogies, avoid jargon
+- Bad news to communicate → Be direct, focus on solutions
+- Complex decision → Break into smaller, digestible sections
+
 ### Step 4: Visual Aids
 
 **Actions**:
@@ -101,6 +189,15 @@ This workflow is triggered when:
 - **Timelines**: Schedules and milestones
 
 **Output**: Visual aids
+
+**Time Estimate**: 15-60 minutes
+
+**Tools**: draw.io, Lucidchart, Miro, PlantUML, Excalidraw
+
+**Edge Cases**:
+- Complex system → Use multiple diagrams at different abstraction levels
+- Data-heavy content → Use charts instead of tables for trends
+- Process explanation → Use flowcharts with clear decision points
 
 ### Step 5: Review and Refinement
 
@@ -124,6 +221,15 @@ This workflow is triggered when:
 
 **Output**: Reviewed document
 
+**Time Estimate**: 15-30 minutes
+
+**Tools**: Grammar tools (Grammarly), peer review, stakeholder feedback
+
+**Edge Cases**:
+- Conflicting feedback → Facilitate discussion, find consensus
+- Tight deadline → Prioritize critical fixes, defer nice-to-haves
+- Reviewer unavailable → Use asynchronous review, set deadline
+
 ### Step 6: Delivery
 
 **Actions**:
@@ -144,6 +250,15 @@ This workflow is triggered when:
 
 **Output**: Delivered communication
 
+**Time Estimate**: 15-60 minutes
+
+**Tools**: Email, Slack, Teams, Zoom, Confluence, SharePoint
+
+**Edge Cases**:
+- Large audience → Use meeting recording, follow up with written summary
+- Distributed team → Record presentation, share asynchronously
+- Urgent communication → Use immediate channels (Slack, phone)
+
 ### Step 7: Feedback and Iteration
 
 **Actions**:
@@ -155,6 +270,15 @@ This workflow is triggered when:
 - Iterate on future communications
 
 **Output**: Communication report
+
+**Time Estimate**: 15-30 minutes
+
+**Tools**: Surveys, feedback forms, analytics (for written content)
+
+**Edge Cases**:
+- No feedback received → Proactively ask specific questions
+- Negative feedback → Address concerns, improve approach
+- Misunderstanding detected → Clarify immediately, update document
 
 ## Quality Gates
 
@@ -175,6 +299,15 @@ This workflow is triggered when:
 | DP1: Communication format? | Report / Presentation / Email / Dashboard | Audience, complexity, urgency |
 | DP2: Technical depth? | High-level / Balanced / Detailed | Audience technical level, purpose |
 | DP3: Follow-up needed? | Yes / No | Questions raised, action items identified |
+| DP4: Urgency level? | Immediate / Standard / Low | Business impact, stakeholder needs |
+
+## Common Anti-Patterns
+
+1. **No stakeholder updates**: Failing to communicate progress and risks
+2. **Technical jargon with non-technical stakeholders**: Confusing the audience
+3. **Hiding bad news**: Delaying communication of problems
+4. **No call to action**: Audience doesn't know what to do next
+5. **One-size-fits-all**: Using same content for all audiences
 
 ## Output Artifact
 
@@ -189,4 +322,6 @@ Use the appropriate template based on communication type:
 - `templates/modernization-plan.md` for modernization progress
 
 ## References
+
 - All workflows (communication supports all phases)
+- Anti-patterns: `ANTI-PATTERNS.md` (Communication section)
