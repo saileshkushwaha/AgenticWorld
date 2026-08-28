@@ -10,21 +10,27 @@
 
 ## Executive Summary
 
+*Guidance: 2-3 sentences covering what will be tested, approach, and results summary.*
+
 [2-3 sentence overview of the test scope, approach, and results]
 
 ## Test Scope
 
 ### In Scope
+*Guidance: List specific features/components to be tested.*
 - [Feature/component 1]
 - [Feature/component 2]
 
 ### Out of Scope
+*Guidance: Explicitly state what is NOT being tested.*
 - [Feature/component 1]
 - [Feature/component 2]
 
 ## Test Strategy
 
 ### Test Types
+
+*Guidance: Define which test types are needed and their approach.*
 
 | Type | Approach | Tools | Responsibility |
 |------|----------|-------|----------------|
@@ -43,6 +49,8 @@
 
 ## Entry Criteria
 
+*Guidance: Conditions that must be met before testing begins.*
+
 - [ ] Code complete and deployed to test environment
 - [ ] Unit tests passing
 - [ ] Test environment ready
@@ -50,6 +58,8 @@
 - [ ] Test cases reviewed
 
 ## Exit Criteria
+
+*Guidance: Conditions that must be met before testing is considered complete.*
 
 - [ ] All planned tests executed
 - [ ] Critical and high defects resolved
@@ -60,6 +70,8 @@
 ## Test Cases
 
 ### TC-001: [Title]
+
+*Guidance: Each test case should be independent and repeatable.*
 
 **Priority**: [critical | high | medium | low]
 
@@ -85,6 +97,8 @@
 [Repeat format above]
 
 ## Test Data
+
+*Guidance: Define what test data is needed and how it will be created.*
 
 | Data Set | Purpose | Source |
 |----------|---------|--------|

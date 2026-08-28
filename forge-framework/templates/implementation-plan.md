@@ -10,25 +10,33 @@
 
 ## Executive Summary
 
+*Guidance: 2-3 sentences covering what will be implemented, approach, and key milestones.*
+
 [2-3 sentence overview of the implementation scope, approach, and status]
 
 ## Implementation Scope
 
 ### In Scope
+*Guidance: List specific features/components to be implemented.*
 - [Item 1]
 - [Item 2]
 
 ### Out of Scope
+*Guidance: Explicitly state what is NOT being implemented.*
 - [Item 1]
 - [Item 2]
 
 ## Design Reference
+
+*Guidance: Link to the design document that this plan implements.*
 
 [Link to design document]
 
 ## Environment Setup
 
 ### Development Environment
+
+*Guidance: List all tools and versions needed for development.*
 
 | Tool | Version | Purpose |
 |------|---------|---------|
@@ -37,6 +45,8 @@
 
 ### Local Infrastructure
 
+*Guidance: List services needed for local development.*
+
 | Service | Version | Configuration |
 |---------|---------|---------------|
 | [service] | [version] | [config] |
@@ -44,11 +54,15 @@
 
 ### Setup Steps
 
+*Guidance: Step-by-step instructions for setting up the development environment.*
+
 1. [Step 1]
 2. [Step 2]
 3. [Step 3]
 
 ## Task Breakdown
+
+*Guidance: Break into small, estimable tasks. Each task should be 1-8 hours.*
 
 ### Task 1: [Title]
 
@@ -80,6 +94,8 @@
 
 ## Implementation Order
 
+*Guidance: Order tasks by dependencies and priority. Risky items first.*
+
 1. [Task ID and title] - [rationale for order]
 2. [Task ID and title] - [rationale for order]
 3. [Task ID and title] - [rationale for order]
@@ -87,10 +103,12 @@
 ## Coding Standards
 
 ### Style
+*Guidance: Reference existing style guides or define project-specific rules.*
 - [Standard 1]: [description]
 - [Standard 2]: [description]
 
 ### Patterns
+*Guidance: Define which patterns to use and when.*
 - [Pattern 1]: [when to use]
 - [Pattern 2]: [when to use]
 
@@ -101,6 +119,7 @@
 ## Testing Strategy
 
 ### Unit Testing
+*Guidance: Define framework, coverage target, and approach.*
 - Framework: [name]
 - Coverage target: [%]
 - Approach: [TDD / after coding]
@@ -110,6 +129,8 @@
 - Scope: [what is tested]
 
 ## Code Review Process
+
+*Guidance: Define the review process including required reviewers.*
 
 1. [Step 1]
 2. [Step 2]
@@ -123,6 +144,8 @@
 | [Task 2] | [status] | [name] | [effort] | [effort] |
 
 ## Quality Metrics
+
+*Guidance: Define targets for each quality metric.*
 
 | Metric | Target | Current |
 |--------|--------|---------|

@@ -67,17 +67,37 @@ Every artifact must follow this structure:
 [Any supplementary material]
 ```
 
+## Complete Example
+
+*Guidance: This is a complete example of a filled artifact header and executive summary.*
+
+```markdown
+# Research Report: Message Queue Evaluation
+
+**Created**: 2026-08-28T10:00:00Z
+**Phase**: Research
+**Status**: draft
+**Author**: Forge Agent
+**Version**: 1.0.0
+
+---
+
+## Executive Summary
+
+This report evaluates message queue technologies for a high-throughput event processing system handling 100K events/second. After comparing Kafka, RabbitMQ, AWS SQS, Google Pub/Sub, and Redis Streams across 12 criteria, we recommend Apache Kafka for its superior throughput, durability, and ecosystem maturity. The recommendation is made with high confidence based on extensive community adoption and proven production use cases.
+```
+
 ## Field Definitions
 
 ### Header Fields
 
 | Field | Format | Required | Description |
 |-------|--------|----------|-------------|
-| Created | ISO 8601 | Yes | When the artifact was created |
-| Phase | Workflow name | Yes | Current SDLC phase |
+| Created | ISO 8601 | Yes | When the artifact was created (e.g., 2026-08-28T10:00:00Z) |
+| Phase | Workflow name | Yes | Current SDLC phase (Research, Analysis, Design, etc.) |
 | Status | draft/review/approved | Yes | Current status of the artifact |
 | Author | String | Yes | Who created the artifact |
-| Version | SemVer | Yes | Artifact version |
+| Version | SemVer | Yes | Artifact version (e.g., 1.0.0) |
 
 ### Section Definitions
 
@@ -85,36 +105,43 @@ Every artifact must follow this structure:
 - **Purpose**: Quick overview for busy readers
 - **Length**: 2-3 sentences
 - **Content**: What, why, and key takeaway
+- **Write this last**: Even though it appears first, write it after completing the rest
 
 #### Decisions & Rationale
 - **Purpose**: Document key decisions and why they were made
 - **Format**: Table with Decision, Options, Rationale columns
 - **Required**: Yes, if any decisions were made
+- **Tip**: Include at least 2 options considered for each decision
 
 #### Risks & Mitigations
 - **Purpose**: Identify risks and how they will be addressed
 - **Format**: Table with Risk, Probability, Impact, Mitigation columns
 - **Required**: Yes
+- **Tip**: Be honest about risks; don't downplay them
 
 #### Assumptions
 - **Purpose**: Document assumptions made during the phase
 - **Format**: Bulleted list
 - **Required**: Yes, if any assumptions were made
+- **Tip**: State the basis for each assumption
 
 #### Open Issues
 - **Purpose**: Track unresolved items
 - **Format**: Bulleted list
 - **Required**: Yes, if any open issues exist
+- **Tip**: State what is blocking resolution
 
 #### Next Steps
 - **Purpose**: Define what happens next
 - **Format**: Numbered list
 - **Required**: Yes
+- **Tip**: Make items specific and actionable
 
 #### References
 - **Purpose**: Link to related artifacts and sources
 - **Format**: Bulleted list
 - **Required**: Yes, if any references exist
+- **Tip**: Use consistent citation format
 
 ## Artifact Types
 
@@ -172,6 +199,7 @@ Every artifact must follow this structure:
 - Always include header row
 - Align columns with pipes
 - Use consistent formatting within columns
+- Keep tables readable (avoid too many columns)
 
 ### Code Blocks
 - Specify language for syntax highlighting

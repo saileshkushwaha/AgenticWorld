@@ -10,6 +10,8 @@
 
 ## Executive Summary
 
+*Guidance: 2-3 sentences covering what will be modernized, approach, and expected outcomes.*
+
 [2-3 sentence overview of the modernization scope, approach, and status]
 
 ## Modernization Scope
@@ -33,6 +35,8 @@
 
 ### Pain Points
 
+*Guidance: List specific pain points with their impact.*
+
 1. **[Pain Point 1]**: [description and impact]
 2. **[Pain Point 2]**: [description and impact]
 3. **[Pain Point 3]**: [description and impact]
@@ -46,6 +50,8 @@
 
 ### Baseline Metrics
 
+*Guidance: Measure current state to compare against after modernization.*
+
 | Metric | Current | Target |
 |--------|---------|--------|
 | [Metric] | [current] | [target] |
@@ -54,6 +60,8 @@
 ## Modernization Goals
 
 ### Primary Goals
+*Guidance: 3-5 specific, measurable goals.*
+
 1. [Goal 1]: [description and success criteria]
 2. [Goal 2]: [description and success criteria]
 3. [Goal 3]: [description and success criteria]
@@ -111,6 +119,7 @@
 3. [Step 3]
 
 ### Data Validation
+*Guidance: How will you verify data integrity after migration?*
 
 - [Validation approach]
 - [Rollback plan for data]
