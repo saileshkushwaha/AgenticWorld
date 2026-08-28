@@ -1,9 +1,5 @@
 # Research Mode Selection - Forge Engineering Lifecycle Framework
 
-## Overview
-
-This document provides criteria for selecting between Quick Research and Deep Research modes based on decision context.
-
 ## Mode Comparison
 
 | Factor | Quick Research | Deep Research |
@@ -13,30 +9,22 @@ This document provides criteria for selecting between Quick Research and Deep Re
 | **Depth** | Surface | Comprehensive |
 | **Iterations** | Single-pass | Multi-pass |
 | **Confidence** | Medium | High |
-| **Cost** | Low | High |
-| **Risk if wrong** | Lower | Higher |
 
-## Selection Decision Matrix
+## Selection Criteria
 
 ### Use Quick Research When:
-- [ ] Decision is reversible or low-impact
-- [ ] Time constraints are tight (< 1 week)
-- [ ] Domain is well-understood
-- [ ] Multiple acceptable solutions exist
-- [ ] Stakeholder accepts medium confidence
-- [ ] Budget is limited
-- [ ] Technology is mature and stable
-- [ ] Prior research exists that can be leveraged
+- Decision is reversible or low-impact
+- Time constraints are tight (< 1 week)
+- Domain is well-understood
+- Multiple acceptable solutions exist
+- Stakeholder accepts medium confidence
 
 ### Use Deep Research When:
-- [ ] Decision is irreversible or high-impact
-- [ ] Significant investment is at stake
-- [ ] Domain is novel or complex
-- [ ] Only one solution will be chosen
-- [ ] Stakeholder requires high confidence
-- [ ] Budget allows for thorough investigation
-- [ ] Technology is emerging or rapidly evolving
-- [ ] Prior research is insufficient or outdated
+- Decision is irreversible or high-impact
+- Significant investment is at stake
+- Domain is novel or complex
+- Only one solution will be chosen
+- Stakeholder requires high confidence
 
 ## Decision Tree
 
@@ -44,9 +32,7 @@ This document provides criteria for selecting between Quick Research and Deep Re
 Is the decision reversible?
 ├── YES → Is time constrained?
 │   ├── YES → Quick Research
-│   └── NO → Is budget limited?
-│       ├── YES → Quick Research
-│       └── NO → Quick Research (with option to deepen)
+│   └── NO → Quick Research (with option to deepen)
 └── NO → Is the impact significant?
     ├── YES → Deep Research
     └── NO → Is confidence requirement high?
@@ -54,26 +40,24 @@ Is the decision reversible?
         └── NO → Quick Research
 ```
 
-## Risk Assessment for Mode Selection
+## Risk Assessment
 
-| Risk Level | Recommended Mode | Rationale |
-|------------|------------------|-----------|
-| Low | Quick | Acceptable to move forward with medium confidence |
-| Medium | Quick (with deepening option) | Start quick, deepen if needed |
-| High | Deep | Cannot afford to be wrong |
-| Critical | Deep + PoC | Must validate with proof of concept |
+| Risk Level | Recommended Mode |
+|------------|------------------|
+| Low | Quick |
+| Medium | Quick (with deepening option) |
+| High | Deep |
+| Critical | Deep + PoC |
 
 ## Escalation Triggers (Quick → Deep)
 
-Escalate from Quick to Deep research when:
-1. Initial findings are contradictory or inconclusive
+1. Initial findings contradictory or inconclusive
 2. Stakeholder confidence in results is low
-3. New questions emerge that require deeper investigation
-4. Decision impact is higher than initially assessed
+3. New questions emerge requiring deeper investigation
+4. Decision impact higher than initially assessed
 5. Time becomes available for deeper investigation
-6. Initial recommendation is challenged by experts
 
-## Research Output Validation
+## Output Validation
 
 ### Validation Checklist
 - [ ] All research objectives addressed
@@ -85,7 +69,6 @@ Escalate from Quick to Deep research when:
 - [ ] Accuracy metrics met
 - [ ] (Deep) Iterative investigation completed
 - [ ] Stakeholder review obtained
-- [ ] Peer review completed (deep only)
 
 ### Validation Failure Recovery
 1. Identify gaps and unmet criteria
@@ -93,34 +76,22 @@ Escalate from Quick to Deep research when:
 3. Plan targeted additional research
 4. Execute additional investigation
 5. Re-validate output
-6. Document what was added and why
 
-## Stakeholder Review Process
+## Stakeholder Review
 
 ### Review Steps
-1. **Prepare summary**: Executive summary with key findings and recommendations
-2. **Present evidence**: Show source quality and verification status
-3. **Highlight uncertainties**: Be transparent about limitations
-4. **Gather feedback**: Collect questions, concerns, and additional context
-5. **Iterate if needed**: Address feedback with additional research
-6. **Obtain sign-off**: Get explicit approval to proceed
+1. Prepare summary with key findings and recommendations
+2. Present evidence and verification status
+3. Highlight uncertainties and limitations
+4. Gather feedback
+5. Iterate if needed
+6. Obtain sign-off
 
 ### Review Template
 ```
 Research Review
-
-Topic: [research topic]
-Mode: [quick | deep]
-Reviewer: [name]
-Date: [date]
-
-Findings Acceptable? [YES/NO]
-Evidence Sufficient? [YES/NO]
-Confidence Adequate? [YES/NO]
-Recommendations Actionable? [YES/NO]
-
-Comments:
-[feedback]
-
-Approved to proceed? [YES/NO]
+Topic: [topic] | Mode: [quick|deep] | Reviewer: [name]
+Findings Acceptable? [YES/NO] | Evidence Sufficient? [YES/NO]
+Confidence Adequate? [YES/NO] | Recommendations Actionable? [YES/NO]
+Comments: [feedback] | Approved? [YES/NO]
 ```

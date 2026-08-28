@@ -1,187 +1,69 @@
 # Test Plan
 
-**Created**: [ISO 8601 timestamp]
-**Phase**: Testing
-**Status**: [draft | review | approved]
-**Author**: [Agent/Team name]
-**Version**: [Semantic version]
-
----
+**Created**: [ISO 8601] | **Phase**: Testing | **Status**: [draft|review|approved]
+**Author**: [Name] | **Version**: [SemVer]
 
 ## Executive Summary
+[2-3 sentences: what will be tested, approach, results summary]
 
-*Guidance: 2-3 sentences covering what will be tested, approach, and results summary.*
-
-[2-3 sentence overview of the test scope, approach, and results]
-
-## Test Scope
-
-### In Scope
-*Guidance: List specific features/components to be tested.*
-- [Feature/component 1]
-- [Feature/component 2]
-
-### Out of Scope
-*Guidance: Explicitly state what is NOT being tested.*
-- [Feature/component 1]
-- [Feature/component 2]
+## Scope
+**In Scope**: [features/components] | **Out of Scope**: [items]
 
 ## Test Strategy
-
-### Test Types
-
-*Guidance: Define which test types are needed and their approach.*
 
 | Type | Approach | Tools | Responsibility |
 |------|----------|-------|----------------|
 | Unit | [approach] | [tools] | [who] |
 | Integration | [approach] | [tools] | [who] |
 | System | [approach] | [tools] | [who] |
-| Performance | [approach] | [tools] | [who] |
-| Security | [approach] | [tools] | [who] |
 
-### Test Levels
-
-1. **Unit Testing**: Individual functions/methods
-2. **Integration Testing**: Component interactions
-3. **System Testing**: End-to-end workflows
-4. **Acceptance Testing**: Business requirements
-
-## Entry Criteria
-
-*Guidance: Conditions that must be met before testing begins.*
-
-- [ ] Code complete and deployed to test environment
-- [ ] Unit tests passing
-- [ ] Test environment ready
-- [ ] Test data prepared
-- [ ] Test cases reviewed
-
-## Exit Criteria
-
-*Guidance: Conditions that must be met before testing is considered complete.*
-
-- [ ] All planned tests executed
-- [ ] Critical and high defects resolved
-- [ ] Code coverage targets met
-- [ ] No open critical defects
-- [ ] Test report approved
+## Entry/Exit Criteria
+**Entry**: [criteria] | **Exit**: [criteria]
 
 ## Test Cases
 
 ### TC-001: [Title]
-
-*Guidance: Each test case should be independent and repeatable.*
-
-**Priority**: [critical | high | medium | low]
-
-**Type**: [unit | integration | system | performance | security]
-
-**Preconditions**:
-- [Condition 1]
-- [Condition 2]
-
-**Test Steps**:
-1. [Step 1]
-2. [Step 2]
-3. [Step 3]
-
-**Expected Result**: [What should happen]
-
-**Actual Result**: [Filled during execution]
-
-**Status**: [pass | fail | blocked | not-run]
-
-### TC-002: [Title]
-
-[Repeat format above]
+**Priority**: [critical|high|medium|low] | **Type**: [unit|integration|system]
+**Preconditions**: [conditions]
+**Steps**: 1. [Step 1] 2. [Step 2]
+**Expected**: [result] | **Actual**: [result] | **Status**: [pass|fail|blocked]
 
 ## Test Data
-
-*Guidance: Define what test data is needed and how it will be created.*
 
 | Data Set | Purpose | Source |
 |----------|---------|--------|
 | [Set 1] | [purpose] | [source] |
-| [Set 2] | [purpose] | [source] |
 
 ## Test Environment
 
 | Component | Configuration |
 |-----------|---------------|
 | [Component] | [config] |
-| [Component] | [config] |
 
 ## Defect Summary
 
 | Severity | Found | Fixed | Open | Verified |
 |----------|-------|-------|------|----------|
-| Critical | [count] | [count] | [count] | [count] |
-| High | [count] | [count] | [count] | [count] |
-| Medium | [count] | [count] | [count] | [count] |
-| Low | [count] | [count] | [count] | [count] |
-
-### Open Defects
-
-| ID | Title | Severity | Status |
-|----|-------|----------|--------|
-| [ID] | [title] | [severity] | [status] |
-| [ID] | [title] | [severity] | [status] |
+| Critical | [n] | [n] | [n] | [n] |
+| High | [n] | [n] | [n] | [n] |
 
 ## Coverage
 
-### Code Coverage
-
-| Component | Line Coverage | Branch Coverage | Target |
-|-----------|---------------|-----------------|--------|
-| [Component] | [%] | [%] | [%] |
+| Component | Line % | Branch % | Target |
+|-----------|--------|----------|--------|
 | [Component] | [%] | [%] | [%] |
 
-### Requirement Coverage
+## Requirement Coverage
 
 | Requirement | Test Cases | Status |
 |-------------|------------|--------|
 | [REQ-01] | [TC-001, TC-002] | [covered] |
-| [REQ-02] | [TC-003] | [covered] |
-
-## Performance Test Results
-
-| Metric | Target | Actual | Status |
-|--------|--------|--------|--------|
-| [Metric] | [target] | [actual] | [pass/fail] |
-| [Metric] | [target] | [actual] | [pass/fail] |
-
-## Security Test Results
-
-| Test | Finding | Severity | Status |
-|------|---------|----------|--------|
-| [Test] | [finding] | [severity] | [open/closed] |
-| [Test] | [finding] | [severity] | [open/closed] |
 
 ## Quality Assessment
+**Overall**: [Excellent|Good|Acceptable|Poor]
+**Recommendation**: [Go / No-Go / Go with conditions]
 
-**Overall Quality**: [Excellent | Good | Acceptable | Poor]
-
-**Assessment**: [Detailed assessment]
-
-**Go/No-Go Recommendation**: [Go / No-Go / Go with conditions]
-
-## Risks and Concerns
-
+## Risks and Concerns / Next Steps / References
 - [Risk 1]: [description and impact]
-- [Risk 2]: [description and impact]
-
-## Next Steps
-
-1. [Action item 1]
-2. [Action item 2]
-3. [Action item 3]
-
-## References
-
-- [Reference 1]: [description and link]
-- [Reference 2]: [description and link]
-
-## Appendix
-
-[Any supplementary material]
+- [Step 1]: [action]
+- [Reference 1]: [citation]
