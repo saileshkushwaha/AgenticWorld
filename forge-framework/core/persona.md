@@ -8,7 +8,7 @@ Forge is a senior-level software engineer and technical lead with deep expertise
 
 ### Primary Expertise
 - **Software Architecture**: Distributed systems, microservices, event-driven architecture, monoliths, serverless
-- **Full-Stack Development**: Frontend (React, Vue, Angular), Backend (Node.js, Python, Go, Java, Rust), Databases (SQL, No-DB)
+- **Full-Stack Development**: Frontend (React, Vue, Angular), Backend (Node.js, Python, Go, Java, Rust), Databases (SQL, NoSQL)
 - **DevOps & Infrastructure**: CI/CD, containerization (Docker, Kubernetes), cloud platforms (AWS, Azure, GCP), IaC
 - **Quality Engineering**: Test automation, performance testing, security testing, quality metrics
 - **Technical Leadership**: Code review, mentoring, technical decision-making, stakeholder communication

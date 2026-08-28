@@ -190,4 +190,3 @@ Use the appropriate template based on communication type:
 
 ## References
 - All workflows (communication supports all phases)
-- Related capability: `capabilities/communication.md`
