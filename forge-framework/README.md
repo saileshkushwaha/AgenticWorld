@@ -1,454 +1,163 @@
 # Forge Engineering Lifecycle Framework
 
-A production-ready, markdown-based agentic framework for end-to-end Software Development Lifecycle (SDLC) operations. Forge is tool-independent, model-agnostic, and produces consistent artifacts across any AI agent platform.
-
-## Table of Contents
-
-- [Overview](#overview)
-- [Why Forge?](#why-forge)
-- [Core Capabilities](#core-capabilities)
-- [Quick Start](#quick-start)
-- [Installation](#installation)
-- [Directory Structure](#directory-structure)
-- [Usage Guide](#usage-guide)
-- [Configuration](#configuration)
-- [Use Cases](#use-cases)
-- [Design Principles](#design-principles)
-- [Versioning](#versioning)
-- [Contributing](#contributing)
-- [FAQ](#faq)
-- [License](#license)
-
-## Overview
-
-Forge provides a structured framework for AI agents to perform complex SDLC tasks including research, analysis, design, implementation, testing, debugging, deployment, modernization, and communication. The framework ensures consistent, high-quality outputs regardless of the underlying AI model or agentic tool.
-
-Unlike ad-hoc prompting, Forge provides:
-- **Structured workflows** with clear steps, inputs, outputs, and quality gates
-- **Standardized templates** for all artifacts ensuring consistency
-- **Decision frameworks** for navigating trade-offs
-- **Self-verification habits** built into every phase
+A production-ready, markdown-based agentic framework for end-to-end SDLC operations. Tool-independent, model-agnostic, and produces consistent artifacts across any AI agent platform.
 
 ## Why Forge?
-
-### The Problem
-
-AI agents producing software engineering work often:
-- Skip critical steps (jumping from requirements to code)
-- Produce inconsistent outputs across different models
-- Lack verification and quality assurance
-- Make undocumented assumptions
-- Ignore edge cases and error handling
-
-### The Solution
-
-Forge addresses these issues by:
-1. **Enforcing structure**: Every phase has defined steps that must be followed
-2. **Standardizing outputs**: Templates ensure consistent artifact format
-3. **Building in verification**: Quality gates at every step prevent skipping
-4. **Requiring documentation**: Assumptions, decisions, and rationale must be recorded
-5. **Being model-agnostic**: Works with any instruction-tuned LLM
-
-### Comparison
 
 | Feature | Ad-hoc Prompting | Forge Framework |
 |---------|-----------------|-----------------|
 | Consistency | Low | High |
-| Completeness | Variable | Guaranteed |
 | Quality Gates | None | Built-in |
 | Artifact Format | Inconsistent | Standardized |
 | Decision Documentation | Rare | Required |
 | Edge Case Coverage | Hit or miss | Systematic |
 
-## Core Capabilities
+## Core Capabilities (34 Workflows)
 
-| Capability | Description | Workflow |
-|------------|-------------|----------|
-| Research | Technology evaluation, best practices, competitive analysis | [01-research](workflows/01-research.md) |
-| Analysis | Requirements analysis, feasibility study, risk assessment | [02-analyze](workflows/02-analyze.md) |
-| Design | Architecture, component, data model, API design | [03-design](workflows/03-design.md) |
-| Implementation | Coding, unit testing, integration | [04-implement](workflows/04-implement.md) |
-| Testing | Test planning, execution, coverage analysis | [05-test](workflows/05-test.md) |
-| Debugging | Reproduction, root cause analysis, fix implementation | [06-debug](workflows/06-debug.md) |
-| Deployment | Environment setup, deployment strategy, rollback planning | [07-deploy](workflows/07-deploy.md) |
-| Modernization | Legacy migration, tech stack upgrades, refactoring | [08-modernize](workflows/08-modernize.md) |
-| Communication | Reporting, documentation, stakeholder updates | [09-communication](workflows/09-communication.md) |
+### Foundation Workflows (01-09)
+| # | Capability | Workflow |
+|---|------------|----------|
+| 1 | Research | [01-research](workflows/01-research.md) |
+| 2 | Analysis | [02-analyze](workflows/02-analyze.md) |
+| 3 | Design | [03-design](workflows/03-design.md) |
+| 4 | Implementation | [04-implement](workflows/04-implement.md) |
+| 5 | Testing | [05-test](workflows/05-test.md) |
+| 6 | Debugging | [06-debug](workflows/06-debug.md) |
+| 7 | Deployment | [07-deploy](workflows/07-deploy.md) |
+| 8 | Modernization | [08-modernize](workflows/08-modernize.md) |
+| 9 | Communication | [09-communication](workflows/09-communication.md) |
+
+### Critical Workflows (10-14)
+| # | Capability | Workflow |
+|---|------------|----------|
+| 10 | Security Audit | [10-security](workflows/10-security.md) |
+| 11 | Performance Optimization | [11-performance](workflows/11-performance.md) |
+| 12 | Incident Management | [12-incident](workflows/12-incident.md) |
+| 13 | Code Review | [13-code-review](workflows/13-code-review.md) |
+| 14 | Project Planning | [14-project-planning](workflows/14-project-planning.md) |
+
+### Important Workflows (15-19)
+| # | Capability | Workflow |
+|---|------------|----------|
+| 15 | Documentation | [15-documentation](workflows/15-documentation.md) |
+| 16 | Configuration Management | [16-configuration](workflows/16-configuration.md) |
+| 17 | Release Management | [17-release](workflows/17-release.md) |
+| 18 | Quality Assurance | [18-qa](workflows/18-qa.md) |
+| 19 | API Management | [19-api](workflows/19-api.md) |
+
+### Specialized Workflows (20-29)
+| # | Capability | Workflow |
+|---|------------|----------|
+| 20 | Data Migration | [20-data-migration](workflows/20-data-migration.md) |
+| 21 | Disaster Recovery | [21-disaster-recovery](workflows/21-disaster-recovery.md) |
+| 22 | Compliance Audit | [22-compliance](workflows/22-compliance.md) |
+| 23 | FinOps | [23-finops](workflows/23-finops.md) |
+| 24 | Monitoring & Observability | [24-monitoring](workflows/24-monitoring.md) |
+| 25 | Stakeholder Management | [25-stakeholder](workflows/25-stakeholder.md) |
+| 26 | Change Management | [26-change-management](workflows/26-change-management.md) |
+| 27 | Knowledge Management | [27-knowledge](workflows/27-knowledge.md) |
+| 28 | Mentoring | [28-mentoring](workflows/28-mentoring.md) |
+| 29 | Accessibility Audit | [29-accessibility](workflows/29-accessibility.md) |
+
+### Emerging Workflows (30-34)
+| # | Capability | Workflow |
+|---|------------|----------|
+| 30 | DevSecOps | [30-devsecops](workflows/30-devsecops.md) |
+| 31 | Green Coding | [31-green-coding](workflows/31-green-coding.md) |
+| 32 | AI-Augmented Development | [32-ai-augmented](workflows/32-ai-augmented.md) |
+| 33 | Multi-Agent Coordination | [33-multi-agent](workflows/33-multi-agent.md) |
+| 34 | Post-Quantum Security | [34-post-quantum](workflows/34-post-quantum.md) |
 
 ## Quick Start
 
-### 5-Minute Setup
-
-1. **Clone or download** the framework files
-2. **Load the system prompt** from `core/system-prompt.md` into your agent
-3. **Select a workflow** based on your current task
-4. **Follow the workflow** steps sequentially
-5. **Generate artifacts** using the provided templates
-
-### Example: Research Task
-
-```
-1. Load core/system-prompt.md as system prompt
-2. Load workflows/01-research.md as context
-3. Ask: "Research the best ORM for a Python microservice"
-4. Forge follows the 7-step research workflow
-5. Output uses templates/research-report.md format
-```
-
-### Example: Implementation Task
-
-```
-1. Load core/system-prompt.md as system prompt
-2. Load workflows/04-implement.md as context
-3. Ask: "Implement a JWT authentication middleware"
-4. Forge follows the 7-step implementation workflow
-5. Output uses templates/implementation-plan.md format
-```
-
-## Installation
-
-### Option 1: Direct Download
-
-Download the framework files and place them in your project:
-
-```
-your-project/
-├── forge-framework/
-│   ├── README.md
-│   ├── core/
-│   ├── workflows/
-│   ├── capabilities/
-│   ├── templates/
-│   └── artifacts/
-└── your-code/
-```
-
-### Option 2: Git Submodule
-
-```bash
-git submodule add https://github.com/your-repo/forge-framework.git
-```
-
-### Option 3: Copy Core Files
-
-For minimal setup, copy only the files you need:
-
-```
-your-project/
-├── system-prompt.md    # From core/
-├── workflows/          # Select relevant workflows
-└── templates/          # Select relevant templates
-```
-
-### Requirements
-
-- An AI agent or LLM with instruction-following capability
-- Context window large enough to hold system prompt + workflow (recommended: 8K+ tokens)
-- No specific programming language or framework required
+1. Load `core/system-prompt.md` as system prompt
+2. Select and load the relevant workflow
+3. Execute the task following workflow steps
+4. Review output against quality gates
 
 ## Directory Structure
 
 ```
 forge-framework/
-├── README.md                     # This file
-├── QUICK-REFERENCE.md            # One-page quick reference card
-├── GLOSSARY.md                   # Terms and definitions (100+ terms)
-├── ANTI-PATTERNS.md              # Common mistakes (30+ anti-patterns)
-├── METRICS.md                    # KPIs and quality scorecard
-├── CHANGELOG.md                  # Version history
-├── DIAGRAMS.md                    # Visual diagrams and Mermaid charts
-├── core/
-│   ├── system-prompt.md          # Main system prompt and agent identity
-│   ├── persona.md                # Agent persona definition
-│   └── principles.md             # Core operating principles (10 principles)
-├── workflows/
-│   ├── 01-research.md            # Research phase workflow
-│   ├── 02-analyze.md             # Analysis phase workflow
-│   ├── 03-design.md              # Design phase workflow
-│   ├── 04-implement.md           # Implementation phase workflow
-│   ├── 05-test.md                # Testing phase workflow
-│   ├── 06-debug.md               # Debugging phase workflow
-│   ├── 07-deploy.md              # Deployment phase workflow
-│   ├── 08-modernize.md           # Modernization phase workflow
-│   └── 09-communication.md       # Communication phase workflow
-├── capabilities/
-│   ├── research.md               # Research capability (5 proficiency levels)
-│   ├── analysis.md               # Analysis capability (5 proficiency levels)
-│   ├── design.md                 # Design capability (5 proficiency levels)
-│   ├── implementation.md         # Implementation capability (5 proficiency levels)
-│   ├── testing.md                # Testing capability (5 proficiency levels)
-│   ├── debugging.md              # Debugging capability (5 proficiency levels)
-│   ├── deployment.md             # Deployment capability (5 proficiency levels)
-│   └── modernization.md          # Modernization capability (5 proficiency levels)
-├── templates/
-│   ├── research-report.md        # Research report template (with examples)
-│   ├── analysis-report.md        # Analysis report template (with examples)
-│   ├── design-document.md        # Design document template (with examples)
-│   ├── implementation-plan.md   # Implementation plan template (with examples)
-│   ├── test-plan.md             # Test plan template (with examples)
-│   ├── debug-report.md          # Debug report template (with examples)
-│   ├── deployment-plan.md       # Deployment plan template (with examples)
-│   └── modernization-plan.md    # Modernization plan template (with examples)
-├── artifacts/
-│   └── output-format.md          # Artifact output format specification
-├── guides/
-│   ├── integration-guide.md      # How workflows connect
-│   ├── configuration-guide.md    # Configuration options reference
-│   └── troubleshooting.md        # Common issues and solutions
-└── examples/
-    └── research-report-example.md # Complete filled artifact example
+├── README.md, QUICK-REFERENCE.md, GLOSSARY.md, ANTI-PATTERNS.md
+├── METRICS.md, CHANGELOG.md, DIAGRAMS.md, FRAMEWORK_ENHANCEMENT_RESEARCH.md
+├── core/ (system-prompt.md, persona.md, principles.md)
+├── workflows/ (01-34)
+├── capabilities/ (34 capability definitions)
+├── templates/ (34 artifact templates)
+├── artifacts/ (output-format.md)
+├── guides/ (integration, configuration, troubleshooting, web-search,
+│           research-mode-selection, onboarding, migration, compatibility)
+└── examples/ (research-report-example.md, analysis-report-example.md)
 ```
-
-## Usage Guide
-
-### Basic Usage
-
-1. **Load the system prompt** into your agent's system prompt field
-2. **Identify the task** you need to accomplish
-3. **Select the appropriate workflow** from the workflows directory
-4. **Provide the workflow** as context to your agent
-5. **Execute the task** following the workflow steps
-6. **Review the output** against quality gates
-
-### Advanced Usage
-
-#### Multi-Phase Projects
-
-For projects spanning multiple phases:
-
-1. Complete the first phase workflow
-2. Use the output artifact as input to the next phase
-3. Reference previous decisions and rationale
-4. Maintain context preservation across phases
-
-#### Custom Workflows
-
-To create custom workflows:
-
-1. Copy an existing workflow as a starting point
-2. Modify steps to fit your domain
-3. Define quality gates appropriate to your context
-4. Create a matching template for the output
-5. Document the new workflow in the capabilities directory
-
-#### Team Adoption
-
-For team-wide adoption:
-
-1. Start with one workflow (e.g., research or implementation)
-2. Train the team on using the framework
-3. Gather feedback and iterate
-4. Gradually introduce additional workflows
-5. Build a library of completed artifacts as examples
 
 ## Configuration
 
-### Global Configuration
+| Option | Default | Values |
+|--------|---------|--------|
+| `output_format` | markdown | markdown, html, json |
+| `quality_gates` | enabled | enabled, disabled |
+| `verbosity` | standard | minimal, standard, detailed |
+| `language` | en | en, es, fr, de, ja, zh |
+| `strict_mode` | false | true, false |
 
-| Option | Description | Default | Values |
-|--------|-------------|---------|--------|
-| `output_format` | Artifact output format | markdown | markdown, html, json |
-| `quality_gates` | Enable/disable quality gates | enabled | enabled, disabled |
-| `verbosity` | Output detail level | standard | minimal, standard, detailed |
-| `language` | Primary output language | en | en, es, fr, de, ja, zh |
-| `strict_mode` | Enforce all rules strictly | false | true, false |
+Create `forge.config.md` in project root with global settings and per-workflow overrides.
 
-### Per-Workflow Configuration
+## Key Features
 
-Each workflow can be configured individually:
+- **Model-Agnostic**: Works with any instruction-tuned LLM
+- **Tool-Agnostic**: Works with CLI, web, API, IDE, and custom agents
+- **34 Complete Workflows**: Covering the full modern SDLC
+- **Template-Enforced**: Consistent output structure
+- **Quality Gates**: Objective, measurable criteria
+- **Deep Research**: Quick and Deep research modes
+- **Self-Verification**: Built-in validation and refinement
+- **Hallucination Detection**: Source verification
+- **Security Built-In**: Security audit + DevSecOps + Post-Quantum
+- **Incident Response**: Production incident management
+- **Compliance**: Regulatory compliance audit
+- **Sustainability**: Green coding and FinOps
+- **AI-Ready**: AI-augmented development and multi-agent coordination
 
-| Option | Description | Default |
-|--------|-------------|---------|
-| `time_estimate` | Include time estimates | true |
-| `tool_recommendations` | Include tool suggestions | true |
-| `edge_cases` | Include edge case handling | true |
-| `examples` | Include worked examples | true |
-
-### Configuration File
-
-Create a `forge.config.md` in your project root:
-
-```markdown
-# Forge Configuration
-
-## Global Settings
-- output_format: markdown
-- quality_gates: enabled
-- verbosity: detailed
-- language: en
-- strict_mode: true
-
-## Workflow Overrides
-- 04-implement:
-  - verbosity: detailed
-  - examples: true
-- 07-deploy:
-  - strict_mode: true
-```
-
-## Use Cases
-
-### Use Case 1: Greenfield Project
-
-**Scenario**: Starting a new project from scratch
-
-**Workflows Used**: Research → Analysis → Design → Implementation → Testing → Deployment
-
-**Process**:
-1. Research technologies and approaches
-2. Analyze requirements and feasibility
-3. Design system architecture
-4. Implement features incrementally
-5. Test thoroughly
-6. Deploy to production
-
-### Use Case 2: Feature Addition
-
-**Scenario**: Adding a new feature to an existing system
-
-**Workflows Used**: Analysis → Design → Implementation → Testing → Deployment
-
-**Process**:
-1. Analyze the feature requirements
-2. Design the feature within existing architecture
-3. Implement with proper integration
-4. Test the feature and regressions
-5. Deploy with appropriate strategy
-
-### Use Case 3: Bug Fix
-
-**Scenario**: Fixing a production bug
-
-**Workflows Used**: Debugging → Implementation → Testing → Deployment
-
-**Process**:
-1. Reproduce and isolate the bug
-2. Perform root cause analysis
-3. Implement the fix
-4. Test the fix and regressions
-5. Deploy with rollback plan
-
-### Use Case 4: Legacy Modernization
-
-**Scenario**: Migrating a legacy system to modern stack
-
-**Workflows Used**: Research → Analysis → Design → Modernization → Testing → Deployment
-
-**Process**:
-1. Research modernization approaches
-2. Analyze current system and constraints
-3. Design target architecture
-4. Execute incremental migration
-5. Test thoroughly at each phase
-6. Deploy with coexistence strategy
-
-### Use Case 5: Technical Due Diligence
-
-**Scenario**: Evaluating a codebase for acquisition
-
-**Workflows Used**: Research → Analysis → Communication
-
-**Process**:
-1. Research the technology stack and market
-2. Analyze code quality, architecture, and risks
-3. Communicate findings to stakeholders
-
-## Design Principles
-
-1. **Evidence over assumption** - All conclusions must be supported by evidence
-2. **Incremental verification** - Verify each step before proceeding
-3. **Structured thinking** - Follow defined processes for consistency
-4. **Artifact consistency** - Produce standardized outputs across all phases
-5. **Context preservation** - Maintain context across workflow transitions
-6. **Proactive risk identification** - Identify and mitigate risks early
-7. **Documentation as first-class concern** - Document decisions and rationale
-8. **Security by design** - Integrate security at every phase
-9. **Performance awareness** - Consider performance at every phase
-10. **Continuous learning** - Incorporate lessons learned
-
-## Versioning
-
-Forge uses semantic versioning (MAJOR.MINOR.PATCH):
-
-- **MAJOR**: Breaking changes to workflows or templates
-- **MINOR**: New workflows, capabilities, or features
-- **PATCH**: Corrections, clarifications, improvements
-
-### Version History
+## Version History
 
 | Version | Date | Changes |
 |---------|------|---------|
+| v3.0.0 | 2026-08-28 | Added 15 new workflows (Tier 3 + Tier 4) for complete SDLC coverage |
+| v2.0.0 | 2026-08-28 | Added 10 new workflows (Security, Performance, Incident, Code Review, Planning, Docs, Config, Release, QA, API) |
+| v1.4.0 | 2026-08-28 | Optimized for token efficiency |
+| v1.3.0 | 2026-08-28 | Compatibility guide for model/tool-agnostic output |
+| v1.2.0 | 2026-08-28 | Enhanced research, web search, onboarding, migration |
+| v1.1.0 | 2026-08-28 | Supporting docs, diagrams, metrics, anti-patterns |
 | v1.0.0 | 2026-08-28 | Initial release |
-
-## Contributing
-
-### How to Contribute
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/your-feature`)
-3. Make your changes following the framework conventions
-4. Test your changes with at least one AI model
-5. Submit a pull request
-
-### Contribution Guidelines
-
-- Follow the existing file structure and naming conventions
-- Use the templates provided for new artifacts
-- Include quality gates for new workflows
-- Document decisions and rationale
-- Test with multiple AI models for consistency
-- Update the version number appropriately
-
-### Reporting Issues
-
-- Use the issue tracker
-- Include the workflow or file where the issue occurs
-- Describe the expected vs actual behavior
-- Include the AI model used (if relevant)
 
 ## FAQ
 
-### General Questions
-
-**Q: What AI models does Forge work with?**
-A: Forge works with any instruction-tuned LLM including Claude, GPT-4/5, Gemini, Llama, and others. The framework is model-agnostic.
-
-**Q: Do I need to use all workflows?**
-A: No. Use only the workflows relevant to your current task. Start with one and expand as needed.
-
-**Q: Can I customize the workflows?**
-A: Yes. Fork the framework and modify workflows to fit your specific needs. See the Usage Guide for customization tips.
+**Q: What AI models work with Forge?**
+A: Any instruction-tuned LLM. Tested with Claude, GPT-4/5, Gemini, Llama.
 
 **Q: How much context window do I need?**
-A: Minimum 8K tokens for basic usage. 32K+ recommended for complex multi-phase projects.
+A: Minimum 8K tokens. 32K+ recommended for complex projects.
 
-### Technical Questions
+**Q: Can I customize workflows?**
+A: Yes. Fork and modify to fit your specific needs.
 
-**Q: What if a workflow step doesn't apply to my situation?**
-A: Skip the step but document why it was skipped. Quality gates should still be satisfied.
+**Q: How is output consistency ensured?**
+A: Template enforcement + quality gates + output normalization.
 
-**Q: How do I handle multi-phase projects?**
-A: Complete one phase, use its output as input to the next phase. Maintain context by referencing previous decisions.
+**Q: What if quality gates fail?**
+A: Iterative refinement up to 3 retries with specific feedback.
 
-**Q: Can I use Forge for non-software projects?**
-A: While designed for SDLC, the structured approach works for any complex problem-solving task.
+**Q: How many workflows are there?**
+A: 34 complete workflows covering the full modern SDLC.
 
-### Adoption Questions
-
-**Q: How do I get my team to adopt Forge?**
-A: Start with one workflow, demonstrate value, gather feedback, and gradually expand. See the Team Adoption section.
-
-**Q: How long does it take to learn Forge?**
-A: Basic usage takes 15 minutes. Full proficiency takes 1-2 weeks of regular use.
+**Q: What about emerging practices like AI and quantum?**
+A: Covered in workflows 30-34 (DevSecOps, Green Coding, AI-Augmented, Multi-Agent, Post-Quantum).
 
 ## License
 
-This framework is open source and available for use in personal and commercial projects.
+Open source. Free for personal and commercial use.
 
 ---
 
-**Next Steps**:
-- Read the [Quick Reference](QUICK-REFERENCE.md) for a one-page summary
-- Explore the [Workflows](workflows/) directory
-- Review the [Templates](templates/) for artifact formats
-- Check the [Glossary](GLOSSARY.md) for terminology
-- View [Diagrams](DIAGRAMS.md) for visual reference
+**Next Steps**: Read [QUICK-REFERENCE.md](QUICK-REFERENCE.md) | Explore [workflows/](workflows/) | View [DIAGRAMS.md](DIAGRAMS.md)
