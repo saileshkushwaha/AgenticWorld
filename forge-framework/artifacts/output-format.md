@@ -246,3 +246,63 @@ Before delivering any artifact, verify:
 - [ ] References included
 - [ ] Formatting follows this specification
 - [ ] Spelling and grammar checked
+
+## Model-Agnostic Output Rules
+
+To ensure identical output structure regardless of which LLM generates it:
+
+1. **Always use the exact template** for the artifact type - never improvise structure
+2. **Always include all required sections** - even if a section has minimal content
+3. **Always use the exact header format** specified in the template
+4. **Always use Markdown tables** for structured data (decisions, risks, comparisons)
+5. **Always use bullet lists** for unordered items and numbered lists for sequential items
+6. **Never use HTML tags** - use only Markdown syntax
+7. **Never skip sections** - if no content, write "None identified" or "N/A"
+8. **Always cite sources** for claims, statistics, and external information
+
+## Output Validation Procedure
+
+### Step 1: Structure Validation
+Verify the output contains all sections required by the template. If sections are missing, add them with appropriate content.
+
+### Step 2: Format Normalization
+Ensure all formatting follows the specification:
+- Headers use ATX style (# not underlines)
+- Tables use proper Markdown table syntax
+- Lists use proper Markdown list syntax
+- Code blocks specify language identifier
+
+### Step 3: Content Validation
+Verify all content meets quality criteria:
+- Claims supported by evidence
+- Decisions documented with rationale
+- Risks have probability, impact, and mitigation
+- Recommendations are actionable
+
+### Step 4: Hallucination Check
+Verify all factual claims:
+- Statistics have citations
+- References are real and accessible
+- Technical details are accurate
+- Version numbers and dates are correct
+
+## Iterative Refinement
+
+If output does not meet quality gates after initial generation:
+
+1. Identify which quality gates failed
+2. Provide specific feedback on what is missing
+3. Request targeted revision
+4. Re-validate the revised output
+5. Repeat up to 3 times until quality gates pass
+
+### Refinement Prompt
+```
+The output does not meet these quality gates:
+- [List failed gates]
+
+Please revise to address:
+- [Specific issues]
+
+Ensure the revised output follows the [template name] template exactly.
+```

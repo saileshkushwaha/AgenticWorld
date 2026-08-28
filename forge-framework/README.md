@@ -197,7 +197,8 @@ forge-framework/
 │   ├── web-search-guide.md       # Web search integration and query templates
 │   ├── research-mode-selection.md # Quick vs deep research decision guide
 │   ├── onboarding-guide.md       # Getting started guide
-│   └── migration-guide.md        # Migrating from other frameworks
+│   ├── migration-guide.md        # Migrating from other frameworks
+│   └── compatibility-guide.md    # Model & tool compatibility guide
 └── examples/
     ├── research-report-example.md # Complete filled research artifact
     └── analysis-report-example.md # Complete filled analysis artifact
@@ -382,6 +383,7 @@ Forge uses semantic versioning (MAJOR.MINOR.PATCH):
 
 | Version | Date | Changes |
 |---------|------|---------|
+| v1.3.0 | 2026-08-28 | Added compatibility guide for model-agnostic and tool-agnostic output |
 | v1.2.0 | 2026-08-28 | Enhanced research with deep mode, web search guide, onboarding, migration, troubleshooting |
 | v1.1.0 | 2026-08-28 | Added supporting docs, diagrams, metrics, anti-patterns |
 | v1.0.0 | 2026-08-28 | Initial release |
