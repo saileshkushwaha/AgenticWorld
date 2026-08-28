@@ -4,6 +4,16 @@
 
 The ability to evaluate requirements, assess feasibility, identify risks, and perform trade-off analysis to inform decision-making.
 
+## Proficiency Levels
+
+| Level | Title | Description |
+|-------|-------|-------------|
+| 1 | Novice | Can document requirements but struggles with analysis and evaluation |
+| 2 | Competent | Can analyze requirements, identify basic risks, perform simple trade-offs |
+| 3 | Proficient | Can conduct thorough analysis, assess feasibility, create risk registers |
+| 4 | Expert | Can handle complex analysis, resolve conflicts, facilitate decisions |
+| 5 | Master | Can establish analysis practices, mentor others, handle novel domains |
+
 ## Scope
 
 ### In Scope
@@ -15,6 +25,7 @@ The ability to evaluate requirements, assess feasibility, identify risks, and pe
 - SWOT analysis
 - Cost-benefit analysis
 - Decision matrix creation
+- Stakeholder facilitation
 
 ### Out of Scope
 - Implementation of analyzed solutions (see Implementation capability)
@@ -29,6 +40,7 @@ The ability to evaluate requirements, assess feasibility, identify risks, and pe
 - Requirements validation and verification
 - Acceptance criteria definition
 - Traceability matrix creation
+- Ambiguity identification and resolution
 
 ### Feasibility Assessment
 - Technical feasibility evaluation
@@ -36,6 +48,7 @@ The ability to evaluate requirements, assess feasibility, identify risks, and pe
 - Operational feasibility assessment
 - Timeline feasibility analysis
 - Resource feasibility evaluation
+- Constraint impact assessment
 
 ### Risk Management
 - Risk identification (technical, operational, business)
@@ -43,6 +56,7 @@ The ability to evaluate requirements, assess feasibility, identify risks, and pe
 - Risk prioritization
 - Mitigation strategy development
 - Contingency planning
+- Risk monitoring and updating
 
 ### Trade-off Analysis
 - Criteria definition and weighting
@@ -50,6 +64,38 @@ The ability to evaluate requirements, assess feasibility, identify risks, and pe
 - Pareto analysis
 - Decision matrix construction
 - Sensitivity analysis
+- Stakeholder facilitation
+
+## Assessment Criteria
+
+### Level 1 (Novice)
+- [ ] Can document basic requirements
+- [ ] Can identify obvious risks
+- [ ] Can compare options on single criteria
+
+### Level 2 (Competent)
+- [ ] Can classify and prioritize requirements
+- [ ] Can create a basic risk register
+- [ ] Can perform cost-benefit analysis
+- [ ] Can create acceptance criteria
+
+### Level 3 (Proficient)
+- [ ] Can conduct feasibility assessment across all dimensions
+- [ ] Can create a complete risk register with mitigations
+- [ ] Can facilitate trade-off analysis with stakeholders
+- [ ] Can create requirements traceability matrix
+
+### Level 4 (Expert)
+- [ ] Can handle ambiguous or conflicting requirements
+- [ ] Can facilitate stakeholder decision-making
+- [ ] Can identify hidden risks and constraints
+- [ ] Can mentor others in analysis techniques
+
+### Level 5 (Master)
+- [ ] Can establish organizational analysis practices
+- [ ] Can design analysis frameworks for new domains
+- [ ] Can evaluate and improve analysis methodologies
+- [ ] Can synthesize analysis across projects
 
 ## Inputs
 - Project objectives and context
@@ -83,3 +129,13 @@ The ability to evaluate requirements, assess feasibility, identify risks, and pe
 - Feasibility confidence level
 - Stakeholder agreement level
 - Analysis completeness score
+
+## Development Path
+
+To improve analysis capability:
+1. Study requirements engineering techniques
+2. Practice feasibility assessment
+3. Learn risk management frameworks
+4. Practice trade-off analysis with real scenarios
+5. Study domain-specific regulations and constraints
+6. Seek feedback on analysis quality

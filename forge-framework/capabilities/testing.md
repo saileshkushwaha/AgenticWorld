@@ -4,6 +4,16 @@
 
 The ability to verify that implementation meets requirements through systematic test planning, execution, and analysis.
 
+## Proficiency Levels
+
+| Level | Title | Description |
+|-------|-------|-------------|
+| 1 | Novice | Can write basic tests but struggles with strategy and analysis |
+| 2 | Competent | Can design test cases, execute tests, log defects |
+| 3 | Proficient | Can create test plans, analyze coverage, assess quality |
+| 4 | Expert | Can design test strategies, handle complex testing, mentor others |
+| 5 | Master | Can establish testing practices, create frameworks, handle novel domains |
+
 ## Scope
 
 ### In Scope
@@ -14,6 +24,7 @@ The ability to verify that implementation meets requirements through systematic 
 - Coverage analysis
 - Test reporting
 - Quality assessment
+- Test automation
 
 ### Out of Scope
 - Code fixes (see Debugging capability)
@@ -29,6 +40,7 @@ The ability to verify that implementation meets requirements through systematic 
 - Resource planning
 - Schedule creation
 - Risk-based test prioritization
+- Entry and exit criteria definition
 
 ### Test Case Design
 - Equivalence partitioning
@@ -37,6 +49,7 @@ The ability to verify that implementation meets requirements through systematic 
 - State transition testing
 - Exploratory testing
 - Test data design
+- Test case prioritization
 
 ### Test Execution
 - Manual test execution
@@ -45,6 +58,7 @@ The ability to verify that implementation meets requirements through systematic 
 - Security testing
 - Regression testing
 - Acceptance testing
+- Exploratory testing
 
 ### Defect Management
 - Defect identification and logging
@@ -52,6 +66,7 @@ The ability to verify that implementation meets requirements through systematic 
 - Defect tracking
 - Root cause analysis (basic)
 - Verification of fixes
+- Defect trend analysis
 
 ### Analysis
 - Coverage analysis (code, requirement, risk)
@@ -59,6 +74,37 @@ The ability to verify that implementation meets requirements through systematic 
 - Trend analysis
 - Risk assessment
 - Go/no-go recommendation
+
+## Assessment Criteria
+
+### Level 1 (Novice)
+- [ ] Can write basic unit tests
+- [ ] Can execute test cases
+- [ ] Can log defects
+
+### Level 2 (Competent)
+- [ ] Can design test cases using basic techniques
+- [ ] Can execute different test types
+- [ ] Can track defect resolution
+- [ ] Can measure code coverage
+
+### Level 3 (Proficient)
+- [ ] Can create comprehensive test plans
+- [ ] Can apply advanced test design techniques
+- [ ] Can analyze coverage and identify gaps
+- [ ] Can provide quality assessment
+
+### Level 4 (Expert)
+- [ ] Can design test strategies for complex systems
+- [ ] Can set up test automation frameworks
+- [ ] Can mentor others in testing techniques
+- [ ] Can facilitate quality decisions
+
+### Level 5 (Master)
+- [ ] Can establish organizational testing practices
+- [ ] Can create testing frameworks for new domains
+- [ ] Can evaluate and improve testing methodologies
+- [ ] Can synthesize testing across projects
 
 ## Inputs
 - Requirements document
@@ -96,3 +142,13 @@ The ability to verify that implementation meets requirements through systematic 
 - Test execution rate
 - Test pass rate
 - Defect density
+
+## Development Path
+
+To improve testing capability:
+1. Study test design techniques
+2. Practice writing different types of tests
+3. Learn test automation frameworks
+4. Study performance and security testing
+5. Practice coverage analysis
+6. Seek feedback on test quality
