@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MultiTube</string>
+    <string name="add_video">Add Video</string>
+    <string name="play_all">Play All</string>
+    <string name="pause_all">Pause All</string>
+    <string name="mute_all">Mute All</string>
+    <string name="grid_size">Grid Size</string>
+    <string name="enter_youtube_url">Enter YouTube URL or Video ID</string>
+    <string name="invalid_url">Invalid YouTube URL or ID</string>
+    <string name="max_videos">Maximum 16 videos allowed</string>
+    <string name="pip_not_supported">Picture-in-Picture not supported on this device</string>
+</resources>
