@@ -87,7 +87,8 @@ forge-framework/
 ├── templates/ (34 artifact templates)
 ├── artifacts/ (output-format.md)
 ├── guides/ (integration, configuration, troubleshooting, web-search,
-│           research-mode-selection, onboarding, migration, compatibility)
+│           research-mode-selection, onboarding, migration, compatibility,
+│           tool-connectors)
 └── examples/ (research-report-example.md, analysis-report-example.md)
 ```
 
