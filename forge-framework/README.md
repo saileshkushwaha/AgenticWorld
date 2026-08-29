@@ -81,6 +81,7 @@ A production-ready, markdown-based agentic framework for end-to-end SDLC operati
 forge-framework/
 ├── README.md, QUICK-REFERENCE.md, GLOSSARY.md, ANTI-PATTERNS.md
 ├── METRICS.md, CHANGELOG.md, DIAGRAMS.md, FRAMEWORK_ENHANCEMENT_RESEARCH.md
+├── VERSIONING.md, CONTRIBUTING.md, EXTENSION-POINTS.md, API-REFERENCE.md
 ├── core/ (system-prompt.md, persona.md, principles.md)
 ├── workflows/ (01-34)
 ├── capabilities/ (34 capability definitions)
@@ -123,6 +124,7 @@ Create `forge.config.md` in project root with global settings and per-workflow o
 
 | Version | Date | Changes |
 |---------|------|---------|
+| v3.1.0 | 2026-08-29 | Added CONTRIBUTING.md, VERSIONING.md, EXTENSION-POINTS.md, API-REFERENCE.md. Enhanced diagrams, troubleshooting, onboarding. Added code examples. |
 | v3.0.0 | 2026-08-28 | Added 15 new workflows (Tier 3 + Tier 4) for complete SDLC coverage |
 | v2.0.0 | 2026-08-28 | Added 10 new workflows (Security, Performance, Incident, Code Review, Planning, Docs, Config, Release, QA, API) |
 | v1.4.0 | 2026-08-28 | Optimized for token efficiency |
