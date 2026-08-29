@@ -12,7 +12,12 @@ A production-ready, markdown-based agentic framework for end-to-end SDLC operati
 | Decision Documentation | Rare | Required |
 | Edge Case Coverage | Hit or miss | Systematic |
 
-## Core Capabilities (34 Workflows)
+## Core Capabilities (35 Workflows)
+
+### Master Workflow
+| # | Capability | Workflow |
+|---|------------|----------|
+| 0 | Greenfield Master | [00-greenfield-master](workflows/00-greenfield-master.md) |
 
 ### Foundation Workflows (01-09)
 | # | Capability | Workflow |
@@ -83,13 +88,13 @@ forge-framework/
 ├── METRICS.md, CHANGELOG.md, DIAGRAMS.md, FRAMEWORK_ENHANCEMENT_RESEARCH.md
 ├── VERSIONING.md, CONTRIBUTING.md, EXTENSION-POINTS.md, API-REFERENCE.md
 ├── core/ (system-prompt.md, persona.md, principles.md)
-├── workflows/ (01-34)
-├── capabilities/ (34 capability definitions)
-├── templates/ (34 artifact templates)
+├── workflows/ (00-35)
+├── capabilities/ (35 capability definitions)
+├── templates/ (35 artifact templates)
 ├── artifacts/ (output-format.md)
 ├── guides/ (integration, configuration, troubleshooting, web-search,
 │           research-mode-selection, onboarding, migration, compatibility,
-│           tool-connectors)
+│           greenfield)
 └── examples/ (research-report-example.md, analysis-report-example.md)
 ```
 
@@ -125,7 +130,8 @@ Create `forge.config.md` in project root with global settings and per-workflow o
 
 | Version | Date | Changes |
 |---------|------|---------|
-| v3.1.0 | 2026-08-29 | Added CONTRIBUTING.md, VERSIONING.md, EXTENSION-POINTS.md, API-REFERENCE.md. Enhanced diagrams, troubleshooting, onboarding. Added code examples. |
+| v4.0.0 | 2026-08-29 | Added greenfield master workflow, project scaffolding, greenfield capability. Framework now self-sufficient for greenfield projects. |
+| v3.1.0 | 2026-08-29 | Added CONTRIBUTING.md, VERSIONING.md, EXTENSION-POINTS.md, API-REFERENCE.md. Enhanced diagrams, troubleshooting, onboarding. |
 | v3.0.0 | 2026-08-28 | Added 15 new workflows (Tier 3 + Tier 4) for complete SDLC coverage |
 | v2.0.0 | 2026-08-28 | Added 10 new workflows (Security, Performance, Incident, Code Review, Planning, Docs, Config, Release, QA, API) |
 | v1.4.0 | 2026-08-28 | Optimized for token efficiency |
