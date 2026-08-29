@@ -272,3 +272,10 @@ Current task: [specific implementation task]
 ## Output
 
 Use: `templates/project-scaffold.md` for initiation, then follow individual workflow templates for each phase.
+## Edge Cases
+
+- Very large projects → Break into sub-projects, each with own master workflow
+- Very small projects → Combine phases (e.g., Research + Analysis)
+- No clear vision → Start with Research phase to clarify
+- Resource constraints → Prioritize MVP, defer nice-to-haves
+- Changing requirements → Use iterative refinement, update artifacts
