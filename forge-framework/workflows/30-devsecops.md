@@ -43,6 +43,20 @@ Train team on new processes. Document procedures. Measure adoption.
 | QG5 | Monitoring configured |
 | QG6 | Training complete |
 
+## Anti-Patterns
+
+1. **Tool overload** — Too many security tools
+2. **Alert fatigue** — Security findings overwhelm
+3. **Security theater** — Looks good, doesn't work
+4. **Bypass culture** — Developers circumventing security
+
+## Edge Cases
+
+- Legacy systems: Gradual security integration
+- Third-party risks: Supply chain security
+- False positives: Triage process needed
+- Zero-day vulnerabilities: Rapid response
+
 ## Output
 Use: `templates/devsecops-plan.md` | Capability: `capabilities/devsecops.md`
 

@@ -44,6 +44,20 @@ Verify compliance with standards. Document audit trail.
 | QG5 | Changes tracked |
 | QG6 | Compliance verified |
 
+## Anti-Patterns
+
+1. **Configuration sprawl** — Too many config sources
+2. **Hardcoded secrets** — Secrets in code
+3. **Drift undetected** — Environment inconsistencies
+4. **Stale flags** — Feature flags never cleaned up
+
+## Edge Cases
+
+- Null values: Use defaults documented
+- Encrypted configs: Document decryption process
+- Missing env vars: Fail fast with clear error
+- Config conflicts: Priority order documented
+
 ## Output
 
 Use: `templates/configuration-report.md` | Capability: `capabilities/configuration-management.md`

@@ -43,6 +43,20 @@ Document findings, gaps, remediation plan. Executive summary.
 | QG5 | Remediation planned |
 | QG6 | Report complete |
 
+## Anti-Patterns
+
+1. **Checkbox compliance** — Not truly implementing
+2. **Documentation debt** — Policies not updated
+3. **Evidence gaps** — Missing audit trail
+4. **Scope inflation** — Including unnecessary systems
+
+## Edge Cases
+
+- Multi-jurisdiction: Different requirements per region
+- Mergers/acquisitions: Legacy compliance
+- Third-party risk: Vendor compliance
+- Rapid growth: Compliance lag
+
 ## Output
 Use: `templates/compliance-report.md` | Capability: `capabilities/compliance.md`
 

@@ -43,6 +43,20 @@ Validate data integrity. Reconcile counts. Document results.
 | QG5 | Migration executed |
 | QG6 | Validation passed |
 
+## Anti-Patterns
+
+1. **Big bang approach** — All-at-once migration risk
+2. **No rollback** — Migration without exit strategy
+3. **Schema drift** — Source/target diverge during migration
+4. **Data loss ignored** — Not tracking lost records
+
+## Edge Cases
+
+- Large volumes: Chunked migration with checkpoints
+- Active connections: Maintenance window needed
+- Data corruption: Validation with sampling
+- Timezone handling: UTC normalization
+
 ## Output
 Use: `templates/data-migration-report.md` | Capability: `capabilities/data-migration.md`
 

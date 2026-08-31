@@ -43,6 +43,20 @@ Promote usage. Gather feedback. Iterate on content.
 | QG5 | Maintenance process defined |
 | QG6 | Adoption tracked |
 
+## Anti-Patterns
+
+1. **Knowledge hoarding** — Experts not sharing
+2. **Outdated content** — No refresh process
+3. **Tool fragmentation** — Knowledge everywhere
+4. **Zero engagement** — Knowledge base unused
+
+## Edge Cases
+
+- Sensitive knowledge: Access controls
+- Conflicting information: Source authority
+- Tacit knowledge: Elicitation techniques
+- Knowledge loss risk: Succession planning
+
 ## Output
 Use: `templates/knowledge-base.md` | Capability: `capabilities/knowledge-management.md`
 

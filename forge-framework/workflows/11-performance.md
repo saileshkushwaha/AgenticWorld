@@ -51,6 +51,13 @@ Measure improvement. Compare against baseline. Document changes and results.
 3. **No measurement** — Subjective improvement
 4. **Over-optimization** — Diminishing returns
 
+## Edge Cases
+
+- Cold start: Initialization overhead
+- Resource contention: Shared environment
+- External dependencies: API latency variability
+- Concurrency issues: Race conditions
+
 ## Output
 
 Use: `templates/performance-report.md` | Capability: `capabilities/performance.md`

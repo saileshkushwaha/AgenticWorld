@@ -38,6 +38,20 @@ Gather feedback. Adjust approach. Address challenges.
 | QG4 | Progress tracked |
 | QG5 | Feedback gathered |
 
+## Anti-Patterns
+
+1. **Teaching without context** — Not explaining why
+2. **Micromanagement** — No autonomy given
+3. **Unrealistic pace** — Too fast or too slow
+4. **Mismatch of styles** — incompatible learning
+
+## Edge Cases
+
+- Remote mentoring: Virtual pair programming
+- Large group: Cohort-based approach
+- Skill gaps: Bridging prerequisites
+- Motivation issues: Finding intrinsic drivers
+
 ## Output
 Use: `templates/mentoring-plan.md` | Capability: `capabilities/mentoring.md`
 

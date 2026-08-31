@@ -43,6 +43,20 @@ Track engagement. Adjust strategy. Document feedback.
 | QG5 | Engagement ongoing |
 | QG6 | Feedback documented |
 
+## Anti-Patterns
+
+1. **Ignoring quiet stakeholders** — Assumed agreement
+2. **Communication overload** — Too many updates
+3. **Unrealistic expectations** — Promises not kept
+4. **Stakeholder fatigue** — Over-meetings
+
+## Edge Cases
+
+- Hostile stakeholders: De-escalation techniques
+- Competing interests: Trade-off analysis
+- Virtual-only stakeholders: Async communication
+- Power dynamics: Navigation strategies
+
 ## Output
 Use: `templates/stakeholder-plan.md` | Capability: `capabilities/stakeholder-management.md`
 

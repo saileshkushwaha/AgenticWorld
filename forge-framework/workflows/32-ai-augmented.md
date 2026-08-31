@@ -43,6 +43,20 @@ Train team. Roll out tools. Measure adoption and impact.
 | QG5 | Policies defined |
 | QG6 | Rollout complete |
 
+## Anti-Patterns
+
+1. **AI dependency** — Over-reliance without verification
+2. **Hallucination acceptance** — Unverified AI outputs
+3. **Tool sprawl** — Too many AI tools
+4. **Security blind spots** — IP leakage via AI
+
+## Edge Cases
+
+- Model hallucinations: Verification requirements
+- Bias propagation: Training data issues
+- Context window limits: Chunking strategies
+- Cost escalation: Usage monitoring
+
 ## Output
 Use: `templates/ai-augmented-plan.md` | Capability: `capabilities/ai-augmented.md`
 

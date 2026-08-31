@@ -51,6 +51,13 @@ Review fixes. Verify issues resolved. Approve or request changes.
 3. **Vague feedback** — Non-actionable comments
 4. **No re-review** — Approving without verifying fixes
 
+## Edge Cases
+
+- Large PRs: Progressive review
+- Deeply nested logic: Simplification suggestions
+- Third-party code: Reviewed differently
+- Dead code: Documentation vs removal
+
 ## Output
 
 Use: `templates/code-review-report.md` | Capability: `capabilities/code-review.md`

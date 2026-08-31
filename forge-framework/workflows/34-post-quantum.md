@@ -43,6 +43,20 @@ Test quantum-resistant implementation. Document migration. Plan ongoing crypto-a
 | QG5 | Implementation complete |
 | QG6 | Validation passed |
 
+## Anti-Patterns
+
+1. **Cryptographic rigidity** — Hardcoded algorithms
+2. **Algorithm hoarding** — Unnecessary crypto diversity
+3. **Migration paralysis** — Analysis without action
+4. **Hybrid weakness** — Weak hybrid implementation
+
+## Edge Cases
+
+- Performance impact: PQC overhead handling
+- Key size explosion: Storage implications
+- Firmware updates: Embedded system challenges
+- Interoperability: Cross-system compatibility
+
 ## Output
 Use: `templates/post-quantum-report.md` | Capability: `capabilities/post-quantum.md`
 

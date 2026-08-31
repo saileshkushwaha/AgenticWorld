@@ -43,6 +43,20 @@ Document carbon footprint, optimizations, ongoing plan.
 | QG5 | Reduction measured |
 | QG6 | Report complete |
 
+## Anti-Patterns
+
+1. **Greenwashing** — Claims without substance
+2. **Premature optimization** — Complexity for marginal gains
+3. **Metric obsession** — Wrong metrics optimized
+4. **Ignoring trade-offs** — Sustainability vs. performance
+
+## Edge Cases
+
+- Embodied carbon: Hardware lifecycle
+- Data center location: Grid carbon intensity
+- Remote work: Travel vs. datacenter
+- Circular economy: E-waste considerations
+
 ## Output
 Use: `templates/green-coding-report.md` | Capability: `capabilities/green-coding.md`
 

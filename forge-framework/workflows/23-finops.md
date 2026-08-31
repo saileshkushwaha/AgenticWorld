@@ -43,6 +43,20 @@ Document savings, recommendations, ongoing optimization plan.
 | QG5 | Monitoring configured |
 | QG6 | Savings documented |
 
+## Anti-Patterns
+
+1. **Cost optimization without reliability** — Cutting too deep
+2. **Short-term savings** — Long-term costs ignored
+3. **Siloed FinOps** — Team awareness lacking
+4. **Alert fatigue** — Too many cost alerts
+
+## Edge Cases
+
+- Spot instance failures: Fallback strategy
+- Currency fluctuations: Budget variance
+- Untagged resources: Cost allocation issues
+- Reserved capacity waste: Demand changes
+
 ## Output
 Use: `templates/finops-report.md` | Capability: `capabilities/finops.md`
 
