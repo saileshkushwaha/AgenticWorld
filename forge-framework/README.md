@@ -12,7 +12,7 @@ A production-ready, markdown-based agentic framework for end-to-end SDLC operati
 | Decision Documentation | Rare | Required |
 | Edge Case Coverage | Hit or miss | Systematic |
 
-## Core Capabilities (52 Workflows)
+## Core Capabilities (55 Workflows)
 
 ### Master Workflow
 | # | Capability | Workflow |
@@ -110,6 +110,13 @@ A production-ready, markdown-based agentic framework for end-to-end SDLC operati
 | 50 | Database Design | [50-database-design](workflows/50-database-design.md) |
 | 51 | User Experience Design | [51-ux-design](workflows/51-ux-design.md) |
 
+### Metrics & Tracking Workflows (52-54)
+| # | Capability | Workflow |
+|---|------------|----------|
+| 52 | Productivity Metrics | [52-productivity-metrics](workflows/52-productivity-metrics.md) |
+| 53 | Work Item Linkage | [53-work-item-linkage](workflows/53-work-item-linkage.md) |
+| 54 | Flow Time Tracking | [54-flow-time-tracking](workflows/54-flow-time-tracking.md) |
+
 ## Quick Start
 
 1. Load `core/system-prompt.md` as system prompt
@@ -126,9 +133,9 @@ forge-framework/
 ├── VERSIONING.md, CONTRIBUTING.md, EXTENSION-POINTS.md, API-REFERENCE.md
 ├── CASE-STUDIES.md
 ├── core/ (system-prompt.md, persona.md, principles.md)
-├── workflows/ (00-51)
-├── capabilities/ (55 capability definitions)
-├── templates/ (52 artifact templates)
+├── workflows/ (00-54)
+├── capabilities/ (58 capability definitions)
+├── templates/ (55 artifact templates)
 ├── artifacts/ (output-format.md, telemetry.md)
 ├── guides/ (integration, configuration, troubleshooting, web-search,
 │           research-mode-selection, onboarding, migration, compatibility,
@@ -153,7 +160,7 @@ Create `forge.config.md` in project root with global settings and per-workflow o
 
 - **Model-Agnostic**: Works with any instruction-tuned LLM
 - **Tool-Agnostic**: Works with CLI, web, API, IDE, and custom agents
-- **40 Complete Workflows**: Covering the full modern SDLC
+- **55 Complete Workflows**: Covering the full modern SDLC
 - **Template-Enforced**: Consistent output structure
 - **Quality Gates**: Objective, measurable criteria
 - **Deep Research**: Quick and Deep research modes
@@ -162,6 +169,9 @@ Create `forge.config.md` in project root with global settings and per-workflow o
 - **Security Built-In**: Security audit + DevSecOps + Post-Quantum + Privacy
 - **Privacy by Design**: PII detection, auto-redaction, consent management
 - **Audit & Assurance**: Risk assessment, internal audit, quality audit, process audit, data audit, configuration audit
+- **Productivity Metrics**: DORA metrics, flow metrics, quality metrics, ROI analysis
+- **Work Item Linkage**: Tool integration, traceability mapping, sync automation
+- **Flow Time Tracking**: Cycle time, lead time, queue time, bottleneck analysis
 - **Incident Response**: Production incident management
 - **Compliance**: Regulatory compliance audit (GDPR, CCPA, HIPAA, PCI DSS)
 - **Sustainability**: Green coding and FinOps
@@ -173,6 +183,7 @@ Create `forge.config.md` in project root with global settings and per-workflow o
 
 | Version | Date | Changes |
 |---------|------|---------|
+| v7.0.0 | 2026-08-31 | Added 3 metrics & tracking workflows: Productivity Metrics, Work Item Linkage, Flow Time Tracking. Created corresponding capabilities and templates. Updated README with 55 workflows. |
 | v6.1.0 | 2026-08-31 | Added 6 missing guides for DevOps, SRE, IaC, API Design, Database Design, UX Design. Fixed quality gates in workflows 50 and 51. Expanded workflow 51 with complete steps. |
 | v6.0.0 | 2026-08-31 | Added 6 audit & assurance workflows: Risk Assessment, Internal Audit, Quality Audit, Process Audit, Data Audit, Configuration Audit. Created corresponding capabilities and templates. Updated README with 46 workflows. |
 | v5.0.0 | 2026-08-31 | Added privacy & data protection, secure data handling workflows. Added 6 security guides, 4 security capabilities, SECURITY.md. Fixed duplicate anti-patterns/edge cases. Differentiated monitoring and telemetry workflows. Updated README with 40 workflows. |
