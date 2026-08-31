@@ -85,4 +85,6 @@
 
 ## Output
 
+Use: `templates/communication.md` | Capability: `capabilities/communication.md`
+
 Templates: `research-report.md`, `analysis-report.md`, `design-document.md`, `implementation-plan.md`, `test-plan.md`, `debug-report.md`, `deployment-plan.md`, `modernization-plan.md`
