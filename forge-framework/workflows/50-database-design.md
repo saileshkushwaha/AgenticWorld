@@ -71,6 +71,40 @@
 - Temporal data: Add versioning
 - Multi-tenancy: Add tenant ID
 
+## Quality Gates
+
+| Gate | Criteria |
+|------|----------|
+| QG1 | Requirements analyzed |
+| QG2 | Technology selected |
+| QG3 | Logical model designed |
+| QG4 | Physical model designed |
+| QG5 | Migration plan created |
+| QG6 | Performance benchmarks established |
+
+## Decision Points
+
+| Point | Options | Criteria |
+|-------|---------|----------|
+| DP1: Database type? | Relational / NoSQL / Multi-model | Data structure, query patterns |
+| DP2: Normalization level? | 3NF / Denormalized / Hybrid | Read/write ratio, consistency needs |
+| DP3: Indexing strategy? | B-Tree / Hash / GIN / GIST | Query patterns, data types |
+| DP4: Partitioning strategy? | Range / List / Hash / Composite | Data volume, access patterns |
+
+## Anti-Patterns
+
+1. **God table** — Single table for everything
+2. **Index overload** — Too many indexes
+3. **No indexing** — Missing critical indexes
+4. **EAV anti-pattern** — Entity-Attribute-Value abuse
+
+## Edge Cases
+
+- High-volume data: Plan sharding
+- Complex queries: Denormalize
+- Temporal data: Add versioning
+- Multi-tenancy: Add tenant ID
+
 ## Output
 
 Use: `templates/database-design.md` | Capability: `capabilities/database-design.md`

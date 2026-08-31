@@ -15,6 +15,37 @@
 **Actions**: Define research objectives, select research methods, recruit participants, conduct research, analyze findings.
 **Methods**: Interviews, surveys, contextual inquiry, diary studies, analytics review.
 **Output**: User research report | **Time**: 2-4h | **Tools**: Research tools, analytics platforms
+**Edge Cases**: Diverse user groups → design for all personas; limited research time → use lean UX methods; legacy constraints → design within constraints; multi-platform → design consistent experiences
+
+### Step 2: Persona Development
+**Actions**: Analyze research findings, create user personas, define user goals and frustrations, validate personas.
+**Output**: User personas | **Time**: 1-2h | **Tools**: Persona templates, research data
+**Edge Cases**: Conflicting findings → create multiple personas; limited research → use proto-personas; stakeholder disagreement → facilitate workshops
+
+### Step 3: Journey Mapping
+**Actions**: Map user journeys, identify touchpoints, document emotions, identify pain points.
+**Output**: Journey maps | **Time**: 1-2h | **Tools**: Journey mapping tools, templates
+**Edge Cases**: Complex journeys → break into phases; multiple personas → map each journey; digital-only → include offline touchpoints
+
+### Step 4: Wireframing
+**Actions**: Create low-fidelity wireframes, define information architecture, iterate based on feedback.
+**Output**: Wireframes | **Time**: 2-4h | **Tools**: Wireframing tools, design systems
+**Edge Cases**: Tight timeline → use templates; complex interactions → annotate wireframes; responsive design → create multiple breakpoints
+
+### Step 5: Prototyping
+**Actions**: Create interactive prototypes, define interactions, test with users.
+**Output**: Prototypes | **Time**: 2-4h | **Tools**: Prototyping tools, user testing platforms
+**Edge Cases**: High-fidelity needs → invest more time; technical constraints → simulate interactions; remote testing → use unmoderated tools
+
+### Step 6: Usability Testing
+**Actions**: Plan usability tests, recruit participants, conduct tests, analyze results.
+**Output**: Usability report | **Time**: 2-4h | **Tools**: Usability testing tools, analytics
+**Edge Cases**: Limited participants → use heuristic evaluation; remote users → use remote testing tools; accessibility needs → include assistive technology users
+
+## Quality Gates
+
+| Gate | Criteria |
+|------|----------|
 | QG1 | Research objectives defined |
 | QG2 | Research conducted |
 | QG3 | Findings analyzed |
