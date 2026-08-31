@@ -127,7 +127,7 @@ forge-framework/
 ├── CASE-STUDIES.md
 ├── core/ (system-prompt.md, persona.md, principles.md)
 ├── workflows/ (00-51)
-├── capabilities/ (52 capability definitions)
+├── capabilities/ (55 capability definitions)
 ├── templates/ (52 artifact templates)
 ├── artifacts/ (output-format.md, telemetry.md)
 ├── guides/ (integration, configuration, troubleshooting, web-search,
@@ -173,6 +173,7 @@ Create `forge.config.md` in project root with global settings and per-workflow o
 
 | Version | Date | Changes |
 |---------|------|---------|
+| v6.1.0 | 2026-08-31 | Added 6 missing guides for DevOps, SRE, IaC, API Design, Database Design, UX Design. Fixed quality gates in workflows 50 and 51. Expanded workflow 51 with complete steps. |
 | v6.0.0 | 2026-08-31 | Added 6 audit & assurance workflows: Risk Assessment, Internal Audit, Quality Audit, Process Audit, Data Audit, Configuration Audit. Created corresponding capabilities and templates. Updated README with 46 workflows. |
 | v5.0.0 | 2026-08-31 | Added privacy & data protection, secure data handling workflows. Added 6 security guides, 4 security capabilities, SECURITY.md. Fixed duplicate anti-patterns/edge cases. Differentiated monitoring and telemetry workflows. Updated README with 40 workflows. |
 | v4.2.0 | 2026-08-31 | Added telemetry system, analytics dashboard, improvement planning. Added telemetry workflow, capability, template, and artifact. |
