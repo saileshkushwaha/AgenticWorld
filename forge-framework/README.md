@@ -12,7 +12,7 @@ A production-ready, markdown-based agentic framework for end-to-end SDLC operati
 | Decision Documentation | Rare | Required |
 | Edge Case Coverage | Hit or miss | Systematic |
 
-## Core Capabilities (40 Workflows)
+## Core Capabilities (46 Workflows)
 
 ### Master Workflow
 | # | Capability | Workflow |
@@ -86,6 +86,16 @@ A production-ready, markdown-based agentic framework for end-to-end SDLC operati
 | 38 | Privacy & Data Protection | [38-privacy-data-protection](workflows/38-privacy-data-protection.md) |
 | 39 | Secure Data Handling | [39-secure-data-handling](workflows/39-secure-data-handling.md) |
 
+### Audit & Assurance Workflows (40-45)
+| # | Capability | Workflow |
+|---|------------|----------|
+| 40 | Risk Assessment | [40-risk-assessment](workflows/40-risk-assessment.md) |
+| 41 | Internal Audit | [41-internal-audit](workflows/41-internal-audit.md) |
+| 42 | Quality Audit | [42-quality-audit](workflows/42-quality-audit.md) |
+| 43 | Process Audit | [43-process-audit](workflows/43-process-audit.md) |
+| 44 | Data Audit | [44-data-audit](workflows/44-data-audit.md) |
+| 45 | Configuration Audit | [45-configuration-audit](workflows/45-configuration-audit.md) |
+
 ## Quick Start
 
 1. Load `core/system-prompt.md` as system prompt
@@ -102,9 +112,9 @@ forge-framework/
 ├── VERSIONING.md, CONTRIBUTING.md, EXTENSION-POINTS.md, API-REFERENCE.md
 ├── CASE-STUDIES.md
 ├── core/ (system-prompt.md, persona.md, principles.md)
-├── workflows/ (00-39)
-├── capabilities/ (40 capability definitions)
-├── templates/ (40 artifact templates)
+├── workflows/ (00-45)
+├── capabilities/ (46 capability definitions)
+├── templates/ (46 artifact templates)
 ├── artifacts/ (output-format.md, telemetry.md)
 ├── guides/ (integration, configuration, troubleshooting, web-search,
 │           research-mode-selection, onboarding, migration, compatibility,
@@ -137,6 +147,7 @@ Create `forge.config.md` in project root with global settings and per-workflow o
 - **Hallucination Detection**: Source verification
 - **Security Built-In**: Security audit + DevSecOps + Post-Quantum + Privacy
 - **Privacy by Design**: PII detection, auto-redaction, consent management
+- **Audit & Assurance**: Risk assessment, internal audit, quality audit, process audit, data audit, configuration audit
 - **Incident Response**: Production incident management
 - **Compliance**: Regulatory compliance audit (GDPR, CCPA, HIPAA, PCI DSS)
 - **Sustainability**: Green coding and FinOps
@@ -148,6 +159,7 @@ Create `forge.config.md` in project root with global settings and per-workflow o
 
 | Version | Date | Changes |
 |---------|------|---------|
+| v6.0.0 | 2026-08-31 | Added 6 audit & assurance workflows: Risk Assessment, Internal Audit, Quality Audit, Process Audit, Data Audit, Configuration Audit. Created corresponding capabilities and templates. Updated README with 46 workflows. |
 | v5.0.0 | 2026-08-31 | Added privacy & data protection, secure data handling workflows. Added 6 security guides, 4 security capabilities, SECURITY.md. Fixed duplicate anti-patterns/edge cases. Differentiated monitoring and telemetry workflows. Updated README with 40 workflows. |
 | v4.2.0 | 2026-08-31 | Added telemetry system, analytics dashboard, improvement planning. Added telemetry workflow, capability, template, and artifact. |
 | v4.1.0 | 2026-08-29 | Added retrospective workflow, technical debt management, case studies, validation guide. Fixed all consistency gaps. |
@@ -179,7 +191,10 @@ A: Template enforcement + quality gates + output normalization.
 A: Iterative refinement up to 3 retries with specific feedback.
 
 **Q: How many workflows are there?**
-A: 40 complete workflows covering the full modern SDLC.
+A: 46 complete workflows covering the full modern SDLC.
+
+**Q: What audit capabilities are included?**
+A: Risk Assessment, Internal Audit, Quality Audit, Process Audit, Data Audit, Configuration Audit, Security Audit, Compliance Audit, Accessibility Audit, Code Review, Privacy Impact Assessment, and Audit Logging.
 
 **Q: What about emerging practices like AI and quantum?**
 A: Covered in workflows 30-34 (DevSecOps, Green Coding, AI-Augmented, Multi-Agent, Post-Quantum).
