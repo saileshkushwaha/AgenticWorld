@@ -12,7 +12,7 @@ A production-ready, markdown-based agentic framework for end-to-end SDLC operati
 | Decision Documentation | Rare | Required |
 | Edge Case Coverage | Hit or miss | Systematic |
 
-## Core Capabilities (46 Workflows)
+## Core Capabilities (52 Workflows)
 
 ### Master Workflow
 | # | Capability | Workflow |
@@ -96,6 +96,20 @@ A production-ready, markdown-based agentic framework for end-to-end SDLC operati
 | 44 | Data Audit | [44-data-audit](workflows/44-data-audit.md) |
 | 45 | Configuration Audit | [45-configuration-audit](workflows/45-configuration-audit.md) |
 
+### DevOps & Infrastructure Workflows (46-48)
+| # | Capability | Workflow |
+|---|------------|----------|
+| 46 | DevOps | [46-devops](workflows/46-devops.md) |
+| 47 | Site Reliability Engineering | [47-sre](workflows/47-sre.md) |
+| 48 | Infrastructure as Code | [48-iac](workflows/48-iac.md) |
+
+### Design Workflows (49-51)
+| # | Capability | Workflow |
+|---|------------|----------|
+| 49 | API Design | [49-api-design](workflows/49-api-design.md) |
+| 50 | Database Design | [50-database-design](workflows/50-database-design.md) |
+| 51 | User Experience Design | [51-ux-design](workflows/51-ux-design.md) |
+
 ## Quick Start
 
 1. Load `core/system-prompt.md` as system prompt
@@ -112,9 +126,9 @@ forge-framework/
 ├── VERSIONING.md, CONTRIBUTING.md, EXTENSION-POINTS.md, API-REFERENCE.md
 ├── CASE-STUDIES.md
 ├── core/ (system-prompt.md, persona.md, principles.md)
-├── workflows/ (00-45)
-├── capabilities/ (46 capability definitions)
-├── templates/ (46 artifact templates)
+├── workflows/ (00-51)
+├── capabilities/ (52 capability definitions)
+├── templates/ (52 artifact templates)
 ├── artifacts/ (output-format.md, telemetry.md)
 ├── guides/ (integration, configuration, troubleshooting, web-search,
 │           research-mode-selection, onboarding, migration, compatibility,
