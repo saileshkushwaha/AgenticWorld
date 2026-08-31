@@ -64,4 +64,4 @@ Document privacy procedures. Train staff on privacy requirements and procedures.
 
 ## Output
 
-Use: `templates/retrospective-report.md` | Capability: `capabilities/retrospective.md`
+Use: `templates/privacy-impact-assessment.md` | Capability: `capabilities/privacy-data-protection.md`

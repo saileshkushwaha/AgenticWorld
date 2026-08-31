@@ -1,11 +1,13 @@
-# Workflow 24: Monitoring and Observability
+# Workflow 24: Infrastructure & Application Monitoring
 
 **Duration**: 4-16h | **Outputs**: Monitoring strategy, alerting config, dashboard design
 
 ## Trigger
-- Monitoring setup, observability improvement, SLO definition
-- Alerting review, incident response improvement
 
+- Infrastructure monitoring setup, application performance monitoring
+- SLO/SLI definition, alerting review
+- Incident response improvement, capacity planning
+- Cloud resource monitoring, log aggregation
 ## Steps
 
 ### Step 1: Requirements Definition
@@ -56,19 +58,6 @@ Verify monitoring works. Document setup. Train team.
 - Clock skew: NTP synchronization
 - Metric gaps: Interpolation handling
 - Service mesh: Distributed tracing complexity
-
 ## Output
+
 Use: `templates/monitoring-report.md` | Capability: `capabilities/monitoring.md`
-
-## Anti-Patterns
-
-1. **Big bang migration** — Migrating everything at once
-2. **No rollback plan** — Migrating without recovery strategy
-3. **Ignoring data quality** — Migrating without validation
-4. **No testing** — Deploying without testing migration
-
-## Edge Cases
-
-- Large data volumes → Use incremental migration
-- Schema mismatch → Create transformation layer
-- Downtime constraints → Use blue-green deployment

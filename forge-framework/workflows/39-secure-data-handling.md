@@ -67,4 +67,4 @@ Document data handling procedures. Train staff on data security requirements and
 
 ## Output
 
-Use: `templates/technical-debt-register.md` | Capability: `capabilities/technical-debt.md`
+Use: `templates/data-handling-procedures.md` | Capability: `capabilities/secure-data-handling.md`

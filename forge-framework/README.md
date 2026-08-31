@@ -12,7 +12,7 @@ A production-ready, markdown-based agentic framework for end-to-end SDLC operati
 | Decision Documentation | Rare | Required |
 | Edge Case Coverage | Hit or miss | Systematic |
 
-## Core Capabilities (37 Workflows)
+## Core Capabilities (40 Workflows)
 
 ### Master Workflow
 | # | Capability | Workflow |
@@ -57,7 +57,7 @@ A production-ready, markdown-based agentic framework for end-to-end SDLC operati
 | 21 | Disaster Recovery | [21-disaster-recovery](workflows/21-disaster-recovery.md) |
 | 22 | Compliance Audit | [22-compliance](workflows/22-compliance.md) |
 | 23 | FinOps | [23-finops](workflows/23-finops.md) |
-| 24 | Monitoring & Observability | [24-monitoring](workflows/24-monitoring.md) |
+| 24 | Infrastructure & Application Monitoring | [24-monitoring](workflows/24-monitoring.md) |
 | 25 | Stakeholder Management | [25-stakeholder](workflows/25-stakeholder.md) |
 | 26 | Change Management | [26-change-management](workflows/26-change-management.md) |
 | 27 | Knowledge Management | [27-knowledge](workflows/27-knowledge.md) |
@@ -73,6 +73,19 @@ A production-ready, markdown-based agentic framework for end-to-end SDLC operati
 | 33 | Multi-Agent Coordination | [33-multi-agent](workflows/33-multi-agent.md) |
 | 34 | Post-Quantum Security | [34-post-quantum](workflows/34-post-quantum.md) |
 
+### Continuous Improvement Workflows (35-37)
+| # | Capability | Workflow |
+|---|------------|----------|
+| 35 | Retrospective | [35-retrospective](workflows/35-retrospective.md) |
+| 36 | Technical Debt Management | [36-technical-debt](workflows/36-technical-debt.md) |
+| 37 | Telemetry & Analytics | [37-telemetry](workflows/37-telemetry.md) |
+
+### Security & Privacy Workflows (38-39)
+| # | Capability | Workflow |
+|---|------------|----------|
+| 38 | Privacy & Data Protection | [38-privacy-data-protection](workflows/38-privacy-data-protection.md) |
+| 39 | Secure Data Handling | [39-secure-data-handling](workflows/39-secure-data-handling.md) |
+
 ## Quick Start
 
 1. Load `core/system-prompt.md` as system prompt
@@ -84,18 +97,19 @@ A production-ready, markdown-based agentic framework for end-to-end SDLC operati
 
 ```
 forge-framework/
-├── README.md, QUICK-REFERENCE.md, GLOSSARY.md, ANTI-PATTERNS.md
+├── README.md, QUICK-REFERENCE.md, GLOSSARY.md, ANTI-PATTERNS.md, SECURITY.md
 ├── METRICS.md, CHANGELOG.md, DIAGRAMS.md, FRAMEWORK_ENHANCEMENT_RESEARCH.md
 ├── VERSIONING.md, CONTRIBUTING.md, EXTENSION-POINTS.md, API-REFERENCE.md
-├── CASE-STUDIES.md, VERSIONING.md
+├── CASE-STUDIES.md
 ├── core/ (system-prompt.md, persona.md, principles.md)
-├── workflows/ (00-36)
-├── capabilities/ (36 capability definitions)
-├── templates/ (36 artifact templates)
-├── artifacts/ (output-format.md)
+├── workflows/ (00-39)
+├── capabilities/ (40 capability definitions)
+├── templates/ (40 artifact templates)
+├── artifacts/ (output-format.md, telemetry.md)
 ├── guides/ (integration, configuration, troubleshooting, web-search,
 │           research-mode-selection, onboarding, migration, compatibility,
-│           greenfield, validation)
+│           greenfield, validation, privacy-policy, secure-coding,
+│           sensitive-data, encryption, audit-logging, secure-api)
 └── examples/ (research-report-example.md, analysis-report-example.md)
 ```
 
@@ -115,22 +129,27 @@ Create `forge.config.md` in project root with global settings and per-workflow o
 
 - **Model-Agnostic**: Works with any instruction-tuned LLM
 - **Tool-Agnostic**: Works with CLI, web, API, IDE, and custom agents
-- **34 Complete Workflows**: Covering the full modern SDLC
+- **40 Complete Workflows**: Covering the full modern SDLC
 - **Template-Enforced**: Consistent output structure
 - **Quality Gates**: Objective, measurable criteria
 - **Deep Research**: Quick and Deep research modes
 - **Self-Verification**: Built-in validation and refinement
 - **Hallucination Detection**: Source verification
-- **Security Built-In**: Security audit + DevSecOps + Post-Quantum
+- **Security Built-In**: Security audit + DevSecOps + Post-Quantum + Privacy
+- **Privacy by Design**: PII detection, auto-redaction, consent management
 - **Incident Response**: Production incident management
-- **Compliance**: Regulatory compliance audit
+- **Compliance**: Regulatory compliance audit (GDPR, CCPA, HIPAA, PCI DSS)
 - **Sustainability**: Green coding and FinOps
 - **AI-Ready**: AI-augmented development and multi-agent coordination
+- **Telemetry**: Comprehensive event tracking and analytics
+- **Secure Data Handling**: Data classification, encryption, access controls
 
 ## Version History
 
 | Version | Date | Changes |
 |---------|------|---------|
+| v5.0.0 | 2026-08-31 | Added privacy & data protection, secure data handling workflows. Added 6 security guides, 4 security capabilities, SECURITY.md. Fixed duplicate anti-patterns/edge cases. Differentiated monitoring and telemetry workflows. Updated README with 40 workflows. |
+| v4.2.0 | 2026-08-31 | Added telemetry system, analytics dashboard, improvement planning. Added telemetry workflow, capability, template, and artifact. |
 | v4.1.0 | 2026-08-29 | Added retrospective workflow, technical debt management, case studies, validation guide. Fixed all consistency gaps. |
 | v4.0.0 | 2026-08-29 | Added greenfield master workflow, project scaffolding, greenfield capability |
 | v3.1.0 | 2026-08-29 | Added CONTRIBUTING.md, VERSIONING.md, EXTENSION-POINTS.md, API-REFERENCE.md |
@@ -160,10 +179,16 @@ A: Template enforcement + quality gates + output normalization.
 A: Iterative refinement up to 3 retries with specific feedback.
 
 **Q: How many workflows are there?**
-A: 34 complete workflows covering the full modern SDLC.
+A: 40 complete workflows covering the full modern SDLC.
 
 **Q: What about emerging practices like AI and quantum?**
 A: Covered in workflows 30-34 (DevSecOps, Green Coding, AI-Augmented, Multi-Agent, Post-Quantum).
+
+**Q: How is sensitive data protected?**
+A: All workflows implement PII detection and auto-redaction. See SECURITY.md and guides/privacy-policy.md for details.
+
+**Q: What security features are included?**
+A: Privacy impact assessment, secure data handling, encryption, audit logging, and compliance with GDPR/CCPA/HIPAA/PCI DSS.
 
 ## License
 
