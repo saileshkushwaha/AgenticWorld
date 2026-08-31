@@ -67,3 +67,15 @@ Use: `templates/mentoring-plan.md` | Capability: `capabilities/mentoring.md`
 - Conflicting stakeholder needs → Facilitate prioritization
 - No stakeholder availability → Use async communication
 - Resistance to change → Provide training and support
+
+## Output
+
+Use: `templates/mentoring-plan.md` | Capability: `capabilities/mentoring.md`
+
+## Related Workflows
+
+| Workflow | Relationship | When to Use |
+|----------|-------------|-------------|
+| [27-knowledge](workflows/27-knowledge.md) | **Related** | To transfer knowledge |
+| [13-code-review](workflows/13-code-review.md) | **Related** | To mentor through code review |
+| [04-implement](workflows/04-implement.md) | **Related** | To mentor during implementation |

@@ -58,3 +58,15 @@ Document findings and recommendations. Prepare audit report.
 ## Output
 
 Use: `templates/process-audit-report.md` | Capability: `capabilities/process-audit.md`
+
+## Related Workflows
+
+| Workflow | Relationship | When to Use |
+|----------|-------------|-------------|
+| [42-quality-audit](workflows/42-quality-audit.md) | **Related** | To audit quality processes |
+| [45-configuration-audit](workflows/45-configuration-audit.md) | **Related** | To audit configuration processes |
+| [41-internal-audit](workflows/41-internal-audit.md) | **Related** | To audit through internal audit |
+
+## Output
+
+Use: `templates/process-audit-report.md` | Capability: `capabilities/process-audit.md`

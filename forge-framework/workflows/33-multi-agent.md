@@ -72,3 +72,15 @@ Use: `templates/multi-agent-plan.md` | Capability: `capabilities/multi-agent.md`
 - Legacy systems → Use incremental security improvements
 - No security team → Use automated tools
 - Compliance conflicts → Consult legal team
+
+## Output
+
+Use: `templates/multi-agent-plan.md` | Capability: `capabilities/multi-agent.md`
+
+## Related Workflows
+
+| Workflow | Relationship | When to Use |
+|----------|-------------|-------------|
+| [32-ai-augmented](workflows/32-ai-augmented.md) | **Related** | To use AI in multi-agent systems |
+| [04-implement](workflows/04-implement.md) | **Related** | To implement multi-agent systems |
+| [37-telemetry](workflows/37-telemetry.md) | **Related** | To track agent performance |

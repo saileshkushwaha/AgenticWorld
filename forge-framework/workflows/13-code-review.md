@@ -74,3 +74,16 @@ Use: `templates/code-review-report.md` | Capability: `capabilities/code-review.m
 - Legacy systems → Use incremental security improvements
 - No security team → Use automated tools and external audits
 - Zero-day vulnerabilities → Have incident response plan ready
+
+## Output
+
+Use: `templates/code-review-report.md` | Capability: `capabilities/code-review.md`
+
+## Related Workflows
+
+| Workflow | Relationship | When to Use |
+|----------|-------------|-------------|
+| [04-implement](workflows/04-implement.md) | **Related** | To review code after implementation |
+| [05-test](workflows/05-test.md) | **Related** | To verify code quality through testing |
+| [10-security](workflows/10-security.md) | **Related** | To review security aspects of code |
+| [30-devsecops](workflows/30-devsecops.md) | **Related** | To integrate code review into CI/CD |

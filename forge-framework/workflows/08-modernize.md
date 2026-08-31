@@ -85,3 +85,11 @@
 ## Output
 
 Use: `templates/modernization-plan.md` | Prev: `07-deploy.md` | Next: `03-design.md` | Capability: `capabilities/modernization.md`
+
+## Related Workflows
+
+| Workflow | Relationship | When to Use |
+|----------|-------------|-------------|
+| [07-deploy](workflows/07-deploy.md) | **Previous** | To modernize after deployment |
+| [03-design](workflows/03-design.md) | **Next** | To design modernized architecture |
+| [36-technical-debt](workflows/36-technical-debt.md) | **Related** | To address technical debt |

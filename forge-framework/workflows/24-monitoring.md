@@ -58,6 +58,19 @@ Verify monitoring works. Document setup. Train team.
 - Clock skew: NTP synchronization
 - Metric gaps: Interpolation handling
 - Service mesh: Distributed tracing complexity
+
+## Output
+
+Use: `templates/monitoring-report.md` | Capability: `capabilities/monitoring.md`
+
+## Related Workflows
+
+| Workflow | Relationship | When to Use |
+|----------|-------------|-------------|
+| [11-performance](workflows/11-performance.md) | **Related** | To monitor performance |
+| [12-incident](workflows/12-incident.md) | **Related** | To detect incidents |
+| [37-telemetry](workflows/37-telemetry.md) | **Related** | To collect telemetry data |
+| [23-finops](workflows/23-finops.md) | **Related** | To monitor cloud costs |
 ## Output
 
 Use: `templates/monitoring-report.md` | Capability: `capabilities/monitoring.md`

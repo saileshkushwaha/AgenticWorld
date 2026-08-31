@@ -72,3 +72,15 @@ Use: `templates/accessibility-report.md` | Capability: `capabilities/accessibili
 - Conflicting stakeholder needs → Facilitate prioritization
 - No stakeholder availability → Use async communication
 - Resistance to change → Provide training and support
+
+## Output
+
+Use: `templates/accessibility-report.md` | Capability: `capabilities/accessibility.md`
+
+## Related Workflows
+
+| Workflow | Relationship | When to Use |
+|----------|-------------|-------------|
+| [03-design](workflows/03-design.md) | **Related** | To design accessible interfaces |
+| [05-test](workflows/05-test.md) | **Related** | To test accessibility |
+| [22-compliance](workflows/22-compliance.md) | **Related** | To ensure accessibility compliance |

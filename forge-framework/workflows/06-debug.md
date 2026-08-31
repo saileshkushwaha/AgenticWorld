@@ -84,3 +84,11 @@
 ## Output
 
 Use: `templates/debug-report.md` | Prev: `05-test.md` | Next: `04-implement.md` | Capability: `capabilities/debugging.md`
+
+## Related Workflows
+
+| Workflow | Relationship | When to Use |
+|----------|-------------|-------------|
+| [05-test](workflows/05-test.md) | **Previous** | To debug after testing |
+| [04-implement](workflows/04-implement.md) | **Next** | To fix implementation issues |
+| [12-incident](workflows/12-incident.md) | **Related** | To debug incidents |

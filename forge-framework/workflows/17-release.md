@@ -74,3 +74,15 @@ Use: `templates/release-plan.md` | Capability: `capabilities/release-management.
 - Multiple audiences → Create separate documents per audience
 - No existing template → Adapt from similar project
 - Technical reviewer unavailable → Use peer review
+
+## Output
+
+Use: `templates/release-plan.md` | Capability: `capabilities/release-management.md`
+
+## Related Workflows
+
+| Workflow | Relationship | When to Use |
+|----------|-------------|-------------|
+| [07-deploy](workflows/07-deploy.md) | **Related** | To deploy releases |
+| [18-qa](workflows/18-qa.md) | **Related** | To ensure quality before release |
+| [10-security](workflows/10-security.md) | **Related** | To validate security before release |

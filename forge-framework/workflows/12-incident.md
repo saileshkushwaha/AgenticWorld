@@ -74,3 +74,16 @@ Use: `templates/incident-report.md` | Capability: `capabilities/incident-managem
 - Legacy systems → Use incremental security improvements
 - No security team → Use automated tools and external audits
 - Zero-day vulnerabilities → Have incident response plan ready
+
+## Output
+
+Use: `templates/incident-report.md` | Capability: `capabilities/incident-management.md`
+
+## Related Workflows
+
+| Workflow | Relationship | When to Use |
+|----------|-------------|-------------|
+| [10-security](workflows/10-security.md) | **Related** | To investigate security incidents |
+| [11-performance](workflows/11-performance.md) | **Related** | To investigate performance incidents |
+| [24-monitoring](workflows/24-monitoring.md) | **Related** | To detect incidents through monitoring |
+| [21-disaster-recovery](workflows/21-disaster-recovery.md) | **Related** | To recover from major incidents |

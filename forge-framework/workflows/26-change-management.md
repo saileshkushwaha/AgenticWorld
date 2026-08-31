@@ -72,3 +72,15 @@ Use: `templates/change-request.md` | Capability: `capabilities/change-management
 - Conflicting stakeholder needs → Facilitate prioritization
 - No stakeholder availability → Use async communication
 - Resistance to change → Provide training and support
+
+## Output
+
+Use: `templates/change-request.md` | Capability: `capabilities/change-management.md`
+
+## Related Workflows
+
+| Workflow | Relationship | When to Use |
+|----------|-------------|-------------|
+| [25-stakeholder](workflows/25-stakeholder.md) | **Related** | To manage stakeholder expectations |
+| [14-project-planning](workflows/14-project-planning.md) | **Related** | To plan changes |
+| [08-modernize](workflows/08-modernize.md) | **Related** | To manage modernization changes |

@@ -72,3 +72,15 @@ Use: `templates/dr-plan.md` | Capability: `capabilities/disaster-recovery.md`
 - Large data volumes → Use incremental migration
 - Schema mismatch → Create transformation layer
 - Downtime constraints → Use blue-green deployment
+
+## Output
+
+Use: `templates/dr-plan.md` | Capability: `capabilities/disaster-recovery.md`
+
+## Related Workflows
+
+| Workflow | Relationship | When to Use |
+|----------|-------------|-------------|
+| [12-incident](workflows/12-incident.md) | **Related** | To respond to incidents |
+| [20-data-migration](workflows/20-data-migration.md) | **Related** | To migrate data during recovery |
+| [40-risk-assessment](workflows/40-risk-assessment.md) | **Related** | To assess disaster risks |

@@ -58,3 +58,15 @@ Publish retrospective report and track action items.
 ## Output
 
 Use: `templates/retrospective-report.md` | Capability: `capabilities/retrospective.md`
+
+## Related Workflows
+
+| Workflow | Relationship | When to Use |
+|----------|-------------|-------------|
+| [01-research](workflows/01-research.md) | **Related** | To gather lessons learned |
+| [27-knowledge](workflows/27-knowledge.md) | **Related** | To capture knowledge |
+| [36-technical-debt](workflows/36-technical-debt.md) | **Related** | To identify technical debt |
+
+## Output
+
+Use: `templates/retrospective-report.md` | Capability: `capabilities/retrospective.md`

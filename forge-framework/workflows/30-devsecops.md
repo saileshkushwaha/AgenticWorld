@@ -72,3 +72,15 @@ Use: `templates/devsecops-plan.md` | Capability: `capabilities/devsecops.md`
 - Legacy systems → Use incremental security improvements
 - No security team → Use automated tools
 - Compliance conflicts → Consult legal team
+
+## Output
+
+Use: `templates/devsecops-plan.md` | Capability: `capabilities/devsecops.md`
+
+## Related Workflows
+
+| Workflow | Relationship | When to Use |
+|----------|-------------|-------------|
+| [10-security](workflows/10-security.md) | **Related** | To integrate security into CI/CD |
+| [07-deploy](workflows/07-deploy.md) | **Related** | To secure deployment pipelines |
+| [04-implement](workflows/04-implement.md) | **Related** | To implement security in code |

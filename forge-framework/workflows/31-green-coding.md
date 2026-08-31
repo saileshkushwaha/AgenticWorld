@@ -72,3 +72,15 @@ Use: `templates/green-coding-report.md` | Capability: `capabilities/green-coding
 - Legacy systems → Use incremental security improvements
 - No security team → Use automated tools
 - Compliance conflicts → Consult legal team
+
+## Output
+
+Use: `templates/green-coding-report.md` | Capability: `capabilities/green-coding.md`
+
+## Related Workflows
+
+| Workflow | Relationship | When to Use |
+|----------|-------------|-------------|
+| [11-performance](workflows/11-performance.md) | **Related** | To optimize energy efficiency |
+| [23-finops](workflows/23-finops.md) | **Related** | To reduce cloud costs |
+| [04-implement](workflows/04-implement.md) | **Related** | To implement green coding practices |

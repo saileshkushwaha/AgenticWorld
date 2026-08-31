@@ -72,3 +72,15 @@ Use: `templates/ai-augmented-plan.md` | Capability: `capabilities/ai-augmented.m
 - Legacy systems → Use incremental security improvements
 - No security team → Use automated tools
 - Compliance conflicts → Consult legal team
+
+## Output
+
+Use: `templates/ai-augmented-plan.md` | Capability: `capabilities/ai-augmented.md`
+
+## Related Workflows
+
+| Workflow | Relationship | When to Use |
+|----------|-------------|-------------|
+| [04-implement](workflows/04-implement.md) | **Related** | To use AI in implementation |
+| [01-research](workflows/01-research.md) | **Related** | To research AI tools |
+| [33-multi-agent](workflows/33-multi-agent.md) | **Related** | To coordinate AI agents |

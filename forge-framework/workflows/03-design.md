@@ -88,3 +88,13 @@
 ## Output
 
 Use: `templates/design-document.md` | Prev: `02-analyze.md` | Next: `04-implement.md` | Capability: `capabilities/design.md`
+
+## Related Workflows
+
+| Workflow | Relationship | When to Use |
+|----------|-------------|-------------|
+| [02-analyze](workflows/02-analyze.md) | **Previous** | To analyze requirements before design |
+| [04-implement](workflows/04-implement.md) | **Next** | After design to implement the solution |
+| [10-security](workflows/10-security.md) | **Related** | To incorporate security into design |
+| [08-modernize](workflows/08-modernize.md) | **Related** | To modernize existing architecture |
+| [14-project-planning](workflows/14-project-planning.md) | **Related** | To plan implementation of design |

@@ -63,3 +63,15 @@ Document risk assessment results. Communicate risks and treatment plans to stake
 ## Output
 
 Use: `templates/risk-assessment.md` | Capability: `capabilities/risk-assessment.md`
+
+## Related Workflows
+
+| Workflow | Relationship | When to Use |
+|----------|-------------|-------------|
+| [10-security](workflows/10-security.md) | **Related** | To assess security risks |
+| [21-disaster-recovery](workflows/21-disaster-recovery.md) | **Related** | To plan for disaster risks |
+| [41-internal-audit](workflows/41-internal-audit.md) | **Related** | To audit risk management |
+
+## Output
+
+Use: `templates/risk-assessment.md` | Capability: `capabilities/risk-assessment.md`

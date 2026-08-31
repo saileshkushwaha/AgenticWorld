@@ -85,3 +85,13 @@
 ## Output
 
 Use: `templates/analysis-report.md` | Prev: `01-research.md` | Next: `03-design.md` | Capability: `capabilities/analysis.md`
+
+## Related Workflows
+
+| Workflow | Relationship | When to Use |
+|----------|-------------|-------------|
+| [01-research](workflows/01-research.md) | **Previous** | To gather information before analysis |
+| [03-design](workflows/03-design.md) | **Next** | After analysis to create architecture |
+| [14-project-planning](workflows/14-project-planning.md) | **Related** | To incorporate analysis into project plan |
+| [40-risk-assessment](workflows/40-risk-assessment.md) | **Related** | To identify and assess risks |
+| [22-compliance](workflows/22-compliance.md) | **Related** | To ensure compliance requirements are met |

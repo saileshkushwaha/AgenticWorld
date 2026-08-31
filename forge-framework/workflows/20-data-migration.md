@@ -72,3 +72,15 @@ Use: `templates/data-migration-report.md` | Capability: `capabilities/data-migra
 - Large data volumes → Use incremental migration
 - Schema mismatch → Create transformation layer
 - Downtime constraints → Use blue-green deployment
+
+## Output
+
+Use: `templates/data-migration-report.md` | Capability: `capabilities/data-migration.md`
+
+## Related Workflows
+
+| Workflow | Relationship | When to Use |
+|----------|-------------|-------------|
+| [44-data-audit](workflows/44-data-audit.md) | **Related** | To audit data quality |
+| [39-secure-data-handling](workflows/39-secure-data-handling.md) | **Related** | To handle data securely |
+| [21-disaster-recovery](workflows/21-disaster-recovery.md) | **Related** | To recover from migration failures |

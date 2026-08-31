@@ -72,3 +72,15 @@ Use: `templates/knowledge-base.md` | Capability: `capabilities/knowledge-managem
 - Conflicting stakeholder needs → Facilitate prioritization
 - No stakeholder availability → Use async communication
 - Resistance to change → Provide training and support
+
+## Output
+
+Use: `templates/knowledge-base.md` | Capability: `capabilities/knowledge-management.md`
+
+## Related Workflows
+
+| Workflow | Relationship | When to Use |
+|----------|-------------|-------------|
+| [15-documentation](workflows/15-documentation.md) | **Related** | To document knowledge |
+| [28-mentoring](workflows/28-mentoring.md) | **Related** | To transfer knowledge |
+| [35-retrospective](workflows/35-retrospective.md) | **Related** | To capture lessons learned |

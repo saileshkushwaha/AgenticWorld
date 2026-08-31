@@ -74,3 +74,16 @@ Use: `templates/project-plan.md` | Capability: `capabilities/project-planning.md
 - Legacy systems → Use incremental security improvements
 - No security team → Use automated tools and external audits
 - Zero-day vulnerabilities → Have incident response plan ready
+
+## Output
+
+Use: `templates/project-plan.md` | Capability: `capabilities/project-planning.md`
+
+## Related Workflows
+
+| Workflow | Relationship | When to Use |
+|----------|-------------|-------------|
+| [01-research](workflows/01-research.md) | **Related** | To incorporate research into project plan |
+| [02-analyze](workflows/02-analyze.md) | **Related** | To incorporate analysis into project plan |
+| [03-design](workflows/03-design.md) | **Related** | To plan implementation of design |
+| [40-risk-assessment](workflows/40-risk-assessment.md) | **Related** | To assess project risks |

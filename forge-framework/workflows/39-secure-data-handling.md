@@ -68,3 +68,15 @@ Document data handling procedures. Train staff on data security requirements and
 ## Output
 
 Use: `templates/data-handling-procedures.md` | Capability: `capabilities/secure-data-handling.md`
+
+## Related Workflows
+
+| Workflow | Relationship | When to Use |
+|----------|-------------|-------------|
+| [38-privacy-data-protection](workflows/38-privacy-data-protection.md) | **Related** | To protect privacy in data handling |
+| [44-data-audit](workflows/44-data-audit.md) | **Related** | To audit data handling practices |
+| [10-security](workflows/10-security.md) | **Related** | To secure data handling |
+
+## Output
+
+Use: `templates/data-handling-procedures.md` | Capability: `capabilities/secure-data-handling.md`

@@ -118,3 +118,14 @@ fun fetchUser(userId: String): Result<User> {
 ## Output
 
 Use: `templates/implementation-plan.md` | Prev: `03-design.md` | Next: `05-test.md` | Capability: `capabilities/implementation.md`
+
+## Related Workflows
+
+| Workflow | Relationship | When to Use |
+|----------|-------------|-------------|
+| [03-design](workflows/03-design.md) | **Previous** | To design architecture before implementation |
+| [05-test](workflows/05-test.md) | **Next** | After implementation to test the solution |
+| [13-code-review](workflows/13-code-review.md) | **Related** | To review code quality |
+| [06-debug](workflows/06-debug.md) | **Related** | To debug issues during implementation |
+| [10-security](workflows/10-security.md) | **Related** | To implement security controls |
+| [30-devsecops](workflows/30-devsecops.md) | **Related** | To integrate security into CI/CD |

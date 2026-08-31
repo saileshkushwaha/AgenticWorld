@@ -74,3 +74,16 @@ Use: `templates/performance-report.md` | Capability: `capabilities/performance.m
 - Legacy systems → Use incremental security improvements
 - No security team → Use automated tools and external audits
 - Zero-day vulnerabilities → Have incident response plan ready
+
+## Output
+
+Use: `templates/performance-report.md` | Capability: `capabilities/performance.md`
+
+## Related Workflows
+
+| Workflow | Relationship | When to Use |
+|----------|-------------|-------------|
+| [10-security](workflows/10-security.md) | **Related** | To ensure performance doesn't compromise security |
+| [12-incident](workflows/12-incident.md) | **Related** | To investigate performance incidents |
+| [24-monitoring](workflows/24-monitoring.md) | **Related** | To monitor performance metrics |
+| [40-risk-assessment](workflows/40-risk-assessment.md) | **Related** | To assess performance risks |

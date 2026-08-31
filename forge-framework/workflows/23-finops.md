@@ -72,3 +72,15 @@ Use: `templates/finops-report.md` | Capability: `capabilities/finops.md`
 - Large data volumes → Use incremental migration
 - Schema mismatch → Create transformation layer
 - Downtime constraints → Use blue-green deployment
+
+## Output
+
+Use: `templates/finops-report.md` | Capability: `capabilities/finops.md`
+
+## Related Workflows
+
+| Workflow | Relationship | When to Use |
+|----------|-------------|-------------|
+| [24-monitoring](workflows/24-monitoring.md) | **Related** | To monitor cloud costs |
+| [40-risk-assessment](workflows/40-risk-assessment.md) | **Related** | To assess financial risks |
+| [14-project-planning](workflows/14-project-planning.md) | **Related** | To plan cloud budgets |

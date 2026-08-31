@@ -72,3 +72,15 @@ Use: `templates/compliance-report.md` | Capability: `capabilities/compliance.md`
 - Large data volumes → Use incremental migration
 - Schema mismatch → Create transformation layer
 - Downtime constraints → Use blue-green deployment
+
+## Output
+
+Use: `templates/compliance-report.md` | Capability: `capabilities/compliance.md`
+
+## Related Workflows
+
+| Workflow | Relationship | When to Use |
+|----------|-------------|-------------|
+| [10-security](workflows/10-security.md) | **Related** | To ensure security compliance |
+| [38-privacy-data-protection](workflows/38-privacy-data-protection.md) | **Related** | To ensure privacy compliance |
+| [41-internal-audit](workflows/41-internal-audit.md) | **Related** | To audit compliance |

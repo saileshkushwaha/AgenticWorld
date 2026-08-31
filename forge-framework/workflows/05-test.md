@@ -84,3 +84,12 @@
 ## Output
 
 Use: `templates/test-plan.md` | Prev: `04-implement.md` | Next: `07-deploy.md` | Capability: `capabilities/testing.md`
+
+## Related Workflows
+
+| Workflow | Relationship | When to Use |
+|----------|-------------|-------------|
+| [04-implement](workflows/04-implement.md) | **Previous** | To test after implementation |
+| [07-deploy](workflows/07-deploy.md) | **Next** | To deploy after testing |
+| [18-qa](workflows/18-qa.md) | **Related** | To ensure quality assurance |
+| [13-code-review](workflows/13-code-review.md) | **Related** | To review test coverage |

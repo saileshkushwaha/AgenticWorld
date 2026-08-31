@@ -74,3 +74,15 @@ Use: `templates/api-management-report.md` | Capability: `capabilities/api-manage
 - Multiple audiences → Create separate documents per audience
 - No existing template → Adapt from similar project
 - Technical reviewer unavailable → Use peer review
+
+## Output
+
+Use: `templates/api-management-report.md` | Capability: `capabilities/api-management.md`
+
+## Related Workflows
+
+| Workflow | Relationship | When to Use |
+|----------|-------------|-------------|
+| [03-design](workflows/03-design.md) | **Related** | To design API architecture |
+| [04-implement](workflows/04-implement.md) | **Related** | To implement APIs |
+| [10-security](workflows/10-security.md) | **Related** | To secure APIs |

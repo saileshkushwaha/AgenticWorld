@@ -88,3 +88,11 @@
 Use: `templates/communication.md` | Capability: `capabilities/communication.md`
 
 Templates: `research-report.md`, `analysis-report.md`, `design-document.md`, `implementation-plan.md`, `test-plan.md`, `debug-report.md`, `deployment-plan.md`, `modernization-plan.md`
+
+## Related Workflows
+
+| Workflow | Relationship | When to Use |
+|----------|-------------|-------------|
+| [15-documentation](workflows/15-documentation.md) | **Related** | To document communications |
+| [25-stakeholder](workflows/25-stakeholder.md) | **Related** | To communicate with stakeholders |
+| [35-retrospective](workflows/35-retrospective.md) | **Related** | To communicate lessons learned |

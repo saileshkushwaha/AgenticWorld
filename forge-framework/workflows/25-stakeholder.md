@@ -72,3 +72,15 @@ Use: `templates/stakeholder-plan.md` | Capability: `capabilities/stakeholder-man
 - Conflicting stakeholder needs → Facilitate prioritization
 - No stakeholder availability → Use async communication
 - Resistance to change → Provide training and support
+
+## Output
+
+Use: `templates/stakeholder-plan.md` | Capability: `capabilities/stakeholder-management.md`
+
+## Related Workflows
+
+| Workflow | Relationship | When to Use |
+|----------|-------------|-------------|
+| [09-communication](workflows/09-communication.md) | **Related** | To communicate with stakeholders |
+| [14-project-planning](workflows/14-project-planning.md) | **Related** | To align stakeholders on project |
+| [26-change-management](workflows/26-change-management.md) | **Related** | To manage stakeholder expectations |

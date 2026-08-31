@@ -72,3 +72,15 @@ Use: `templates/post-quantum-report.md` | Capability: `capabilities/post-quantum
 - Legacy systems → Use incremental security improvements
 - No security team → Use automated tools
 - Compliance conflicts → Consult legal team
+
+## Output
+
+Use: `templates/post-quantum-report.md` | Capability: `capabilities/post-quantum.md`
+
+## Related Workflows
+
+| Workflow | Relationship | When to Use |
+|----------|-------------|-------------|
+| [10-security](workflows/10-security.md) | **Related** | To implement quantum-resistant security |
+| [30-devsecops](workflows/30-devsecops.md) | **Related** | To integrate into CI/CD |
+| [04-implement](workflows/04-implement.md) | **Related** | To implement quantum-resistant algorithms |

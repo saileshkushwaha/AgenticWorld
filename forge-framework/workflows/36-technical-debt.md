@@ -58,3 +58,15 @@ Document debt register and remediation plan.
 ## Output
 
 Use: `templates/technical-debt-register.md` | Capability: `capabilities/technical-debt.md`
+
+## Related Workflows
+
+| Workflow | Relationship | When to Use |
+|----------|-------------|-------------|
+| [35-retrospective](workflows/35-retrospective.md) | **Related** | To identify debt in retrospectives |
+| [04-implement](workflows/04-implement.md) | **Related** | To track debt during implementation |
+| [08-modernize](workflows/08-modernize.md) | **Related** | To address debt through modernization |
+
+## Output
+
+Use: `templates/technical-debt-register.md` | Capability: `capabilities/technical-debt.md`

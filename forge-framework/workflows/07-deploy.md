@@ -84,3 +84,12 @@
 ## Output
 
 Use: `templates/deployment-plan.md` | Prev: `05-test.md` | Next: `08-modernize.md` | Capability: `capabilities/deployment.md`
+
+## Related Workflows
+
+| Workflow | Relationship | When to Use |
+|----------|-------------|-------------|
+| [05-test](workflows/05-test.md) | **Previous** | To deploy after testing |
+| [08-modernize](workflows/08-modernize.md) | **Next** | To modernize after deployment |
+| [17-release](workflows/17-release.md) | **Related** | To release deployments |
+| [16-configuration](workflows/16-configuration.md) | **Related** | To configure deployment environments |

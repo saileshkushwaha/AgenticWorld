@@ -74,3 +74,15 @@ Use: `templates/documentation.md` | Capability: `capabilities/documentation.md`
 - Multiple audiences → Create separate documents per audience
 - No existing template → Adapt from similar project
 - Technical reviewer unavailable → Use peer review
+
+## Output
+
+Use: `templates/documentation.md` | Capability: `capabilities/documentation.md`
+
+## Related Workflows
+
+| Workflow | Relationship | When to Use |
+|----------|-------------|-------------|
+| [09-communication](workflows/09-communication.md) | **Related** | To communicate documentation |
+| [27-knowledge](workflows/27-knowledge.md) | **Related** | To manage knowledge base |
+| [04-implement](workflows/04-implement.md) | **Related** | To document implementation |

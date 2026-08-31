@@ -74,3 +74,15 @@ Use: `templates/configuration-report.md` | Capability: `capabilities/configurati
 - Multiple audiences → Create separate documents per audience
 - No existing template → Adapt from similar project
 - Technical reviewer unavailable → Use peer review
+
+## Output
+
+Use: `templates/configuration-report.md` | Capability: `capabilities/configuration-management.md`
+
+## Related Workflows
+
+| Workflow | Relationship | When to Use |
+|----------|-------------|-------------|
+| [45-configuration-audit](workflows/45-configuration-audit.md) | **Related** | To audit configuration compliance |
+| [10-security](workflows/10-security.md) | **Related** | To secure configurations |
+| [07-deploy](workflows/07-deploy.md) | **Related** | To configure deployment environments |

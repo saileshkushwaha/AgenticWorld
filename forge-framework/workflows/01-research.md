@@ -78,3 +78,13 @@
 ## Output
 
 Use: `templates/research-report.md` | Next: `02-analyze.md` | Capability: `capabilities/research.md`
+
+## Related Workflows
+
+| Workflow | Relationship | When to Use |
+|----------|-------------|-------------|
+| [02-analyze](workflows/02-analyze.md) | **Next** | After research to analyze requirements |
+| [14-project-planning](workflows/14-project-planning.md) | **Related** | To incorporate research into project plan |
+| [03-design](workflows/03-design.md) | **Related** | To inform architecture design decisions |
+| [10-security](workflows/10-security.md) | **Related** | To research security implications |
+| [35-retrospective](workflows/35-retrospective.md) | **Related** | To gather lessons learned |
