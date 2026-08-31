@@ -43,5 +43,19 @@ Monitor agent performance. Optimize coordination. Document learnings.
 | QG5 | Testing passed |
 | QG6 | Monitoring configured |
 
+## Anti-Patterns
+
+1. **Agent proliferation** — Too many agents
+2. **Coordination overhead** — More time coordinating than working
+3. **Single point of failure** — Orchestrator bottleneck
+4. **Unclear ownership** — Task responsibility unclear
+
+## Edge Cases
+
+- Agent conflicts: Resolution strategies
+- Circular dependencies: Breaking cycles
+- Partial failures: Graceful degradation
+- Communication failures: Retry and timeout
+
 ## Output
 Use: `templates/multi-agent-plan.md` | Capability: `capabilities/multi-agent.md`

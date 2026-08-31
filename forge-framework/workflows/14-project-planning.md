@@ -51,6 +51,13 @@ Identify project risks. Assess probability/impact. Define mitigation strategies.
 3. **Resource overallocation** — Burnout risk
 4. **Ignoring dependencies** — Blocked work
 
+## Edge Cases
+
+- Unknown unknowns: Contingency planning
+- Team turnover: Knowledge transfer
+- External dependencies: Vendor delays
+- Scope changes: Change control process
+
 ## Output
 
 Use: `templates/project-plan.md` | Capability: `capabilities/project-planning.md`

@@ -44,6 +44,20 @@ Document inventory, versioning, deprecation, DX improvements.
 | QG5 | Analytics configured |
 | QG6 | Report follows template |
 
+## Anti-Patterns
+
+1. **Versioning neglect** — No backward compatibility
+2. **Documentation debt** — Docs lag behind API
+3. **Undocumented changes** — Breaking changes without notice
+4. **Overly generic** — One endpoint for everything
+
+## Edge Cases
+
+- Deprecated APIs: Clear sunset timeline
+- Rate limiting: Document clearly
+- Error codes: Consistent across endpoints
+- Pagination: Standard cursor/offset approach
+
 ## Output
 
 Use: `templates/api-management-report.md` | Capability: `capabilities/api-management.md`

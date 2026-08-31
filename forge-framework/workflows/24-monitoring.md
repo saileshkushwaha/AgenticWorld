@@ -43,5 +43,19 @@ Verify monitoring works. Document setup. Train team.
 | QG5 | Implementation complete |
 | QG6 | Validation passed |
 
+## Anti-Patterns
+
+1. **Tool sprawl** — Too many monitoring tools
+2. **Alert fatigue** — Too many alerts, low signal
+3. **Dashboard chaos** — Unused or redundant dashboards
+4. **Metric overload** — Collecting everything
+
+## Edge Cases
+
+- High cardinality: Sampling strategies
+- Clock skew: NTP synchronization
+- Metric gaps: Interpolation handling
+- Service mesh: Distributed tracing complexity
+
 ## Output
 Use: `templates/monitoring-report.md` | Capability: `capabilities/monitoring.md`

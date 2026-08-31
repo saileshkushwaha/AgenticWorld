@@ -52,6 +52,13 @@ Document findings, risks, remediation plan. Executive summary for leadership.
 3. **No remediation** — Findings without plan
 4. **Ignoring low severity** — Cumulative risk
 
+## Edge Cases
+
+- Zero-day vulnerabilities: Rapid assessment
+- Third-party dependencies: Supply chain risk
+- Insider threats: Access pattern analysis
+- Social engineering: Human factor awareness
+
 ## Output
 
 Use: `templates/security-audit-report.md` | Capability: `capabilities/security.md`

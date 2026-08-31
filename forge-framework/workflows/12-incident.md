@@ -51,6 +51,13 @@ Implement preventive measures. Update runbooks. Share learnings.
 3. **No preventive measures** — Recurring incidents
 4. **Poor communication** — Stakeholders uninformed
 
+## Edge Cases
+
+- Multiple simultaneous incidents: Prioritization
+- Partial data: Incomplete information
+- Escalation fatigue: Too many escalations
+- Stakeholder panic: Managed communication
+
 ## Output
 
 Use: `templates/incident-report.md` | Capability: `capabilities/incident-management.md`

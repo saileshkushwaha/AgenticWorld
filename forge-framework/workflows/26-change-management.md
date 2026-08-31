@@ -43,5 +43,19 @@ Verify change worked. Document lessons. Update processes.
 | QG5 | Implementation planned |
 | QG6 | Review complete |
 
+## Anti-Patterns
+
+1. **Shadow IT** — Changes outside process
+2. **Rubber stamping** — Approvals without review
+3. **Scope creep** — Continuous small changes
+4. **Emergency bypass** — Frequent "emergencies"
+
+## Edge Cases
+
+- Failed change: Rollback execution
+- Cascade effects: Impact on dependencies
+- Out-of-hours changes: On-call procedures
+- Rollback not possible: Go-forward strategy
+
 ## Output
 Use: `templates/change-request.md` | Capability: `capabilities/change-management.md`

@@ -44,6 +44,20 @@ Publish to appropriate platform (wiki, docs site, repo). Notify stakeholders.
 | QG5 | Editing complete |
 | QG6 | Published |
 
+## Anti-Patterns
+
+1. **Scope creep** — Adding content beyond original scope
+2. **Perfectionism** — Endless refinement, never publishing
+3. **Outdated docs** — No refresh process for existing docs
+4. **Inconsistent style** — Varying formats across documents
+
+## Edge Cases
+
+- Null/empty content: Start with skeleton structure
+- Extreme length: Split into multiple documents
+- Sensitive data: Redact before documenting
+- Multiple audiences: Create separate versions or use clear section markers
+
 ## Output
 
 Use: `templates/documentation.md` | Capability: `capabilities/documentation.md`

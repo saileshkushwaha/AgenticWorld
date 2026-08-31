@@ -43,5 +43,19 @@ Document findings, compliance status, remediation plan. Create VPAT if needed.
 | QG5 | Remediation planned |
 | QG6 | Report complete |
 
+## Anti-Patterns
+
+1. **Accessibility as afterthought** — Retrofitting
+2. **Over-reliance on automation** — Tools miss context
+3. **One-size-fits-all** — Same approach for all disabilities
+4. **WCAG compliance theater** — Checkbox mentality
+
+## Edge Cases
+
+- Dynamic content: Screen reader updates
+- Complex interactions: ARIA patterns
+- Mobile accessibility: Touch targets
+- Cognitive accessibility: Plain language
+
 ## Output
 Use: `templates/accessibility-report.md` | Capability: `capabilities/accessibility.md`

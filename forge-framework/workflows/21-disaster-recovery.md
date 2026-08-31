@@ -43,5 +43,19 @@ Document DR plan, RTO/RPO, testing schedule. Get approval.
 | QG5 | Testing planned |
 | QG6 | Plan approved |
 
+## Anti-Patterns
+
+1. **Single point of failure** — No redundancy considered
+2. **Untested backups** — Assumes backups work
+3. **Unrealistic RTO/RPO** — Targets not achievable
+4. **Ignored human factor** — Procedures too complex
+
+## Edge Cases
+
+- Partial failure: Graceful degradation
+- Cascading failures: Circuit breakers
+- Communication outage: Offline procedures
+- Data corruption: Checksum validation
+
 ## Output
 Use: `templates/dr-plan.md` | Capability: `capabilities/disaster-recovery.md`
