@@ -54,7 +54,7 @@ export function ProductCard({ product }: ProductCardProps) {
   const inWishlist = isInWishlist(product.id)
 
   return (
-    <div onClick={handleClick} className="group bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-xl hover:border-orange-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer">
+    <div data-testid="product-card" onClick={handleClick} className="group bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-xl hover:border-orange-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer">
       <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100">
         <img
           src={product.imageUrl}
@@ -67,6 +67,7 @@ export function ProductCard({ product }: ProductCardProps) {
           </Badge>
         )}
         <button
+          data-testid="wishlist-button"
           onClick={handleWishlistToggle}
           className={`absolute top-3 right-3 w-9 h-9 rounded-full flex items-center justify-center transition-all shadow-sm ${
             inWishlist ? 'bg-red-50 text-red-500' : 'bg-white/90 text-gray-400 hover:text-red-500 hover:bg-white'
@@ -91,6 +92,7 @@ export function ProductCard({ product }: ProductCardProps) {
             )}
           </div>
           <button
+            data-testid="add-to-cart"
             onClick={handleAddToCart}
             className="w-9 h-9 bg-orange-600 text-white rounded-full flex items-center justify-center hover:bg-orange-700 transition-colors shadow-sm hover:shadow-md"
           >

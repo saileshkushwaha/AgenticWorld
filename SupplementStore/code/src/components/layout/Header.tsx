@@ -64,6 +64,7 @@ export function Header() {
               </form>
             ) : (
               <button
+                data-testid="search-button"
                 onClick={() => setIsSearchOpen(true)}
                 className="p-2 text-gray-500 hover:text-orange-600 hover:bg-orange-50 rounded-full transition-colors"
               >
@@ -71,7 +72,7 @@ export function Header() {
               </button>
             )}
 
-            <Link to="/cart" className="relative p-2 text-gray-500 hover:text-orange-600 hover:bg-orange-50 rounded-full transition-colors">
+            <Link to="/cart" data-testid="cart-link" className="relative p-2 text-gray-500 hover:text-orange-600 hover:bg-orange-50 rounded-full transition-colors">
               <ShoppingCartIcon className="w-5 h-5" />
               {itemCount > 0 && (
                 <span className="absolute -top-0.5 -right-0.5 w-5 h-5 flex items-center justify-center text-[10px] text-white bg-orange-600 rounded-full font-bold">
@@ -82,7 +83,7 @@ export function Header() {
 
             {isAuthenticated ? (
               <div className="relative group">
-                <button className="flex items-center gap-2 p-1.5 rounded-full hover:bg-orange-50 transition-colors">
+                <button data-testid="user-menu" className="flex items-center gap-2 p-1.5 rounded-full hover:bg-orange-50 transition-colors">
                   <div className="w-8 h-8 bg-gradient-to-br from-orange-400 to-red-500 rounded-full flex items-center justify-center">
                     <span className="text-white text-xs font-bold">
                       {user?.firstName?.[0]}{user?.lastName?.[0]}
@@ -116,6 +117,7 @@ export function Header() {
             )}
 
             <button
+              data-testid="mobile-menu-button"
               className="md:hidden p-2 text-gray-500 hover:text-orange-600"
               onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
             >

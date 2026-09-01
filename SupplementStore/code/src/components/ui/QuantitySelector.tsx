@@ -32,6 +32,7 @@ export function QuantitySelector({
   return (
     <div className={cn('flex items-center border border-gray-300 rounded-lg overflow-hidden', className)}>
       <button
+        data-testid="quantity-decrease"
         onClick={() => onChange(Math.max(min, value - 1))}
         disabled={value <= min}
         className={cn(
@@ -41,10 +42,11 @@ export function QuantitySelector({
       >
         −
       </button>
-      <span className={cn('flex items-center justify-center font-medium text-gray-900 border-x border-gray-300', buttonClasses[size], sizeClasses[size])}>
+      <span data-testid="quantity-value" className={cn('flex items-center justify-center font-medium text-gray-900 border-x border-gray-300', buttonClasses[size], sizeClasses[size])}>
         {value}
       </span>
       <button
+        data-testid="quantity-increase"
         onClick={() => onChange(Math.min(max, value + 1))}
         disabled={value >= max}
         className={cn(

@@ -38,7 +38,7 @@ export function CartPage() {
           {items.map((item) => {
             const price = item.product.salePrice ?? item.product.price
             return (
-              <div key={item.id} className="bg-white rounded-xl shadow-sm border border-gray-100 p-4 flex gap-4">
+              <div key={item.id} data-testid="cart-item" className="bg-white rounded-xl shadow-sm border border-gray-100 p-4 flex gap-4">
                 <Link to={`/products/${item.product.slug}`}>
                   <img
                     src={item.product.imageUrl}
@@ -62,6 +62,7 @@ export function CartPage() {
                 </div>
                 <div className="flex flex-col items-end justify-between">
                   <button
+                    data-testid="remove-item"
                     onClick={() => removeItem(item.product.id)}
                     className="text-gray-400 hover:text-red-500 transition-colors"
                   >
