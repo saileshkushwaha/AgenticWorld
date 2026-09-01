@@ -25,7 +25,6 @@ The ability to upgrade, migrate, or refactor existing systems to improve maintai
 - Platform migration
 - Data migration
 - Architecture evolution
-- Coexistence planning
 
 ### Out of Scope
 - New feature development (see Implementation capability)
