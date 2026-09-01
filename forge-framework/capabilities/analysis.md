@@ -25,7 +25,6 @@ The ability to evaluate requirements, assess feasibility, identify risks, and pe
 - SWOT analysis
 - Cost-benefit analysis
 - Decision matrix creation
-- Stakeholder facilitation
 
 ### Out of Scope
 - Implementation of analyzed solutions (see Implementation capability)
