@@ -24,7 +24,6 @@ The ability to identify, isolate, and resolve defects through systematic investi
 - Regression testing
 - Prevention strategy
 - Debug documentation
-- Knowledge sharing
 
 ### Out of Scope
 - Test case design (see Testing capability)
