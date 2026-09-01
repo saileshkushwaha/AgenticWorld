@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { ShoppingCartIcon, HeartIcon } from '@heroicons/react/24/outline'
 import { HeartIcon as HeartSolid } from '@heroicons/react/24/solid'
 import { Product } from '../../types'
@@ -14,6 +14,7 @@ interface ProductCardProps {
 }
 
 export function ProductCard({ product }: ProductCardProps) {
+  const navigate = useNavigate()
   const addItem = useCartStore((state) => state.addItem)
   const addToast = useUIStore((state) => state.addToast)
   const setAuthModalOpen = useUIStore((state) => state.setAuthModalOpen)
@@ -44,12 +45,16 @@ export function ProductCard({ product }: ProductCardProps) {
     }
   }
 
+  const handleClick = () => {
+    navigate(`/products/${product.slug}`)
+  }
+
   const price = product.salePrice ?? product.price
   const hasDiscount = product.salePrice && product.salePrice < product.price
   const inWishlist = isInWishlist(product.id)
 
   return (
-    <Link to={`/products/${product.slug}`} className="group bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-xl hover:border-orange-200 transition-all duration-300 hover:-translate-y-1 block">
+    <div onClick={handleClick} className="group bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-xl hover:border-orange-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer">
       <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100">
         <img
           src={product.imageUrl}
@@ -93,6 +98,6 @@ export function ProductCard({ product }: ProductCardProps) {
           </button>
         </div>
       </div>
-    </Link>
+    </div>
   )
 }
