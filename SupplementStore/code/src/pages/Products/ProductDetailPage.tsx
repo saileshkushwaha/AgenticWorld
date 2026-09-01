@@ -1,16 +1,28 @@
 import { useParams, Link } from 'react-router-dom'
 import { useQuery } from '@tanstack/react-query'
-import { ShoppingCartIcon, StarIcon, CheckIcon } from '@heroicons/react/24/solid'
+import { ShoppingCartIcon, HeartIcon, CheckIcon } from '@heroicons/react/24/solid'
+import { HeartIcon as HeartOutline } from '@heroicons/react/24/outline'
 import { api } from '../../services/api'
 import { useCartStore } from '../../stores/cart'
 import { useUIStore } from '../../stores/ui'
+import { useWishlistStore } from '../../stores/wishlist'
+import { useAuthStore } from '../../stores/auth'
 import { Button } from '../../components/ui/Button'
 import { Badge } from '../../components/ui/Badge'
+import { Breadcrumb } from '../../components/ui/Breadcrumb'
+import { ImageGallery } from '../../components/ui/ImageGallery'
+import { QuantitySelector } from '../../components/ui/QuantitySelector'
+import { RatingDisplay, RatingInput } from '../../components/ui/Rating'
+import { useState } from 'react'
 
 export function ProductDetailPage() {
   const { slug } = useParams<{ slug: string }>()
   const addItem = useCartStore((state) => state.addItem)
   const addToast = useUIStore((state) => state.addToast)
+  const setAuthModalOpen = useUIStore((state) => state.setAuthModalOpen)
+  const { addItem: addToWishlist, removeItem: removeFromWishlist, isInWishlist } = useWishlistStore()
+  const isAuthenticated = useAuthStore((state) => state.isAuthenticated)
+  const [quantity, setQuantity] = useState(1)
 
   const { data: product, isLoading } = useQuery({
     queryKey: ['product', slug],
@@ -24,15 +36,21 @@ export function ProductDetailPage() {
     enabled: !!product?.id,
   })
 
+  const { data: relatedProducts } = useQuery({
+    queryKey: ['related-products', product?.category],
+    queryFn: () => api.products.getAll({ category: product?.category, limit: 4 }),
+    enabled: !!product?.category,
+  })
+
   if (isLoading) {
     return (
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 animate-pulse">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="aspect-square bg-gray-200 rounded-lg" />
+          <div className="aspect-square bg-gray-200 rounded-xl animate-pulse" />
           <div className="space-y-4">
-            <div className="h-8 bg-gray-200 rounded w-3/4" />
-            <div className="h-4 bg-gray-200 rounded w-1/4" />
-            <div className="h-6 bg-gray-200 rounded w-1/2" />
+            <div className="h-8 bg-gray-200 rounded w-3/4 animate-pulse" />
+            <div className="h-4 bg-gray-200 rounded w-1/4 animate-pulse" />
+            <div className="h-6 bg-gray-200 rounded w-1/2 animate-pulse" />
           </div>
         </div>
       </div>
@@ -43,7 +61,7 @@ export function ProductDetailPage() {
     return (
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center">
         <h1 className="text-2xl font-bold mb-4">Product Not Found</h1>
-        <Link to="/products" className="text-primary-600 hover:text-primary-700">
+        <Link to="/products" className="text-orange-600 hover:text-orange-700">
           ← Back to Products
         </Link>
       </div>
@@ -52,54 +70,48 @@ export function ProductDetailPage() {
 
   const price = product.salePrice ?? product.price
   const hasDiscount = product.salePrice && product.salePrice < product.price
+  const inWishlist = isInWishlist(product.id)
+  const images = [product.imageUrl, ...(product.gallery || [])].filter(Boolean)
 
   const handleAddToCart = () => {
-    addItem(product)
-    addToast(`${product.name} added to cart`, 'success')
+    addItem(product, quantity)
+    addToast(`${product.name} (${quantity}) added to cart`, 'success')
+  }
+
+  const handleWishlistToggle = () => {
+    if (!isAuthenticated) {
+      setAuthModalOpen(true)
+      addToast('Please log in to add to wishlist', 'info')
+      return
+    }
+    if (inWishlist) {
+      removeFromWishlist(product.id)
+      addToast(`${product.name} removed from wishlist`, 'info')
+    } else {
+      addToWishlist(product)
+      addToast(`${product.name} added to wishlist`, 'success')
+    }
   }
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      {/* Breadcrumb */}
-      <nav className="flex items-center space-x-2 text-sm text-gray-500 mb-6">
-        <Link to="/" className="hover:text-primary-600">Home</Link>
-        <span>/</span>
-        <Link to="/products" className="hover:text-primary-600">Products</Link>
-        <span>/</span>
-        <span className="text-gray-900">{product.name}</span>
-      </nav>
+      <Breadcrumb
+        items={[
+          { label: 'Products', href: '/products' },
+          { label: product.name },
+        ]}
+        className="mb-6"
+      />
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {/* Product Image */}
-        <div className="aspect-square rounded-lg overflow-hidden bg-gray-100">
-          <img
-            src={product.imageUrl}
-            alt={product.name}
-            className="w-full h-full object-cover"
-          />
-        </div>
+        <ImageGallery images={images} alt={product.name} />
 
-        {/* Product Info */}
         <div>
           <p className="text-sm text-gray-500 mb-1">{product.brand}</p>
           <h1 className="text-2xl font-bold text-gray-900 mb-2">{product.name}</h1>
 
-          {/* Rating */}
-          <div className="flex items-center mb-4">
-            <div className="flex items-center">
-              {[...Array(5)].map((_, i) => (
-                <StarIcon
-                  key={i}
-                  className={`w-5 h-5 ${i < Math.floor(product.rating) ? 'text-yellow-400' : 'text-gray-300'}`}
-                />
-              ))}
-            </div>
-            <span className="text-sm text-gray-500 ml-2">
-              {product.rating} ({product.reviewCount} reviews)
-            </span>
-          </div>
+          <RatingDisplay rating={product.rating} reviewCount={product.reviewCount} className="mb-4" />
 
-          {/* Price */}
           <div className="flex items-center mb-6">
             <span className="text-3xl font-bold text-gray-900">${price.toFixed(2)}</span>
             {hasDiscount && (
@@ -112,10 +124,8 @@ export function ProductDetailPage() {
             )}
           </div>
 
-          {/* Description */}
           <p className="text-gray-600 mb-6">{product.description}</p>
 
-          {/* Certifications */}
           {product.certifications && product.certifications.length > 0 && (
             <div className="mb-6">
               <h3 className="text-sm font-medium text-gray-900 mb-2">Certifications</h3>
@@ -130,7 +140,6 @@ export function ProductDetailPage() {
             </div>
           )}
 
-          {/* Dosage */}
           {product.dosage && (
             <div className="mb-6">
               <h3 className="text-sm font-medium text-gray-900 mb-1">Recommended Dosage</h3>
@@ -138,29 +147,42 @@ export function ProductDetailPage() {
             </div>
           )}
 
-          {/* Add to Cart */}
+          <div className="flex items-center gap-4 mb-4">
+            <span className="text-sm font-medium text-gray-700">Quantity:</span>
+            <QuantitySelector value={quantity} onChange={setQuantity} min={1} max={product.stock} />
+          </div>
+
           <div className="flex gap-4">
-            <Button onClick={handleAddToCart} className="flex-1">
+            <Button onClick={handleAddToCart} className="flex-1" disabled={product.stock === 0}>
               <ShoppingCartIcon className="w-5 h-5 mr-2" />
-              Add to Cart
+              {product.stock === 0 ? 'Out of Stock' : 'Add to Cart'}
+            </Button>
+            <Button variant="outline" onClick={handleWishlistToggle} className="px-4">
+              {inWishlist ? (
+                <HeartIcon className="w-5 h-5 text-red-500" />
+              ) : (
+                <HeartOutline className="w-5 h-5" />
+              )}
             </Button>
           </div>
 
-          {/* Stock */}
           <p className="mt-4 text-sm text-gray-500">
-            {product.stock > 0 ? `${product.stock} in stock` : 'Out of stock'}
+            {product.stock > 0 ? (
+              <span className="text-green-600">{product.stock} in stock</span>
+            ) : (
+              <span className="text-red-600">Out of stock</span>
+            )}
           </p>
         </div>
       </div>
 
-      {/* Ingredients & Nutrition */}
       <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="card p-6">
+        <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
           <h2 className="text-lg font-bold mb-4">Ingredients</h2>
           <p className="text-gray-600">{product.ingredients}</p>
         </div>
         {product.nutrition && (
-          <div className="card p-6">
+          <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
             <h2 className="text-lg font-bold mb-4">Nutrition Facts</h2>
             <div className="space-y-2 text-gray-600">
               {product.nutrition.servingSize && <p>Serving Size: {product.nutrition.servingSize}</p>}
@@ -173,23 +195,16 @@ export function ProductDetailPage() {
         )}
       </div>
 
-      {/* Reviews */}
+      {/* Reviews Section */}
       <div className="mt-12">
         <h2 className="text-lg font-bold mb-4">Customer Reviews</h2>
         {reviews && reviews.length > 0 ? (
           <div className="space-y-4">
             {reviews.map((review) => (
-              <div key={review.id} className="card p-6">
+              <div key={review.id} className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
                 <div className="flex items-center justify-between mb-2">
                   <div className="flex items-center">
-                    <div className="flex">
-                      {[...Array(5)].map((_, i) => (
-                        <StarIcon
-                          key={i}
-                          className={`w-4 h-4 ${i < review.rating ? 'text-yellow-400' : 'text-gray-300'}`}
-                        />
-                      ))}
-                    </div>
+                    <RatingDisplay rating={review.rating} showCount={false} size="sm" />
                     {review.isVerified && (
                       <Badge variant="success" className="ml-2">Verified Purchase</Badge>
                     )}
@@ -208,6 +223,32 @@ export function ProductDetailPage() {
           <p className="text-gray-500">No reviews yet. Be the first to review this product!</p>
         )}
       </div>
+
+      {/* Related Products */}
+      {relatedProducts && relatedProducts.data.length > 0 && (
+        <div className="mt-12">
+          <h2 className="text-lg font-bold mb-4">Related Products</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {relatedProducts.data
+              .filter((p) => p.id !== product.id)
+              .slice(0, 4)
+              .map((p) => (
+                <Link key={p.id} to={`/products/${p.slug}`} className="group">
+                  <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow">
+                    <div className="aspect-square bg-gray-100">
+                      <img src={p.imageUrl} alt={p.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
+                    </div>
+                    <div className="p-4">
+                      <p className="text-xs text-gray-500">{p.brand}</p>
+                      <h3 className="font-medium text-gray-900 truncate">{p.name}</h3>
+                      <p className="text-orange-600 font-bold mt-1">${(p.salePrice ?? p.price).toFixed(2)}</p>
+                    </div>
+                  </div>
+                </Link>
+              ))}
+          </div>
+        </div>
+      )}
     </div>
   )
 }
