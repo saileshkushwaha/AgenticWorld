@@ -61,3 +61,12 @@ Implement preventive measures. Update runbooks. Share learnings.
 ## Output
 
 Use: `templates/incident-report.md` | Capability: `capabilities/incident-management.md`
+
+## Related Workflows
+
+| Workflow | Relationship | When to Use |
+|----------|-------------|-------------|
+| [62-incident-communication](workflows/62-incident-communication.md) | **Related** | Communicate during incidents |
+| [63-post-incident-review](workflows/63-post-incident-review.md) | **Related** | Post-incident review |
+| [57-business-continuity](workflows/57-business-continuity.md) | **Related** | Business continuity |
+| [58-dr-testing](workflows/58-dr-testing.md) | **Related** | DR testing |

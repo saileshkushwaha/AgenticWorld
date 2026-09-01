@@ -68,6 +68,38 @@ A production-ready, markdown-based agentic framework for end-to-end SDLC operati
 | 33 | Multi-Agent Coordination | [33-multi-agent](workflows/33-multi-agent.md) |
 | 34 | Post-Quantum Security | [34-post-quantum](workflows/34-post-quantum.md) |
 
+### Enterprise Security Workflows (55-61)
+| # | Capability | Workflow |
+|---|------------|----------|
+| 55 | Secrets Management | [55-secrets-management](workflows/55-secrets-management.md) |
+| 56 | Identity & Access Management | [56-iam](workflows/56-iam.md) |
+| 57 | Business Continuity Planning | [57-business-continuity](workflows/57-business-continuity.md) |
+| 58 | Disaster Recovery Testing | [58-dr-testing](workflows/58-dr-testing.md) |
+| 59 | Failover Testing | [59-failover-testing](workflows/59-failover-testing.md) |
+| 60 | Data Governance | [60-data-governance](workflows/60-data-governance.md) |
+| 61 | Penetration Testing | [61-penetration-testing](workflows/61-penetration-testing.md) |
+
+### Enterprise Operations Workflows (62-66)
+| # | Capability | Workflow |
+|---|------------|----------|
+| 62 | Incident Communication | [62-incident-communication](workflows/62-incident-communication.md) |
+| 63 | Post-Incident Review | [63-post-incident-review](workflows/63-post-incident-review.md) |
+| 64 | Multi-Region Deployment | [64-multi-region-deployment](workflows/64-multi-region-deployment.md) |
+| 65 | Log Aggregation | [65-log-aggregation](workflows/65-log-aggregation.md) |
+| 66 | Distributed Tracing | [66-distributed-tracing](workflows/66-distributed-tracing.md) |
+
+### Architecture & Optimization Workflows (67-74)
+| # | Capability | Workflow |
+|---|------------|----------|
+| 67 | Microservices Decomposition | [67-microservices-decomposition](workflows/67-microservices-decomposition.md) |
+| 68 | Domain-Driven Design | [68-domain-driven-design](workflows/68-domain-driven-design.md) |
+| 69 | Chaos Engineering | [69-chaos-engineering](workflows/69-chaos-engineering.md) |
+| 70 | A/B Testing | [70-ab-testing](workflows/70-ab-testing.md) |
+| 71 | Caching Strategy | [71-caching-strategy](workflows/71-caching-strategy.md) |
+| 72 | Database Optimization | [72-database-optimization](workflows/72-database-optimization.md) |
+| 73 | ISO 27001 Preparation | [73-iso27001-preparation](workflows/73-iso27001-preparation.md) |
+| 74 | SOC 2 Preparation | [74-soc2-preparation](workflows/74-soc2-preparation.md) |
+
 ## Quick Start
 
 1. Load `core/system-prompt.md` as system prompt
@@ -108,22 +140,26 @@ Create `forge.config.md` in project root with global settings and per-workflow o
 
 - **Model-Agnostic**: Works with any instruction-tuned LLM
 - **Tool-Agnostic**: Works with CLI, web, API, IDE, and custom agents
-- **34 Complete Workflows**: Covering the full modern SDLC
+- **55 Complete Workflows**: Covering the full modern SDLC plus enterprise operations
 - **Template-Enforced**: Consistent output structure
 - **Quality Gates**: Objective, measurable criteria
 - **Deep Research**: Quick and Deep research modes
 - **Self-Verification**: Built-in validation and refinement
 - **Hallucination Detection**: Source verification
-- **Security Built-In**: Security audit + DevSecOps + Post-Quantum
-- **Incident Response**: Production incident management
-- **Compliance**: Regulatory compliance audit
+- **Security Built-In**: Security audit + DevSecOps + Post-Quantum + Penetration Testing + Secrets Management + IAM
+- **Incident Response**: Production incident management + communication + post-incident review
+- **Compliance**: Regulatory compliance audit + ISO 27001 + SOC 2 preparation
 - **Sustainability**: Green coding and FinOps
 - **AI-Ready**: AI-augmented development and multi-agent coordination
+- **Enterprise Grade**: Multi-region deployment, DR testing, failover testing, chaos engineering
+- **Observability**: Monitoring, telemetry, log aggregation, distributed tracing
+- **Architecture**: Microservices decomposition, domain-driven design, caching strategy
 
 ## Version History
 
 | Version | Date | Changes |
 |---------|------|---------|
+| v3.2.0 | 2026-09-01 | Added 20 new workflows (55-74) for enterprise security, operations, architecture, and compliance. Includes secrets management, IAM, BCP, DR testing, penetration testing, multi-region deployment, log aggregation, distributed tracing, microservices decomposition, DDD, chaos engineering, A/B testing, caching strategy, database optimization, ISO 27001, SOC 2 preparation. |
 | v3.1.0 | 2026-08-29 | Added CONTRIBUTING.md, VERSIONING.md, EXTENSION-POINTS.md, API-REFERENCE.md. Enhanced diagrams, troubleshooting, onboarding. Added code examples. |
 | v3.0.0 | 2026-08-28 | Added 15 new workflows (Tier 3 + Tier 4) for complete SDLC coverage |
 | v2.0.0 | 2026-08-28 | Added 10 new workflows (Security, Performance, Incident, Code Review, Planning, Docs, Config, Release, QA, API) |
@@ -151,7 +187,7 @@ A: Template enforcement + quality gates + output normalization.
 A: Iterative refinement up to 3 retries with specific feedback.
 
 **Q: How many workflows are there?**
-A: 34 complete workflows covering the full modern SDLC.
+A: 55 complete workflows covering the full modern SDLC plus enterprise operations, security, and compliance.
 
 **Q: What about emerging practices like AI and quantum?**
 A: Covered in workflows 30-34 (DevSecOps, Green Coding, AI-Augmented, Multi-Agent, Post-Quantum).

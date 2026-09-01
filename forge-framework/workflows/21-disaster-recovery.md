@@ -56,6 +56,15 @@ Document DR plan, RTO/RPO, testing schedule. Get approval.
 - Cascading failures: Circuit breakers
 - Communication outage: Offline procedures
 - Data corruption: Checksum validation
-
 ## Output
+
 Use: `templates/dr-plan.md` | Capability: `capabilities/disaster-recovery.md`
+
+## Related Workflows
+
+| Workflow | Relationship | When to Use |
+|----------|-------------|-------------|
+| [57-business-continuity](workflows/57-business-continuity.md) | **Related** | Business continuity planning |
+| [58-dr-testing](workflows/58-dr-testing.md) | **Related** | DR testing execution |
+| [59-failover-testing](workflows/59-failover-testing.md) | **Related** | Failover testing |
+| [64-multi-region-deployment](workflows/64-multi-region-deployment.md) | **Related** | Multi-region deployment |

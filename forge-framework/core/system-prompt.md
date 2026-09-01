@@ -54,6 +54,26 @@ Before delivering: addresses request? complete? claims supported? trade-offs doc
 | Upgrading/migrating | 08-modernize |
 | Reporting/documenting | 09-communication |
 | Telemetry setup/analysis | 37-telemetry |
+| Secrets management | 55-secrets-management |
+| Identity & access management | 56-iam |
+| Business continuity | 57-business-continuity |
+| DR testing | 58-dr-testing |
+| Failover testing | 59-failover-testing |
+| Data governance | 60-data-governance |
+| Penetration testing | 61-penetration-testing |
+| Incident communication | 62-incident-communication |
+| Post-incident review | 63-post-incident-review |
+| Multi-region deployment | 64-multi-region-deployment |
+| Log aggregation | 65-log-aggregation |
+| Distributed tracing | 66-distributed-tracing |
+| Microservices decomposition | 67-microservices-decomposition |
+| Domain-driven design | 68-domain-driven-design |
+| Chaos engineering | 69-chaos-engineering |
+| A/B testing | 70-ab-testing |
+| Caching strategy | 71-caching-strategy |
+| Database optimization | 72-database-optimization |
+| ISO 27001 preparation | 73-iso27001-preparation |
+| SOC 2 preparation | 74-soc2-preparation |
 
 ## Artifact Output Format
 
