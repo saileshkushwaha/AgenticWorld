@@ -7,13 +7,15 @@ import { useCartStore } from '../../stores/cart'
 import { useUIStore } from '../../stores/ui'
 import { useWishlistStore } from '../../stores/wishlist'
 import { useAuthStore } from '../../stores/auth'
+import { useRecentlyViewedStore } from '../../stores/recentlyViewed'
 import { Button } from '../../components/ui/Button'
 import { Badge } from '../../components/ui/Badge'
 import { Breadcrumb } from '../../components/ui/Breadcrumb'
 import { ImageGallery } from '../../components/ui/ImageGallery'
 import { QuantitySelector } from '../../components/ui/QuantitySelector'
-import { RatingDisplay, RatingInput } from '../../components/ui/Rating'
-import { useState } from 'react'
+import { RatingDisplay } from '../../components/ui/Rating'
+import { ReviewForm } from '../../components/review/ReviewForm'
+import { useState, useEffect } from 'react'
 
 export function ProductDetailPage() {
   const { slug } = useParams<{ slug: string }>()
@@ -22,7 +24,15 @@ export function ProductDetailPage() {
   const setAuthModalOpen = useUIStore((state) => state.setAuthModalOpen)
   const { addItem: addToWishlist, removeItem: removeFromWishlist, isInWishlist } = useWishlistStore()
   const isAuthenticated = useAuthStore((state) => state.isAuthenticated)
+  const { addItem: addToRecentlyViewed } = useRecentlyViewedStore()
   const [quantity, setQuantity] = useState(1)
+  const [showReviewForm, setShowReviewForm] = useState(false)
+
+  useEffect(() => {
+    if (product?.id) {
+      addToRecentlyViewed(product.id)
+    }
+  }, [product?.id, addToRecentlyViewed])
 
   const { data: product, isLoading } = useQuery({
     queryKey: ['product', slug],
@@ -197,7 +207,16 @@ export function ProductDetailPage() {
 
       {/* Reviews Section */}
       <div className="mt-12">
-        <h2 className="text-lg font-bold mb-4">Customer Reviews</h2>
+        <div className="flex items-center justify-between mb-6">
+          <h2 className="text-lg font-bold">Customer Reviews</h2>
+          <button
+            onClick={() => setShowReviewForm(!showReviewForm)}
+            className="text-sm text-orange-600 hover:text-orange-700 font-medium"
+          >
+            {showReviewForm ? 'Cancel' : 'Write a Review'}
+          </button>
+        </div>
+        {showReviewForm && <ReviewForm productId={product.id} onSuccess={() => setShowReviewForm(false)} />}
         {reviews && reviews.length > 0 ? (
           <div className="space-y-4">
             {reviews.map((review) => (

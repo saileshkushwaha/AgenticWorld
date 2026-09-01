@@ -4,6 +4,8 @@ import { useOrderStore } from '../../stores/order'
 import { useWishlistStore } from '../../stores/wishlist'
 import { useUIStore } from '../../stores/ui'
 import { EmptyState } from '../../components/ui/EmptyState'
+import { OrderInvoice } from '../../components/order/OrderInvoice'
+import { useState } from 'react'
 
 export function AccountPage() {
   const { user } = useAuthStore()
@@ -58,6 +60,9 @@ export function AccountPage() {
 
 export function OrdersPage() {
   const orders = useOrderStore((state) => state.orders)
+  const [selectedOrder, setSelectedOrder] = useState<string | null>(null)
+
+  const selectedOrderData = selectedOrder ? orders.find((o) => o.id === selectedOrder) : null
 
   if (orders.length === 0) {
     return (
@@ -76,50 +81,68 @@ export function OrdersPage() {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <h1 className="text-2xl font-bold mb-8">Order History</h1>
-      <div className="space-y-4">
-        {orders.map((order) => (
-          <div key={order.id} className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
-            <div className="flex flex-wrap items-center justify-between gap-4 mb-4">
-              <div>
-                <p className="font-mono font-bold text-gray-900">{order.id}</p>
-                <p className="text-sm text-gray-500">
-                  {new Date(order.createdAt).toLocaleDateString('en-US', {
-                    year: 'numeric',
-                    month: 'long',
-                    day: 'numeric',
-                  })}
-                </p>
+      {selectedOrderData ? (
+        <div>
+          <button
+            onClick={() => setSelectedOrder(null)}
+            className="mb-4 text-sm text-orange-600 hover:text-orange-700 font-medium"
+          >
+            ← Back to Orders
+          </button>
+          <OrderInvoice order={selectedOrderData} onClose={() => setSelectedOrder(null)} />
+        </div>
+      ) : (
+        <div className="space-y-4">
+          {orders.map((order) => (
+            <div key={order.id} className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+              <div className="flex flex-wrap items-center justify-between gap-4 mb-4">
+                <div>
+                  <p className="font-mono font-bold text-gray-900">{order.id}</p>
+                  <p className="text-sm text-gray-500">
+                    {new Date(order.createdAt).toLocaleDateString('en-US', {
+                      year: 'numeric',
+                      month: 'long',
+                      day: 'numeric',
+                    })}
+                  </p>
+                </div>
+                <div className="flex items-center gap-4">
+                  <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-medium capitalize">
+                    {order.status}
+                  </span>
+                  <span className="font-bold text-gray-900">${order.total.toFixed(2)}</span>
+                </div>
               </div>
-              <div className="flex items-center gap-4">
-                <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-medium capitalize">
-                  {order.status}
-                </span>
-                <span className="font-bold text-gray-900">${order.total.toFixed(2)}</span>
-              </div>
-            </div>
-            <div className="border-t border-gray-100 pt-4">
-              <div className="flex flex-wrap gap-4">
-                {order.items.map((item) => (
-                  <div key={item.id} className="flex items-center gap-3">
-                    <img src={item.product.imageUrl} alt={item.product.name} className="w-12 h-12 object-cover rounded-lg" />
-                    <div>
-                      <p className="font-medium text-gray-900 text-sm">{item.product.name}</p>
-                      <p className="text-xs text-gray-500">Qty: {item.quantity}</p>
+              <div className="border-t border-gray-100 pt-4">
+                <div className="flex flex-wrap gap-4">
+                  {order.items.map((item) => (
+                    <div key={item.id} className="flex items-center gap-3">
+                      <img src={item.product.imageUrl} alt={item.product.name} className="w-12 h-12 object-cover rounded-lg" />
+                      <div>
+                        <p className="font-medium text-gray-900 text-sm">{item.product.name}</p>
+                        <p className="text-xs text-gray-500">Qty: {item.quantity}</p>
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
+              </div>
+              <div className="mt-4 pt-4 border-t border-gray-100 flex gap-3">
+                <button
+                  onClick={() => setSelectedOrder(order.id)}
+                  className="text-sm text-orange-600 hover:text-orange-700 font-medium"
+                >
+                  View Invoice
+                </button>
+                {order.trackingNumber && (
+                  <span className="text-sm text-gray-600">
+                    Tracking: <span className="font-mono font-medium">{order.trackingNumber}</span>
+                  </span>
+                )}
               </div>
             </div>
-            {order.trackingNumber && (
-              <div className="mt-4 pt-4 border-t border-gray-100">
-                <p className="text-sm text-gray-600">
-                  Tracking: <span className="font-mono font-medium">{order.trackingNumber}</span>
-                </p>
-              </div>
-            )}
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      )}
     </div>
   )
 }
