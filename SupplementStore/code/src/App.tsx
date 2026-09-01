@@ -12,7 +12,7 @@ import { ContactPage } from './pages/Contact/ContactPage'
 import { FAQPage } from './pages/FAQ/FAQPage'
 import { PrivacyPolicyPage } from './pages/Privacy/PrivacyPolicyPage'
 import { TermsPage } from './pages/Terms/TermsPage'
-import { NotFoundPage } from './pages/NotFound/NotFoundPage'
+import { CategoryDetailPage } from './pages/Category/CategoryDetailPage'
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -42,7 +42,7 @@ export default function App() {
           <Route path="/faq" element={<FAQPage />} />
           <Route path="/privacy" element={<PrivacyPolicyPage />} />
           <Route path="/terms" element={<TermsPage />} />
-          <Route path="*" element={<NotFoundPage />} />
+          <Route path="/category/:slug" element={<CategoryDetailPage />} />
         </Routes>
       </Layout>
     </QueryClientProvider>

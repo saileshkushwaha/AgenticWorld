@@ -140,7 +140,7 @@ Create `forge.config.md` in project root with global settings and per-workflow o
 
 - **Model-Agnostic**: Works with any instruction-tuned LLM
 - **Tool-Agnostic**: Works with CLI, web, API, IDE, and custom agents
-- **55 Complete Workflows**: Covering the full modern SDLC plus enterprise operations
+- **69 Complete Workflows**: Covering the full modern SDLC plus enterprise operations
 - **Template-Enforced**: Consistent output structure
 - **Quality Gates**: Objective, measurable criteria
 - **Deep Research**: Quick and Deep research modes
@@ -187,7 +187,7 @@ A: Template enforcement + quality gates + output normalization.
 A: Iterative refinement up to 3 retries with specific feedback.
 
 **Q: How many workflows are there?**
-A: 55 complete workflows covering the full modern SDLC plus enterprise operations, security, and compliance.
+A: 69 complete workflows covering the full modern SDLC plus enterprise operations, security, and compliance.
 
 **Q: What about emerging practices like AI and quantum?**
 A: Covered in workflows 30-34 (DevSecOps, Green Coding, AI-Augmented, Multi-Agent, Post-Quantum).

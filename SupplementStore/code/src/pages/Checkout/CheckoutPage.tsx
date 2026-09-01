@@ -7,6 +7,9 @@ import { useCartStore } from '../../stores/cart'
 import { useOrderStore } from '../../stores/order'
 import { useUIStore } from '../../stores/ui'
 import { useAuthStore } from '../../stores/auth'
+import { useCouponStore } from '../../stores/coupon'
+import { useShippingStore } from '../../stores/shipping'
+import { CouponInput, ShippingSelector } from '../../components/checkout/CouponShipping'
 import { Address } from '../../types'
 
 const shippingSchema = z.object({
@@ -38,6 +41,8 @@ export function CheckoutPage() {
   const setAuthModalOpen = useUIStore((state) => state.setAuthModalOpen)
   const isAuthenticated = useAuthStore((state) => state.isAuthenticated)
   const navigate = useNavigate()
+  const { appliedCoupon, getDiscount } = useCouponStore()
+  const { selectedOption } = useShippingStore()
   const [step, setStep] = useState(1)
   const [orderId, setOrderId] = useState<string | null>(null)
   const [shippingData, setShippingData] = useState<ShippingFormData | null>(null)
@@ -150,9 +155,11 @@ export function CheckoutPage() {
     addToast('Order placed successfully!', 'success')
   }
 
-  const tax = getTotal() * 0.08
-  const shipping = 0
-  const total = getTotal() + tax + shipping
+  const subtotal = getTotal()
+  const tax = subtotal * 0.08
+  const discount = getDiscount(subtotal)
+  const shippingCost = selectedOption?.price || 0
+  const total = subtotal + tax + shippingCost - discount
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -301,22 +308,35 @@ export function CheckoutPage() {
           <div className="space-y-2 text-sm">
             <div className="flex justify-between">
               <span className="text-gray-600">Subtotal</span>
-              <span>${getTotal().toFixed(2)}</span>
+              <span>${subtotal.toFixed(2)}</span>
             </div>
             <div className="flex justify-between">
               <span className="text-gray-600">Shipping</span>
-              <span className="text-green-600">Free</span>
+              <span>{shippingCost === 0 ? 'Free' : `$${shippingCost.toFixed(2)}`}</span>
             </div>
             <div className="flex justify-between">
               <span className="text-gray-600">Tax (8%)</span>
               <span>${tax.toFixed(2)}</span>
             </div>
+            {discount > 0 && (
+              <div className="flex justify-between text-green-600">
+                <span>Discount</span>
+                <span>-${discount.toFixed(2)}</span>
+              </div>
+            )}
             <div className="border-t pt-2 mt-2 flex justify-between font-bold text-lg">
               <span>Total</span>
               <span>${total.toFixed(2)}</span>
             </div>
           </div>
+          <div className="mt-4">
+            <CouponInput />
+          </div>
         </div>
+      </div>
+
+      <div className="mt-8">
+        <ShippingSelector />
       </div>
     </div>
   )

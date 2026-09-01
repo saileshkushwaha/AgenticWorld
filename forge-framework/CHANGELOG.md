@@ -5,17 +5,21 @@ All notable changes to the Forge framework will be documented in this file.
 ## [v3.2.0] - 2026-09-01
 
 ### Added
-- **20 new workflows (55-74)** for enterprise-grade coverage:
+- **31 new workflows (44-74)** for enterprise-grade coverage:
+  - **Audit & Governance (44-45)**: Data Audit, Configuration Audit
+  - **DevOps & SRE (46-48)**: DevOps, SRE, Infrastructure as Code
+  - **Design (49-51)**: API Design, Database Design, UX Design
+  - **Metrics & Tracking (52-54)**: Productivity Metrics, Work Item Linkage, Flow Time Tracking
   - **Enterprise Security (55-61)**: Secrets Management, Identity & Access Management, Business Continuity Planning, Disaster Recovery Testing, Failover Testing, Data Governance, Penetration Testing
   - **Enterprise Operations (62-66)**: Incident Communication, Post-Incident Review, Multi-Region Deployment, Log Aggregation, Distributed Tracing
   - **Architecture & Optimization (67-74)**: Microservices Decomposition, Domain-Driven Design, Chaos Engineering, A/B Testing, Caching Strategy, Database Optimization, ISO 27001 Preparation, SOC 2 Preparation
-- **20 new capabilities** for each new workflow
-- **20 new templates** for each new workflow
+- **31 new capabilities** for each new workflow
+- **31 new templates** for each new workflow
 - Cross-references updated in workflows 12-incident.md and 21-disaster-recovery.md
 - README.md updated with new workflow categories and key features
 
 ### Enhanced
-- Framework now covers 55 workflows (up from 34)
+- Framework now covers 69 workflows (up from 34)
 - Added enterprise production grade capabilities
 - Added certification preparation (ISO 27001, SOC 2)
 - Added observability depth (log aggregation, distributed tracing)
