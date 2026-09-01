@@ -4,7 +4,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { useUIStore } from '../../stores/ui'
 import { useAuthStore } from '../../stores/auth'
-import { X } from '@heroicons/react/24/outline'
+import { XMarkIcon } from '@heroicons/react/24/outline'
 
 const loginSchema = z.object({
   email: z.string().email('Invalid email address'),
@@ -84,7 +84,7 @@ export function AuthModal() {
           onClick={() => setAuthModalOpen(false)}
           className="absolute top-4 right-4 text-gray-400 hover:text-gray-600"
         >
-          <X className="w-6 h-6" />
+          <XMarkIcon className="w-6 h-6" />
         </button>
 
         <h2 className="text-2xl font-bold text-gray-900 mb-6">
