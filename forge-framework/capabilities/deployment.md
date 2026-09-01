@@ -23,7 +23,6 @@ The ability to release software to target environments through planning, executi
 - Post-deployment verification
 - Rollback execution
 - Monitoring and alerting setup
-- Infrastructure as Code (IaC)
 - Database migration during deployment
 
 ### Out of Scope
