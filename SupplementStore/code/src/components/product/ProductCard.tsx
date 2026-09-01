@@ -7,7 +7,6 @@ import { useUIStore } from '../../stores/ui'
 import { useWishlistStore } from '../../stores/wishlist'
 import { useAuthStore } from '../../stores/auth'
 import { Badge } from '../ui/Badge'
-import { Button } from '../ui/Button'
 import { RatingDisplay } from '../ui/Rating'
 
 interface ProductCardProps {
@@ -23,12 +22,14 @@ export function ProductCard({ product }: ProductCardProps) {
 
   const handleAddToCart = (e: React.MouseEvent) => {
     e.preventDefault()
+    e.stopPropagation()
     addItem(product)
     addToast(`${product.name} added to cart`, 'success')
   }
 
   const handleWishlistToggle = (e: React.MouseEvent) => {
     e.preventDefault()
+    e.stopPropagation()
     if (!isAuthenticated) {
       setAuthModalOpen(true)
       addToast('Please log in to add to wishlist', 'info')
@@ -48,43 +49,48 @@ export function ProductCard({ product }: ProductCardProps) {
   const inWishlist = isInWishlist(product.id)
 
   return (
-    <Link to={`/products/${product.slug}`} className="card group hover:shadow-md transition-shadow relative">
-      <div className="relative aspect-square overflow-hidden">
+    <Link to={`/products/${product.slug}`} className="group bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-xl hover:border-orange-200 transition-all duration-300 hover:-translate-y-1 block">
+      <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100">
         <img
           src={product.imageUrl}
           alt={product.name}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
         />
         {hasDiscount && (
-          <Badge variant="error" className="absolute top-2 left-2">
+          <Badge variant="error" className="absolute top-3 left-3 shadow-sm">
             Sale
           </Badge>
         )}
         <button
           onClick={handleWishlistToggle}
-          className="absolute top-2 right-2 w-8 h-8 bg-white/90 rounded-full flex items-center justify-center shadow-sm hover:bg-white transition-colors"
+          className={`absolute top-3 right-3 w-9 h-9 rounded-full flex items-center justify-center transition-all shadow-sm ${
+            inWishlist ? 'bg-red-50 text-red-500' : 'bg-white/90 text-gray-400 hover:text-red-500 hover:bg-white'
+          }`}
         >
           {inWishlist ? (
-            <HeartSolid className="w-4 h-4 text-red-500" />
+            <HeartSolid className="w-4 h-4" />
           ) : (
-            <HeartIcon className="w-4 h-4 text-gray-600" />
+            <HeartIcon className="w-4 h-4" />
           )}
         </button>
       </div>
       <div className="p-4">
-        <p className="text-xs text-gray-500 mb-1">{product.brand}</p>
-        <h3 className="font-medium text-gray-900 mb-2 line-clamp-2">{product.name}</h3>
-        <RatingDisplay rating={product.rating} reviewCount={product.reviewCount} size="sm" className="mb-2" />
+        <p className="text-xs font-medium text-orange-600 mb-1 uppercase tracking-wide">{product.brand}</p>
+        <h3 className="font-semibold text-gray-900 mb-2 line-clamp-2 text-sm leading-snug">{product.name}</h3>
+        <RatingDisplay rating={product.rating} reviewCount={product.reviewCount} size="sm" className="mb-3" />
         <div className="flex items-center justify-between">
-          <div>
+          <div className="flex items-center gap-2">
             <span className="text-lg font-bold text-gray-900">${price.toFixed(2)}</span>
             {hasDiscount && (
-              <span className="ml-2 text-sm text-gray-500 line-through">${product.price.toFixed(2)}</span>
+              <span className="text-sm text-gray-400 line-through">${product.price.toFixed(2)}</span>
             )}
           </div>
-          <Button size="sm" onClick={handleAddToCart}>
+          <button
+            onClick={handleAddToCart}
+            className="w-9 h-9 bg-orange-600 text-white rounded-full flex items-center justify-center hover:bg-orange-700 transition-colors shadow-sm hover:shadow-md"
+          >
             <ShoppingCartIcon className="w-4 h-4" />
-          </Button>
+          </button>
         </div>
       </div>
     </Link>
