@@ -80,6 +80,33 @@
 | Functional Equivalence | 100% preserved |
 | Performance Improvement | Per goals |
 
+### Enterprise Security
+
+| Metric | Target |
+|--------|--------|
+| Secrets Coverage | 100% in vault |
+| IAM Coverage | 100% apps with SSO |
+| DR Test Frequency | 2+ per year |
+| Pen Test Frequency | 1+ per year |
+
+### Enterprise Operations
+
+| Metric | Target |
+|--------|--------|
+| Incident Communication SLA | <15 min initial |
+| Post-Incident Review | <48h after resolution |
+| Multi-Region RTO | Per SLA |
+| Log Coverage | 100% sources aggregated |
+
+### Architecture & Optimization
+
+| Metric | Target |
+|--------|--------|
+| Cache Hit Ratio | >80% |
+| Query Performance | Per SLA |
+| Chaos Experiment Frequency | 1+ per month |
+| A/B Test Significance | >95% |
+
 ## Quality Scorecard
 
 | Dimension | 1 (Poor) | 3 (Acceptable) | 5 (Excellent) |

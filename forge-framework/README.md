@@ -12,12 +12,7 @@ A production-ready, markdown-based agentic framework for end-to-end SDLC operati
 | Decision Documentation | Rare | Required |
 | Edge Case Coverage | Hit or miss | Systematic |
 
-## Core Capabilities (55 Workflows)
-
-### Master Workflow
-| # | Capability | Workflow |
-|---|------------|----------|
-| 0 | Greenfield Master | [00-greenfield-master](workflows/00-greenfield-master.md) |
+## Core Capabilities (34 Workflows)
 
 ### Foundation Workflows (01-09)
 | # | Capability | Workflow |
@@ -57,7 +52,7 @@ A production-ready, markdown-based agentic framework for end-to-end SDLC operati
 | 21 | Disaster Recovery | [21-disaster-recovery](workflows/21-disaster-recovery.md) |
 | 22 | Compliance Audit | [22-compliance](workflows/22-compliance.md) |
 | 23 | FinOps | [23-finops](workflows/23-finops.md) |
-| 24 | Infrastructure & Application Monitoring | [24-monitoring](workflows/24-monitoring.md) |
+| 24 | Monitoring & Observability | [24-monitoring](workflows/24-monitoring.md) |
 | 25 | Stakeholder Management | [25-stakeholder](workflows/25-stakeholder.md) |
 | 26 | Change Management | [26-change-management](workflows/26-change-management.md) |
 | 27 | Knowledge Management | [27-knowledge](workflows/27-knowledge.md) |
@@ -73,49 +68,37 @@ A production-ready, markdown-based agentic framework for end-to-end SDLC operati
 | 33 | Multi-Agent Coordination | [33-multi-agent](workflows/33-multi-agent.md) |
 | 34 | Post-Quantum Security | [34-post-quantum](workflows/34-post-quantum.md) |
 
-### Continuous Improvement Workflows (35-37)
+### Enterprise Security Workflows (55-61)
 | # | Capability | Workflow |
 |---|------------|----------|
-| 35 | Retrospective | [35-retrospective](workflows/35-retrospective.md) |
-| 36 | Technical Debt Management | [36-technical-debt](workflows/36-technical-debt.md) |
-| 37 | Telemetry & Analytics | [37-telemetry](workflows/37-telemetry.md) |
+| 55 | Secrets Management | [55-secrets-management](workflows/55-secrets-management.md) |
+| 56 | Identity & Access Management | [56-iam](workflows/56-iam.md) |
+| 57 | Business Continuity Planning | [57-business-continuity](workflows/57-business-continuity.md) |
+| 58 | Disaster Recovery Testing | [58-dr-testing](workflows/58-dr-testing.md) |
+| 59 | Failover Testing | [59-failover-testing](workflows/59-failover-testing.md) |
+| 60 | Data Governance | [60-data-governance](workflows/60-data-governance.md) |
+| 61 | Penetration Testing | [61-penetration-testing](workflows/61-penetration-testing.md) |
 
-### Security & Privacy Workflows (38-39)
+### Enterprise Operations Workflows (62-66)
 | # | Capability | Workflow |
 |---|------------|----------|
-| 38 | Privacy & Data Protection | [38-privacy-data-protection](workflows/38-privacy-data-protection.md) |
-| 39 | Secure Data Handling | [39-secure-data-handling](workflows/39-secure-data-handling.md) |
+| 62 | Incident Communication | [62-incident-communication](workflows/62-incident-communication.md) |
+| 63 | Post-Incident Review | [63-post-incident-review](workflows/63-post-incident-review.md) |
+| 64 | Multi-Region Deployment | [64-multi-region-deployment](workflows/64-multi-region-deployment.md) |
+| 65 | Log Aggregation | [65-log-aggregation](workflows/65-log-aggregation.md) |
+| 66 | Distributed Tracing | [66-distributed-tracing](workflows/66-distributed-tracing.md) |
 
-### Audit & Assurance Workflows (40-45)
+### Architecture & Optimization Workflows (67-74)
 | # | Capability | Workflow |
 |---|------------|----------|
-| 40 | Risk Assessment | [40-risk-assessment](workflows/40-risk-assessment.md) |
-| 41 | Internal Audit | [41-internal-audit](workflows/41-internal-audit.md) |
-| 42 | Quality Audit | [42-quality-audit](workflows/42-quality-audit.md) |
-| 43 | Process Audit | [43-process-audit](workflows/43-process-audit.md) |
-| 44 | Data Audit | [44-data-audit](workflows/44-data-audit.md) |
-| 45 | Configuration Audit | [45-configuration-audit](workflows/45-configuration-audit.md) |
-
-### DevOps & Infrastructure Workflows (46-48)
-| # | Capability | Workflow |
-|---|------------|----------|
-| 46 | DevOps | [46-devops](workflows/46-devops.md) |
-| 47 | Site Reliability Engineering | [47-sre](workflows/47-sre.md) |
-| 48 | Infrastructure as Code | [48-iac](workflows/48-iac.md) |
-
-### Design Workflows (49-51)
-| # | Capability | Workflow |
-|---|------------|----------|
-| 49 | API Design | [49-api-design](workflows/49-api-design.md) |
-| 50 | Database Design | [50-database-design](workflows/50-database-design.md) |
-| 51 | User Experience Design | [51-ux-design](workflows/51-ux-design.md) |
-
-### Metrics & Tracking Workflows (52-54)
-| # | Capability | Workflow |
-|---|------------|----------|
-| 52 | Productivity Metrics | [52-productivity-metrics](workflows/52-productivity-metrics.md) |
-| 53 | Work Item Linkage | [53-work-item-linkage](workflows/53-work-item-linkage.md) |
-| 54 | Flow Time Tracking | [54-flow-time-tracking](workflows/54-flow-time-tracking.md) |
+| 67 | Microservices Decomposition | [67-microservices-decomposition](workflows/67-microservices-decomposition.md) |
+| 68 | Domain-Driven Design | [68-domain-driven-design](workflows/68-domain-driven-design.md) |
+| 69 | Chaos Engineering | [69-chaos-engineering](workflows/69-chaos-engineering.md) |
+| 70 | A/B Testing | [70-ab-testing](workflows/70-ab-testing.md) |
+| 71 | Caching Strategy | [71-caching-strategy](workflows/71-caching-strategy.md) |
+| 72 | Database Optimization | [72-database-optimization](workflows/72-database-optimization.md) |
+| 73 | ISO 27001 Preparation | [73-iso27001-preparation](workflows/73-iso27001-preparation.md) |
+| 74 | SOC 2 Preparation | [74-soc2-preparation](workflows/74-soc2-preparation.md) |
 
 ## Quick Start
 
@@ -128,19 +111,16 @@ A production-ready, markdown-based agentic framework for end-to-end SDLC operati
 
 ```
 forge-framework/
-├── README.md, QUICK-REFERENCE.md, GLOSSARY.md, ANTI-PATTERNS.md, SECURITY.md
+├── README.md, QUICK-REFERENCE.md, GLOSSARY.md, ANTI-PATTERNS.md
 ├── METRICS.md, CHANGELOG.md, DIAGRAMS.md, FRAMEWORK_ENHANCEMENT_RESEARCH.md
 ├── VERSIONING.md, CONTRIBUTING.md, EXTENSION-POINTS.md, API-REFERENCE.md
-├── CASE-STUDIES.md
 ├── core/ (system-prompt.md, persona.md, principles.md)
-├── workflows/ (00-54)
-├── capabilities/ (58 capability definitions)
-├── templates/ (55 artifact templates)
-├── artifacts/ (output-format.md, telemetry.md)
+├── workflows/ (01-34)
+├── capabilities/ (34 capability definitions)
+├── templates/ (34 artifact templates)
+├── artifacts/ (output-format.md)
 ├── guides/ (integration, configuration, troubleshooting, web-search,
-│           research-mode-selection, onboarding, migration, compatibility,
-│           greenfield, validation, privacy-policy, secure-coding,
-│           sensitive-data, encryption, audit-logging, secure-api)
+│           research-mode-selection, onboarding, migration, compatibility)
 └── examples/ (research-report-example.md, analysis-report-example.md)
 ```
 
@@ -160,37 +140,27 @@ Create `forge.config.md` in project root with global settings and per-workflow o
 
 - **Model-Agnostic**: Works with any instruction-tuned LLM
 - **Tool-Agnostic**: Works with CLI, web, API, IDE, and custom agents
-- **55 Complete Workflows**: Covering the full modern SDLC
+- **55 Complete Workflows**: Covering the full modern SDLC plus enterprise operations
 - **Template-Enforced**: Consistent output structure
 - **Quality Gates**: Objective, measurable criteria
 - **Deep Research**: Quick and Deep research modes
 - **Self-Verification**: Built-in validation and refinement
 - **Hallucination Detection**: Source verification
-- **Security Built-In**: Security audit + DevSecOps + Post-Quantum + Privacy
-- **Privacy by Design**: PII detection, auto-redaction, consent management
-- **Audit & Assurance**: Risk assessment, internal audit, quality audit, process audit, data audit, configuration audit
-- **Productivity Metrics**: DORA metrics, flow metrics, quality metrics, ROI analysis
-- **Work Item Linkage**: Tool integration, traceability mapping, sync automation
-- **Flow Time Tracking**: Cycle time, lead time, queue time, bottleneck analysis
-- **Incident Response**: Production incident management
-- **Compliance**: Regulatory compliance audit (GDPR, CCPA, HIPAA, PCI DSS)
+- **Security Built-In**: Security audit + DevSecOps + Post-Quantum + Penetration Testing + Secrets Management + IAM
+- **Incident Response**: Production incident management + communication + post-incident review
+- **Compliance**: Regulatory compliance audit + ISO 27001 + SOC 2 preparation
 - **Sustainability**: Green coding and FinOps
 - **AI-Ready**: AI-augmented development and multi-agent coordination
-- **Telemetry**: Comprehensive event tracking and analytics
-- **Secure Data Handling**: Data classification, encryption, access controls
+- **Enterprise Grade**: Multi-region deployment, DR testing, failover testing, chaos engineering
+- **Observability**: Monitoring, telemetry, log aggregation, distributed tracing
+- **Architecture**: Microservices decomposition, domain-driven design, caching strategy
 
 ## Version History
 
 | Version | Date | Changes |
 |---------|------|---------|
-| v7.0.0 | 2026-08-31 | Added 3 metrics & tracking workflows: Productivity Metrics, Work Item Linkage, Flow Time Tracking. Created corresponding capabilities and templates. Updated README with 55 workflows. |
-| v6.1.0 | 2026-08-31 | Added 6 missing guides for DevOps, SRE, IaC, API Design, Database Design, UX Design. Fixed quality gates in workflows 50 and 51. Expanded workflow 51 with complete steps. |
-| v6.0.0 | 2026-08-31 | Added 6 audit & assurance workflows: Risk Assessment, Internal Audit, Quality Audit, Process Audit, Data Audit, Configuration Audit. Created corresponding capabilities and templates. Updated README with 46 workflows. |
-| v5.0.0 | 2026-08-31 | Added privacy & data protection, secure data handling workflows. Added 6 security guides, 4 security capabilities, SECURITY.md. Fixed duplicate anti-patterns/edge cases. Differentiated monitoring and telemetry workflows. Updated README with 40 workflows. |
-| v4.2.0 | 2026-08-31 | Added telemetry system, analytics dashboard, improvement planning. Added telemetry workflow, capability, template, and artifact. |
-| v4.1.0 | 2026-08-29 | Added retrospective workflow, technical debt management, case studies, validation guide. Fixed all consistency gaps. |
-| v4.0.0 | 2026-08-29 | Added greenfield master workflow, project scaffolding, greenfield capability |
-| v3.1.0 | 2026-08-29 | Added CONTRIBUTING.md, VERSIONING.md, EXTENSION-POINTS.md, API-REFERENCE.md |
+| v3.2.0 | 2026-09-01 | Added 20 new workflows (55-74) for enterprise security, operations, architecture, and compliance. Includes secrets management, IAM, BCP, DR testing, penetration testing, multi-region deployment, log aggregation, distributed tracing, microservices decomposition, DDD, chaos engineering, A/B testing, caching strategy, database optimization, ISO 27001, SOC 2 preparation. |
+| v3.1.0 | 2026-08-29 | Added CONTRIBUTING.md, VERSIONING.md, EXTENSION-POINTS.md, API-REFERENCE.md. Enhanced diagrams, troubleshooting, onboarding. Added code examples. |
 | v3.0.0 | 2026-08-28 | Added 15 new workflows (Tier 3 + Tier 4) for complete SDLC coverage |
 | v2.0.0 | 2026-08-28 | Added 10 new workflows (Security, Performance, Incident, Code Review, Planning, Docs, Config, Release, QA, API) |
 | v1.4.0 | 2026-08-28 | Optimized for token efficiency |
@@ -217,19 +187,10 @@ A: Template enforcement + quality gates + output normalization.
 A: Iterative refinement up to 3 retries with specific feedback.
 
 **Q: How many workflows are there?**
-A: 46 complete workflows covering the full modern SDLC.
-
-**Q: What audit capabilities are included?**
-A: Risk Assessment, Internal Audit, Quality Audit, Process Audit, Data Audit, Configuration Audit, Security Audit, Compliance Audit, Accessibility Audit, Code Review, Privacy Impact Assessment, and Audit Logging.
+A: 55 complete workflows covering the full modern SDLC plus enterprise operations, security, and compliance.
 
 **Q: What about emerging practices like AI and quantum?**
 A: Covered in workflows 30-34 (DevSecOps, Green Coding, AI-Augmented, Multi-Agent, Post-Quantum).
-
-**Q: How is sensitive data protected?**
-A: All workflows implement PII detection and auto-redaction. See SECURITY.md and guides/privacy-policy.md for details.
-
-**Q: What security features are included?**
-A: Privacy impact assessment, secure data handling, encryption, audit logging, and compliance with GDPR/CCPA/HIPAA/PCI DSS.
 
 ## License
 

@@ -31,19 +31,19 @@ This document provides a machine-readable reference for the Forge framework stru
     "workflows": {
       "path": "workflows/",
       "pattern": "##-name.md",
-      "count": 34,
+      "count": 55,
       "required": true
     },
     "capabilities": {
       "path": "capabilities/",
       "pattern": "name.md",
-      "count": 34,
+      "count": 55,
       "required": true
     },
     "templates": {
       "path": "templates/",
       "pattern": "name-template.md",
-      "count": 34,
+      "count": 55,
       "required": true
     },
     "artifacts": {

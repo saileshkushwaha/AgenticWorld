@@ -56,23 +56,6 @@ Document DR plan, RTO/RPO, testing schedule. Get approval.
 - Cascading failures: Circuit breakers
 - Communication outage: Offline procedures
 - Data corruption: Checksum validation
-
-## Output
-Use: `templates/dr-plan.md` | Capability: `capabilities/disaster-recovery.md`
-
-## Anti-Patterns
-
-1. **Big bang migration** — Migrating everything at once
-2. **No rollback plan** — Migrating without recovery strategy
-3. **Ignoring data quality** — Migrating without validation
-4. **No testing** — Deploying without testing migration
-
-## Edge Cases
-
-- Large data volumes → Use incremental migration
-- Schema mismatch → Create transformation layer
-- Downtime constraints → Use blue-green deployment
-
 ## Output
 
 Use: `templates/dr-plan.md` | Capability: `capabilities/disaster-recovery.md`
@@ -81,6 +64,7 @@ Use: `templates/dr-plan.md` | Capability: `capabilities/disaster-recovery.md`
 
 | Workflow | Relationship | When to Use |
 |----------|-------------|-------------|
-| [12-incident](workflows/12-incident.md) | **Related** | To respond to incidents |
-| [20-data-migration](workflows/20-data-migration.md) | **Related** | To migrate data during recovery |
-| [40-risk-assessment](workflows/40-risk-assessment.md) | **Related** | To assess disaster risks |
+| [57-business-continuity](workflows/57-business-continuity.md) | **Related** | Business continuity planning |
+| [58-dr-testing](workflows/58-dr-testing.md) | **Related** | DR testing execution |
+| [59-failover-testing](workflows/59-failover-testing.md) | **Related** | Failover testing |
+| [64-multi-region-deployment](workflows/64-multi-region-deployment.md) | **Related** | Multi-region deployment |
