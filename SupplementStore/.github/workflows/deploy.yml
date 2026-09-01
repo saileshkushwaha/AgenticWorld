@@ -25,7 +25,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - run: cd code && npm install
+      - run: cd code && npm install --legacy-peer-deps
       - run: cd code && npm run build
       - uses: actions/configure-pages@v4
       - uses: actions/upload-pages-artifact@v3
