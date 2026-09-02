@@ -32,26 +32,34 @@ export function AccountPage() {
         </div>
 
         <div className="md:col-span-3">
-          <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
-            <h2 className="text-lg font-bold mb-4">Welcome, {user?.firstName || 'Guest'}!</h2>
-            <p className="text-gray-600 mb-6">
-              Manage your account, view your orders, and update your profile.
-            </p>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              <div className="bg-gray-50 rounded-lg p-4 text-center">
-                <div className="text-2xl font-bold text-orange-600">{orders.length}</div>
-                <div className="text-sm text-gray-600">Total Orders</div>
-              </div>
-              <div className="bg-gray-50 rounded-lg p-4 text-center">
-                <div className="text-2xl font-bold text-orange-600">{wishlistCount}</div>
-                <div className="text-sm text-gray-600">Wishlist Items</div>
-              </div>
-              <div className="bg-gray-50 rounded-lg p-4 text-center">
-                <div className="text-2xl font-bold text-orange-600">0</div>
-                <div className="text-sm text-gray-600">Reviews</div>
-              </div>
-            </div>
-          </div>
+          <Outlet />
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export function AccountDashboard() {
+  const { user } = useAuthStore()
+  const orders = useOrderStore((state) => state.orders)
+  const wishlistCount = useWishlistStore((state) => state.getItemCount())
+
+  return (
+    <div className="card p-6">
+      <h2 className="text-lg font-bold text-default mb-4">Welcome, {user?.firstName || 'Guest'}!</h2>
+      <p className="text-secondary mb-6">Manage your account, view your orders, and update your profile.</p>
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div className="bg-surface rounded-lg p-4 text-center border border-default">
+          <div className="text-2xl font-bold text-primary">{orders.length}</div>
+          <div className="text-sm text-secondary">Total Orders</div>
+        </div>
+        <div className="bg-surface rounded-lg p-4 text-center border border-default">
+          <div className="text-2xl font-bold text-primary">{wishlistCount}</div>
+          <div className="text-sm text-secondary">Wishlist Items</div>
+        </div>
+        <div className="bg-surface rounded-lg p-4 text-center border border-default">
+          <div className="text-2xl font-bold text-primary">0</div>
+          <div className="text-sm text-secondary">Reviews</div>
         </div>
       </div>
     </div>

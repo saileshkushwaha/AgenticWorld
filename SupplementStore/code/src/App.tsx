@@ -8,7 +8,7 @@ import { ProductsPage } from './pages/Products/ProductsPage'
 import { ProductDetailPage } from './pages/Products/ProductDetailPage'
 import { CartPage } from './pages/Cart/CartPage'
 import { CheckoutPage } from './pages/Checkout/CheckoutPage'
-import { AccountPage, OrdersPage, ProfilePage, WishlistPage } from './pages/Account/AccountPage'
+import { AccountPage, OrdersPage, ProfilePage, WishlistPage, AccountDashboard } from './pages/Account/AccountPage'
 import { AboutPage } from './pages/About/AboutPage'
 import { ContactPage } from './pages/Contact/ContactPage'
 import { FAQPage } from './pages/FAQ/FAQPage'
@@ -60,10 +60,12 @@ function AppContent() {
         <Route path="/products/:slug" element={<ProductDetailPage />} />
         <Route path="/cart" element={<CartPage />} />
         <Route path="/checkout" element={<CheckoutPage />} />
-        <Route path="/account" element={<AccountPage />} />
-        <Route path="/account/orders" element={<OrdersPage />} />
-        <Route path="/account/profile" element={<ProfilePage />} />
-        <Route path="/account/wishlist" element={<WishlistPage />} />
+        <Route path="/account" element={<AccountPage />}>
+          <Route index element={<AccountDashboard />} />
+          <Route path="orders" element={<OrdersPage />} />
+          <Route path="profile" element={<ProfilePage />} />
+          <Route path="wishlist" element={<WishlistPage />} />
+        </Route>
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/faq" element={<FAQPage />} />
