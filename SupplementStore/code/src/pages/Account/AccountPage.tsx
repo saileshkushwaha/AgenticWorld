@@ -67,6 +67,7 @@ export function AccountDashboard() {
 }
 
 export function OrdersPage() {
+  const navigate = useNavigate()
   const orders = useOrderStore((state) => state.orders)
   const [selectedOrder, setSelectedOrder] = useState<string | null>(null)
 
@@ -74,21 +75,21 @@ export function OrdersPage() {
 
   if (orders.length === 0) {
     return (
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <h1 className="text-2xl font-bold mb-8">Order History</h1>
+      <div>
+        <h1 className="text-2xl font-bold text-default mb-8">Order History</h1>
         <EmptyState
           icon="📦"
           title="No orders yet"
           description="Start shopping to see your orders here!"
-          action={{ label: 'Browse Products', onClick: () => window.location.href = '/products' }}
+          action={{ label: 'Browse Products', onClick: () => navigate('/products') }}
         />
       </div>
     )
   }
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <h1 className="text-2xl font-bold mb-8">Order History</h1>
+    <div>
+      <h1 className="text-2xl font-bold text-default mb-8">Order History</h1>
       {selectedOrderData ? (
         <div>
           <button
@@ -157,13 +158,12 @@ export function OrdersPage() {
 
 export function ProfilePage() {
   const { user } = useAuthStore()
-  const navigate = useNavigate()
   const setAuthModalOpen = useUIStore((state) => state.setAuthModalOpen)
 
   if (!user) {
     return (
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <h1 className="text-2xl font-bold mb-8">Profile</h1>
+      <div>
+        <h1 className="text-2xl font-bold text-default mb-8">Profile</h1>
         <EmptyState
           icon="👤"
           title="Not logged in"
@@ -175,8 +175,8 @@ export function ProfilePage() {
   }
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <h1 className="text-2xl font-bold mb-8">Profile</h1>
+    <div>
+      <h1 className="text-2xl font-bold text-default mb-8">Profile</h1>
       <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
         <div className="flex items-center gap-6 mb-8">
           <div className="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center">
@@ -223,8 +223,8 @@ export function WishlistPage() {
 
   if (items.length === 0) {
     return (
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <h1 className="text-2xl font-bold mb-8">Wishlist</h1>
+      <div>
+        <h1 className="text-2xl font-bold text-default mb-8">Wishlist</h1>
         <EmptyState
           icon="❤️"
           title="Your wishlist is empty"
