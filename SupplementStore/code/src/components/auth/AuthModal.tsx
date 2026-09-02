@@ -6,6 +6,8 @@ import { useUIStore } from '../../stores/ui'
 import { useAuthStore } from '../../stores/auth'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 
+const ADMIN_EMAILS = ['admin@supplementstore.com', 'admin@example.com', 'admin@test.com']
+
 const loginSchema = z.object({
   email: z.string().email('Invalid email address'),
   password: z.string().min(6, 'Password must be at least 6 characters'),
@@ -44,16 +46,22 @@ export function AuthModal() {
   const onSubmit = async (data: LoginFormData | RegisterFormData) => {
     await new Promise((resolve) => setTimeout(resolve, 1000))
     if (mode === 'login') {
+      const email = (data as LoginFormData).email
+      const isAdmin = ADMIN_EMAILS.includes(email.toLowerCase())
       const user = {
         id: crypto.randomUUID(),
-        email: (data as LoginFormData).email,
-        firstName: 'Alex',
-        lastName: 'Strong',
-        role: 'customer' as const,
+        email: email,
+        firstName: isAdmin ? 'Admin' : 'Alex',
+        lastName: isAdmin ? 'User' : 'Strong',
+        role: isAdmin ? 'admin' as const : 'customer' as const,
         createdAt: new Date().toISOString(),
       }
       login(user, 'mock-token-' + crypto.randomUUID())
-      addToast('Welcome back! You are now logged in.', 'success')
+      if (isAdmin) {
+        addToast('Welcome back! You are logged in as Admin.', 'success')
+      } else {
+        addToast('Welcome back! You are now logged in.', 'success')
+      }
     } else {
       const regData = data as RegisterFormData
       const user = {
