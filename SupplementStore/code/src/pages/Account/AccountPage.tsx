@@ -221,10 +221,8 @@ export function WishlistPage() {
   const addToast = useUIStore((state) => state.addToast)
   const navigate = useNavigate()
 
-  if (items.length === 0) {
-    return (
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <h1 className="text-2xl font-bold mb-8">Wishlist</h1>
+        <h1 className="text-2xl font-bold text-default mb-8">Wishlist</h1>
         <EmptyState
           icon="❤️"
           title="Your wishlist is empty"
@@ -240,28 +238,28 @@ export function WishlistPage() {
       <h1 className="text-2xl font-bold mb-8">Wishlist ({items.length} items)</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {items.map((item) => (
-          <div key={item.id} className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+          <div key={item.id} className="card overflow-hidden">
             <Link to={`/products/${item.product.slug}`}>
-              <div className="aspect-square bg-gray-100">
+              <div className="aspect-square bg-surface">
                 <img src={item.product.imageUrl} alt={item.product.name} className="w-full h-full object-cover" />
               </div>
             </Link>
             <div className="p-4">
-              <p className="text-sm text-gray-500">{item.product.brand}</p>
-              <Link to={`/products/${item.product.slug}`} className="font-medium text-gray-900 hover:text-orange-600">
+              <p className="text-sm text-secondary">{item.product.brand}</p>
+              <Link to={`/products/${item.product.slug}`} className="font-medium text-default hover:text-primary">
                 {item.product.name}
               </Link>
-              <p className="text-orange-600 font-bold mt-1">${(item.product.salePrice ?? item.product.price).toFixed(2)}</p>
+              <p className="text-primary font-bold mt-1">${(item.product.salePrice ?? item.product.price).toFixed(2)}</p>
               <div className="flex gap-2 mt-3">
                 <button
                   onClick={() => { addToCart(item.product); addToast(`${item.product.name} added to cart`, 'success') }}
-                  className="flex-1 py-2 bg-orange-600 text-white rounded-lg text-sm font-medium hover:bg-orange-700 transition-colors"
+                  className="flex-1 py-2 btn-primary text-white rounded-lg text-sm font-medium"
                 >
                   Add to Cart
                 </button>
                 <button
                   onClick={() => { removeItem(item.product.id); addToast('Removed from wishlist', 'info') }}
-                  className="px-3 py-2 border border-gray-300 rounded-lg text-gray-600 hover:bg-gray-50 transition-colors"
+                  className="px-3 py-2 border border-default rounded-lg text-secondary hover:bg-surface transition-colors"
                 >
                   ✕
                 </button>
