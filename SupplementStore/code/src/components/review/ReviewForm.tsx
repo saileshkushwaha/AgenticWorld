@@ -5,6 +5,7 @@ import { z } from 'zod'
 import { useUIStore } from '../../stores/ui'
 import { useAuthStore } from '../../stores/auth'
 import { RatingInput } from '../ui/Rating'
+import { api } from '../../services/api'
 
 const reviewSchema = z.object({
   rating: z.number().min(1, 'Rating is required').max(5),
@@ -49,7 +50,15 @@ export function ReviewForm({ productId, onSuccess }: ReviewFormProps) {
 
   const onSubmit = async (data: ReviewFormData) => {
     setIsSubmitting(true)
-    await new Promise((resolve) => setTimeout(resolve, 1000))
+    await api.reviews.create({
+      userId: user?.id || 'anonymous',
+      user: user || { id: 'anonymous', email: '', firstName: 'Anonymous', lastName: 'User', role: 'user', createdAt: new Date().toISOString() },
+      productId,
+      rating: data.rating,
+      title: data.title,
+      comment: data.comment,
+      isVerified: false,
+    })
     addToast('Review submitted successfully! Thank you for your feedback.', 'success')
     setIsSubmitting(false)
     onSuccess()
