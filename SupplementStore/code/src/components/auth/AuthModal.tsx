@@ -37,8 +37,11 @@ export function AuthModal() {
     handleSubmit,
     formState: { errors, isSubmitting },
     reset,
-  } = useForm<LoginFormData | RegisterFormData>({
+  } = useForm({
     resolver: zodResolver(mode === 'login' ? loginSchema : registerSchema),
+    defaultValues: mode === 'login' 
+      ? { email: '', password: '' }
+      : { firstName: '', lastName: '', email: '', password: '', confirmPassword: '' },
   })
 
   if (!isAuthModalOpen) return null
