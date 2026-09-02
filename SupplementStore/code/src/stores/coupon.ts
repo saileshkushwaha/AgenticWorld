@@ -85,6 +85,10 @@ export const useCouponStore = create<CouponState>()(
       getDiscount: (subtotal: number) => {
         const coupon = get().appliedCoupon
         if (!coupon || subtotal < coupon.minOrder) return 0
+        if (new Date(coupon.expiresAt) < new Date()) {
+          get().removeCoupon()
+          return 0
+        }
         let discount = 0
         if (coupon.type === 'percentage') {
           discount = subtotal * (coupon.value / 100)
