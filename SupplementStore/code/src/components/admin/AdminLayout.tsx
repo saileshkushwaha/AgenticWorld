@@ -178,7 +178,7 @@ export function AdminLayout() {
                 placeholder="Search..."
                 className="bg-transparent border-none outline-none text-sm text-default w-40"
               />
-              <kbd className="hidden lg:inline-flex items-center px-2 py-0.5 text-xs text-secondary bg-gray-100 rounded">⌘K</kbd>
+              <kbd className="hidden lg:inline-flex items-center px-2 py-0.5 text-xs text-secondary bg-surface rounded border border-default">⌘K</kbd>
             </div>
 
             {/* Dark mode toggle */}
