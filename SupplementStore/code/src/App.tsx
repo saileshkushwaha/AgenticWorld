@@ -25,6 +25,7 @@ import { PaymentSettings } from './pages/Admin/PaymentSettings'
 import { ShippingSettings } from './pages/Admin/ShippingSettings'
 import { SiteSettings } from './pages/Admin/SiteSettings'
 import { ThemeSettings } from './pages/Admin/ThemeSettings'
+import { AnalyticsPage } from './pages/Admin/Analytics'
 import { useApplyTheme } from './hooks/useApplyTheme'
 
 const queryClient = new QueryClient({
@@ -43,6 +44,7 @@ function AppContent() {
       <Route element={<AdminGuard />}>
         <Route path="/admin" element={<AdminLayout />}>
           <Route index element={<AdminDashboard />} />
+          <Route path="analytics" element={<AnalyticsPage />} />
           <Route path="products" element={<ProductManagement />} />
           <Route path="categories" element={<CategoryManagement />} />
           <Route path="orders" element={<OrderManagement />} />

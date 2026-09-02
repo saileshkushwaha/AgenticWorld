@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { ShoppingCartIcon, MagnifyingGlassIcon, Bars3Icon, XMarkIcon, SunIcon, MoonIcon } from '@heroicons/react/24/outline'
+import { ShoppingBagIcon, MagnifyingGlassIcon, Bars3Icon, XMarkIcon, SunIcon, MoonIcon } from '@heroicons/react/24/outline'
 import { useCartStore } from '../../stores/cart'
 import { useUIStore } from '../../stores/ui'
 import { useAuthStore } from '../../stores/auth'
@@ -32,9 +32,7 @@ export function Header() {
             <div className="w-8 h-8 rounded-lg flex items-center justify-center bg-primary">
               <span className="text-white font-bold text-sm">SS</span>
             </div>
-            <span className="text-xl font-bold text-primary">
-              SupplementStore
-            </span>
+            <span className="text-xl font-bold text-primary">SupplementStore</span>
           </Link>
 
           <nav className="hidden md:flex items-center gap-8">
@@ -48,24 +46,13 @@ export function Header() {
           <div className="flex items-center gap-3">
             {isSearchOpen ? (
               <form onSubmit={handleSearch} className="flex items-center">
-                <input
-                  type="text"
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  placeholder="Search products..."
-                  className="w-48 px-4 py-2 border border-default rounded-full text-sm focus:ring-2 bg-surface"
-                  autoFocus
-                />
+                <input type="text" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} placeholder="Search products..." className="w-48 px-4 py-2 border border-default rounded-full text-sm focus:ring-2 bg-surface" autoFocus />
                 <button type="button" onClick={() => setIsSearchOpen(false)} className="ml-2 p-2 text-secondary">
                   <XMarkIcon className="w-4 h-4" />
                 </button>
               </form>
             ) : (
-              <button
-                data-testid="search-button"
-                onClick={() => setIsSearchOpen(true)}
-                className="p-2 text-secondary hover:text-primary hover:opacity-80 rounded-full transition-colors"
-              >
+              <button data-testid="search-button" onClick={() => setIsSearchOpen(true)} className="p-2 text-secondary hover:text-primary hover:opacity-80 rounded-full transition-colors">
                 <MagnifyingGlassIcon className="w-5 h-5" />
               </button>
             )}
@@ -79,11 +66,7 @@ export function Header() {
               )}
             </Link>
 
-            <button
-              onClick={toggleMode}
-              className="p-2 text-secondary hover:text-primary rounded-full transition-colors"
-              aria-label={mode.isDark ? 'Switch to light mode' : 'Switch to dark mode'}
-            >
+            <button onClick={toggleMode} className="p-2 text-secondary hover:text-primary rounded-full transition-colors" aria-label={mode.isDark ? 'Switch to light mode' : 'Switch to dark mode'}>
               {mode.isDark ? <SunIcon className="w-5 h-5" /> : <MoonIcon className="w-5 h-5" />}
             </button>
 
@@ -91,9 +74,7 @@ export function Header() {
               <div className="relative group">
                 <button data-testid="user-menu" className="flex items-center gap-2 p-1.5 rounded-full hover:opacity-80 transition-colors">
                   <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-                    <span className="text-white text-xs font-bold">
-                      {user?.firstName?.[0]}{user?.lastName?.[0]}
-                    </span>
+                    <span className="text-white text-xs font-bold">{user?.firstName?.[0]}{user?.lastName?.[0]}</span>
                   </div>
                 </button>
                 <div className="absolute right-0 top-full mt-2 w-56 surface rounded-xl shadow-lg border border-default py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
@@ -115,19 +96,10 @@ export function Header() {
                 </div>
               </div>
             ) : (
-              <button
-                onClick={() => setAuthModalOpen(true)}
-                className="px-5 py-2 btn-primary"
-              >
-                Sign In
-              </button>
+              <button onClick={() => setAuthModalOpen(true)} className="px-5 py-2 btn-primary">Sign In</button>
             )}
 
-            <button
-              data-testid="mobile-menu-button"
-              className="md:hidden p-2 text-secondary hover:text-primary"
-              onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
-            >
+            <button data-testid="mobile-menu-button" className="md:hidden p-2 text-secondary hover:text-primary" onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}>
               {isMobileMenuOpen ? <XMarkIcon className="w-5 h-5" /> : <Bars3Icon className="w-5 h-5" />}
             </button>
           </div>
@@ -137,6 +109,9 @@ export function Header() {
       {isMobileMenuOpen && (
         <div className="md:hidden border-t border-default surface">
           <div className="px-4 py-4 space-y-1">
+            {user?.role === 'admin' && (
+              <Link to="/admin" className="block px-4 py-3 text-primary hover:opacity-80 rounded-lg font-medium" onClick={() => setMobileMenuOpen(false)}>Admin Panel</Link>
+            )}
             <Link to="/" className="block px-4 py-3 text-default hover:opacity-80 rounded-lg font-medium" onClick={() => setMobileMenuOpen(false)}>Home</Link>
             <Link to="/products" className="block px-4 py-3 text-default hover:opacity-80 rounded-lg font-medium" onClick={() => setMobileMenuOpen(false)}>Products</Link>
             <Link to="/about" className="block px-4 py-3 text-default hover:opacity-80 rounded-lg font-medium" onClick={() => setMobileMenuOpen(false)}>About</Link>
