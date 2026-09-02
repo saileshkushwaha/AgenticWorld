@@ -115,10 +115,11 @@ export function CheckoutPage() {
   }
 
   const subtotal = getTotal()
-  const tax = subtotal * 0.08
+  const taxRate = tax.enabled ? tax.rate / 100 : 0
+  const taxAmount = subtotal * taxRate
   const discount = getDiscount(subtotal)
   const shippingCost = selectedOption?.price || 0
-  const total = subtotal + tax + shippingCost - discount
+  const total = subtotal + taxAmount + shippingCost - discount
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -253,8 +254,8 @@ export function CheckoutPage() {
                 <span>{shippingCost === 0 ? 'Free' : `$${shippingCost.toFixed(2)}`}</span>
               </div>
               <div className="flex justify-between text-secondary">
-                <span>Tax (8%)</span>
-                <span>${tax.toFixed(2)}</span>
+                <span>Tax ({tax.rate}%)</span>
+                <span>${taxAmount.toFixed(2)}</span>
               </div>
               {discount > 0 && (
                 <div className="flex justify-between text-green-600">
