@@ -15,7 +15,7 @@ forge-framework/
 ├── capabilities/   # 88 capability definitions
 ├── templates/      # 84 artifact templates
 ├── guides/         # 52 comprehensive guides
-├── examples/       # 9 filled example artifacts
+├── examples/       # 10 filled example artifacts
 ├── artifacts/      # Supporting artifact definitions
 └── *.md            # Root-level framework documentation
 ```

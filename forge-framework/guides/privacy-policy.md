@@ -1,7 +1,7 @@
 # Privacy Policy Guide - Forge Engineering Lifecycle Framework
 
 ## Overview
-This guide provides procedures for handling Personal Identifiable Information (PII) and ensuring privacy compliance when using the Forge framework.
+This guide provides procedures for handling Personal Identifiable Information (PII) and ensuring privacy compliance when using the Forge framework. It covers data classification, handling procedures, consent management, and breach response protocols.
 
 ## Privacy Principles
 
@@ -18,6 +18,118 @@ This guide provides procedures for handling Personal Identifiable Information (P
 | **Public** | Company public info, open source data | No restrictions |
 | **Internal** | Employee directories, internal documentation | Forge approved usage only |
 | **Confidential** | Customer data, contracts, intellectual property | Strict access controls, encryption |
+| **Restricted** | PII, health records, financial data | End-to-end encryption, audit logging |
+| **Highly Restricted** | Secrets, credentials, payment data | Maximum security, no external access |
+
+## PII Handling Procedures
+
+### Collection
+- Verify legal basis for collection
+- Provide clear privacy notice
+- Obtain consent where required
+- Use secure collection channels
+- Validate data accuracy
+
+### Storage
+- Encrypt PII at rest (AES-256)
+- Implement access controls (RBAC)
+- Maintain audit logs for PII access
+- Regular backup and disaster recovery
+- Enforce retention schedules
+
+### Processing
+- Process only for stated purposes
+- Apply pseudonymization where possible
+- Monitor processing activities
+- Document processing operations
+- Regular privacy impact assessments
+
+### Sharing
+- Implement data sharing agreements
+- Verify recipient security controls
+- Apply data minimization to shared data
+- Use secure transfer protocols
+- Maintain sharing audit logs
+
+### Disposal
+- Define retention periods per data category
+- Implement automated deletion processes
+- Use secure disposal methods (secure erase, shredding)
+- Document disposal activities
+- Regular retention audits
+
+## Consent Management
+
+### Consent Requirements
+- Obtain explicit consent for sensitive data
+- Provide granular consent options
+- Allow easy consent withdrawal
+- Maintain consent audit trail
+- Regular consent review and refresh
+
+### Consent Lifecycle
+1. **Collection**: Obtain and document consent
+2. **Storage**: Securely store consent records
+3. **Monitoring**: Track consent status changes
+4. **Withdrawal**: Process consent revocations
+5. **Audit**: Regular consent compliance reviews
+
+## Breach Response
+
+### Detection and Assessment
+- Monitor for potential privacy breaches
+- Assess risk to affected individuals
+- Determine notification requirements
+- Activate incident response team
+
+### Notification
+- Notify affected individuals within required timeframe
+- Notify regulatory bodies as required
+- Provide clear communication about breach
+- Offer remediation and support
+
+### Remediation
+- Contain and investigate the breach
+- Implement fixes to prevent recurrence
+- Update security and privacy controls
+- Document lessons learned
+
+## Compliance Frameworks
+
+### GDPR Compliance
+- Appoint Data Protection Officer (if required)
+- Conduct Data Protection Impact Assessments
+- Implement data subject rights mechanisms
+- Maintain records of processing activities
+- Ensure cross-border data transfer compliance
+
+### CCPA/CPRA Compliance
+- Provide right to know about data collection
+- Enable right to delete personal information
+- Implement opt-out of sale mechanisms
+- Ensure non-discrimination for rights exercise
+- Support right to correct inaccurate data
+
+## Integration with Forge Workflows
+
+| Workflow | Privacy Integration | Purpose |
+|----------|--------------------|---------|
+| 10-security.md | Privacy security assessment | Security and privacy review |
+| 38-privacy-data-protection.md | Privacy controls implementation | Data protection measures |
+| 48-audit-logging.md | Privacy audit trails | Compliance evidence |
+| 60-data-governance.md | Data classification | Data governance framework |
+| 84-secure-data-handling.md | Secure data processing | Data protection implementation |
+
+## Best Practices
+
+1. Implement privacy by design in all systems
+2. Conduct regular privacy impact assessments
+3. Maintain comprehensive data inventories
+4. Implement strong encryption and access controls
+5. Provide regular privacy training for staff
+6. Establish clear incident response procedures
+7. Regularly review and update privacy practices
+8. Engage with privacy regulators and industry groups
 | **Restricted** | Sensitive personal data, financial information | Additional safeguards, minimal access |
 
 ## PII Detection
