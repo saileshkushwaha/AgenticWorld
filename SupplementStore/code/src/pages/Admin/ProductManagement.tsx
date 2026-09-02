@@ -8,6 +8,7 @@ export function ProductManagement() {
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [editingProduct, setEditingProduct] = useState<Product | null>(null)
   const [formData, setFormData] = useState<Partial<Product>>({})
+  const [deleteConfirm, setDeleteConfirm] = useState<string | null>(null)
 
   const filteredProducts = productList.filter((p) =>
     p.name.toLowerCase().includes(search.toLowerCase()) ||
@@ -38,6 +39,11 @@ export function ProductManagement() {
     setIsModalOpen(false)
   }
 
+  const handleDelete = (id: string) => {
+    setProductList(productList.filter((p) => p.id !== id))
+    setDeleteConfirm(null)
+  }
+
   return (
     <div>
       <div className="flex items-center justify-between mb-6">
@@ -65,7 +71,7 @@ export function ProductManagement() {
                   <td className="py-3 text-sm text-secondary">{product.stock}</td>
                   <td className="py-3 text-right">
                     <button onClick={() => openEditModal(product)} className="text-sm text-primary mr-3">Edit</button>
-                    <button onClick={() => setProductList(productList.filter((p) => p.id !== product.id))} className="text-sm text-red-500">Delete</button>
+                    <button onClick={() => setDeleteConfirm(product.id)} className="text-sm text-red-500">Delete</button>
                   </td>
                 </tr>
               ))}
@@ -73,6 +79,22 @@ export function ProductManagement() {
           </table>
         </div>
       </div>
+
+      {/* Delete Confirmation */}
+      {deleteConfirm && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+          <div className="absolute inset-0 bg-black/50" onClick={() => setDeleteConfirm(null)} />
+          <div className="relative bg-surface rounded-2xl shadow-xl p-6 max-w-md">
+            <h3 className="text-lg font-bold text-default mb-2">Confirm Delete</h3>
+            <p className="text-secondary mb-6">Are you sure you want to delete this product? This action cannot be undone.</p>
+            <div className="flex justify-end gap-3">
+              <button onClick={() => setDeleteConfirm(null)} className="px-4 py-2 btn-secondary">Cancel</button>
+              <button onClick={() => handleDelete(deleteConfirm)} className="px-4 py-2 btn-danger">Delete</button>
+            </div>
+          </div>
+        </div>
+      )}
+
       {isModalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
           <div className="absolute inset-0 bg-black/50" onClick={() => setIsModalOpen(false)} />
