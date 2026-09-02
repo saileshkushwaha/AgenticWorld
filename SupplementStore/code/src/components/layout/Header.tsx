@@ -105,11 +105,11 @@ export function Header() {
                     )}
                   </div>
                   {user?.role === 'admin' && (
-                    <Link to="/admin" className="block px-4 py-2.5 text-sm text-primary hover:opacity-80 font-medium" onClick={() => setSearchOpen(false)}>Admin Panel</Link>
+                    <Link to="/admin" className="block px-4 py-2.5 text-sm text-primary hover:opacity-80 font-medium" onClick={() => setIsSearchOpen(false)}>Admin Panel</Link>
                   )}
-                  <Link to="/account" className="block px-4 py-2.5 text-sm text-default hover:opacity-80" onClick={() => setSearchOpen(false)}>My Account</Link>
-                  <Link to="/account/orders" className="block px-4 py-2.5 text-sm text-default hover:opacity-80" onClick={() => setSearchOpen(false)}>Orders</Link>
-                  <Link to="/account/wishlist" className="block px-4 py-2.5 text-sm text-default hover:opacity-80" onClick={() => setSearchOpen(false)}>Wishlist</Link>
+                  <Link to="/account" className="block px-4 py-2.5 text-sm text-default hover:opacity-80" onClick={() => setIsSearchOpen(false)}>My Account</Link>
+                  <Link to="/account/orders" className="block px-4 py-2.5 text-sm text-default hover:opacity-80" onClick={() => setIsSearchOpen(false)}>Orders</Link>
+                  <Link to="/account/wishlist" className="block px-4 py-2.5 text-sm text-default hover:opacity-80" onClick={() => setIsSearchOpen(false)}>Wishlist</Link>
                   <hr className="my-1 border-default" />
                   <button onClick={() => { logout(); navigate('/') }} className="block w-full text-left px-4 py-2.5 text-sm text-red-500 hover:opacity-80">Sign Out</button>
                 </div>
