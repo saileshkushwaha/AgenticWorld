@@ -17,18 +17,15 @@ export function CouponInput() {
 
   if (appliedCoupon) {
     return (
-      <div className="flex items-center justify-between bg-green-50 border border-green-200 rounded-lg px-4 py-3">
+      <div className="flex items-center justify-between bg-green-500/10 border border-green-500/30 rounded-lg px-4 py-3">
         <div className="flex items-center gap-2">
-          <span className="text-green-600">✓</span>
-          <span className="font-medium text-green-800">{appliedCoupon.code}</span>
-          <span className="text-green-600 text-sm">
+          <span className="text-green-500">✓</span>
+          <span className="font-medium text-green-500">{appliedCoupon.code}</span>
+          <span className="text-green-400 text-sm">
             ({appliedCoupon.type === 'percentage' ? `${appliedCoupon.value}% off` : `$${appliedCoupon.value} off`})
           </span>
         </div>
-        <button
-          onClick={() => { removeCoupon(); addToast('Coupon removed', 'info') }}
-          className="text-green-600 hover:text-green-800 text-sm"
-        >
+        <button onClick={() => { removeCoupon(); addToast('Coupon removed', 'info') }} className="text-green-500 hover:text-green-400 text-sm">
           Remove
         </button>
       </div>
@@ -37,20 +34,9 @@ export function CouponInput() {
 
   return (
     <div className="flex gap-2">
-      <input
-        type="text"
-        value={code}
-        onChange={(e) => setCode(e.target.value)}
-        placeholder="Enter coupon code"
-        className="flex-1 px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
-        onKeyDown={(e) => e.key === 'Enter' && handleApply()}
-      />
-      <button
-        onClick={handleApply}
-        className="px-4 py-2 bg-orange-600 text-white rounded-lg text-sm font-medium hover:bg-orange-700 transition-colors"
-      >
-        Apply
-      </button>
+      <input type="text" value={code} onChange={(e) => setCode(e.target.value)} placeholder="Enter coupon code"
+        className="flex-1 input-field" onKeyDown={(e) => e.key === 'Enter' && handleApply()} />
+      <button onClick={handleApply} className="px-4 py-2 btn-primary">Apply</button>
     </div>
   )
 }
@@ -61,32 +47,20 @@ export function ShippingSelector() {
 
   return (
     <div className="space-y-2">
-      <h3 className="font-medium text-gray-900">Shipping Method</h3>
+      <h3 className="font-medium text-default">Shipping Method</h3>
       {enabledOptions.map((option) => (
-        <label
-          key={option.id}
+        <label key={option.id}
           className={`flex items-center justify-between p-3 border rounded-lg cursor-pointer transition-colors ${
-            selectedOption?.id === option.id
-              ? 'border-orange-600 bg-orange-50'
-              : 'border-gray-200 hover:border-gray-300'
-          }`}
-        >
+            selectedOption?.id === option.id ? 'border-primary bg-primary/10' : 'border-default hover:border-primary'
+          }`}>
           <div className="flex items-center gap-3">
-            <input
-              type="radio"
-              name="shipping"
-              checked={selectedOption?.id === option.id}
-              onChange={() => setSelectedOption(option)}
-              className="text-orange-600 focus:ring-orange-500"
-            />
+            <input type="radio" name="shipping" checked={selectedOption?.id === option.id} onChange={() => setSelectedOption(option)} className="text-primary focus:ring-primary" />
             <div>
-              <p className="font-medium text-gray-900">{option.name}</p>
-              <p className="text-sm text-gray-500">{option.estimatedDays}</p>
+              <p className="font-medium text-default">{option.name}</p>
+              <p className="text-sm text-secondary">{option.estimatedDays}</p>
             </div>
           </div>
-          <span className="font-medium text-gray-900">
-            {option.price === 0 ? 'Free' : `$${option.price.toFixed(2)}`}
-          </span>
+          <span className="font-medium text-default">{option.price === 0 ? 'Free' : `$${option.price.toFixed(2)}`}</span>
         </label>
       ))}
     </div>
