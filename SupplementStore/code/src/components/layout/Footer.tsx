@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 export function Footer() {
   return (
-    <footer className="bg-gray-900 text-white" role="contentinfo">
+    <footer className="bg-gray-900 dark:bg-gray-950 text-white" role="contentinfo">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div>
@@ -53,11 +53,11 @@ export function Footer() {
             <ul className="space-y-3 text-sm text-gray-400">
               <li className="flex items-center gap-2">
                 <span className="text-primary">✉</span>
-                <span>support@supplementstore.com</span>
+                <a href="mailto:support@supplementstore.com" className="hover:text-primary transition-colors">support@supplementstore.com</a>
               </li>
               <li className="flex items-center gap-2">
                 <span className="text-primary">☎</span>
-                <span>1-800-SUPPLEMENT</span>
+                <a href="tel:18007877536" className="hover:text-primary transition-colors">1-800-SUPPLEMENT</a>
               </li>
               <li className="flex items-center gap-2">
                 <span className="text-primary">🕐</span>
