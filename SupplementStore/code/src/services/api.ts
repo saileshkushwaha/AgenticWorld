@@ -55,6 +55,11 @@ export const api = {
       return { data, total }
     },
 
+    getById: async (id: string): Promise<Product | undefined> => {
+      await delay(200)
+      return products.find(p => p.id === id)
+    },
+
     getBySlug: async (slug: string): Promise<Product | undefined> => {
       await delay(200)
       return products.find(p => p.slug === slug)
@@ -62,7 +67,7 @@ export const api = {
 
     getFeatured: async (): Promise<Product[]> => {
       await delay(200)
-      return products.filter(p => p.rating >= 4.5).slice(0, 4)
+      return products.filter(p => p.rating >= 4.5).slice(0, 8)
     },
 
     search: async (query: string): Promise<Product[]> => {
