@@ -1,4 +1,4 @@
-# Onboarding Guide - Forge Engineering Lifecycle Framework
+# Updated Onboarding Guide - Forge Engineering Lifecycle Framework
 
 ## Prerequisites
 
@@ -27,8 +27,12 @@ Identify what you need to do and select the corresponding workflow:
 | Test software | `workflows/05-test.md` |
 | Fix a bug | `workflows/06-debug.md` |
 | Deploy software | `workflows/07-deploy.md` |
+| Prepare SOC 2 documentation | `workflows/74-soc2-preparation.md` |
+| Prepare ISO 27001 documentation | `workflows/73-iso27001-preparation.md` |
+| Generate API documentation | `workflows/75-autodoc-generate.md` |
+| Create design system | `workflows/78-design-system.md` |
 
-See `QUICK-REFERENCE.md` for all 34 workflows.
+See `QUICK-REFERENCE.md` for all workflows.
 
 ### Step 3: Load the Workflow
 Provide the selected workflow as context to your agent. You can:
@@ -41,9 +45,7 @@ Ask your agent to perform the task. It will follow the workflow steps.
 
 **Example prompt:**
 ```
-I need to research the best database for a Python microservice 
-handling 10K transactions/second. Please follow the research workflow 
-and provide a detailed comparison.
+I need to research the best database for a Python microservice handling 10K transactions/second. Please follow the research workflow and provide a detailed comparison.
 ```
 
 ### Step 5: Review the Output
@@ -82,6 +84,12 @@ Create `forge.config.md` in project root:
 - 01-research:
   - verbosity: detailed
 - 04-implement:
+  - verbosity: detailed
+- 74-soc2-preparation:
+  - verbosity: detailed
+- 75-autodoc-generate:
+  - verbosity: detailed
+- 78-design-system:
   - verbosity: detailed
 ```
 
@@ -134,4 +142,13 @@ A: Minimum 8K tokens. 32K+ recommended for complex projects.
 A: Check accuracy metrics. Verification rate ≥80% and completeness ≥90% = good.
 
 **Q: What if I disagree with the recommendation?**
-A. Review evidence chain. If insufficient, ask for additional research.
+A: Review evidence chain. If insufficient, ask for additional research.
+
+**Q: How do I create a design system?**
+A: Follow the design system workflow to create standardized components and design tokens.
+
+**Q: How do I generate API documentation?**
+A: Use the autodoc generation workflow to automatically document from source code.
+
+**Q: How do I prepare for compliance audits?**
+A: Use SOC 2 preparation or ISO 27001 preparation workflows for specific compliance requirements.
