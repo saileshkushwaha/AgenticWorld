@@ -75,10 +75,6 @@ Use: `templates/code-review-report.md` | Capability: `capabilities/code-review.m
 - No security team → Use automated tools and external audits
 - Zero-day vulnerabilities → Have incident response plan ready
 
-## Output
-
-Use: `templates/code-review-report.md` | Capability: `capabilities/code-review.md`
-
 ## Related Workflows
 
 | Workflow | Relationship | When to Use |

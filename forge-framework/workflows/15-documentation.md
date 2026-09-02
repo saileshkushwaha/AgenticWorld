@@ -75,10 +75,6 @@ Use: `templates/documentation.md` | Capability: `capabilities/documentation.md`
 - No existing template → Adapt from similar project
 - Technical reviewer unavailable → Use peer review
 
-## Output
-
-Use: `templates/documentation.md` | Capability: `capabilities/documentation.md`
-
 ## Related Workflows
 
 | Workflow | Relationship | When to Use |

@@ -1,5 +1,9 @@
 # Configuration Guide - Forge Engineering Lifecycle Framework
 
+## Overview
+This guide provides procedures for configuring the Forge framework for different environments, workflows, and project types. It covers global, per-workflow, and per-project configuration levels.
+# Configuration Guide - Forge Engineering Lifecycle Framework
+
 ## Configuration Levels
 
 ### Global Configuration

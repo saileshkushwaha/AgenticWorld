@@ -73,10 +73,6 @@ Use: `templates/change-request.md` | Capability: `capabilities/change-management
 - No stakeholder availability → Use async communication
 - Resistance to change → Provide training and support
 
-## Output
-
-Use: `templates/change-request.md` | Capability: `capabilities/change-management.md`
-
 ## Related Workflows
 
 | Workflow | Relationship | When to Use |

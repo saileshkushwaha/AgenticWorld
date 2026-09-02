@@ -96,6 +96,3 @@ Use: `templates/risk-assessment.md` | Capability: `capabilities/risk-assessment.
 | [21-disaster-recovery](workflows/21-disaster-recovery.md) | **Related** | To plan for disaster risks |
 | [41-internal-audit](workflows/41-internal-audit.md) | **Related** | To audit risk management |
 
-## Output
-
-Use: `templates/risk-assessment.md` | Capability: `capabilities/risk-assessment.md`

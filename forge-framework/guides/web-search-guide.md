@@ -1,3 +1,7 @@
+# Web Search Guide - Forge Engineering Lifecycle Framework
+
+## Overview
+This guide provides procedures for conducting effective web searches within the Forge framework. It covers search strategies, source evaluation, and integration with research workflows.
 # Web Search Integration Guide - Forge Engineering Lifecycle Framework
 
 ## Search Query Templates

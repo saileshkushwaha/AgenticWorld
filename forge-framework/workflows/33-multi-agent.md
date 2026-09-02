@@ -73,10 +73,6 @@ Use: `templates/multi-agent-plan.md` | Capability: `capabilities/multi-agent.md`
 - No security team → Use automated tools
 - Compliance conflicts → Consult legal team
 
-## Output
-
-Use: `templates/multi-agent-plan.md` | Capability: `capabilities/multi-agent.md`
-
 ## Related Workflows
 
 | Workflow | Relationship | When to Use |

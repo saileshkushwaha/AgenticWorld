@@ -74,6 +74,3 @@ Use: `templates/privacy-impact-assessment.md` | Capability: `capabilities/privac
 | [22-compliance](workflows/22-compliance.md) | **Related** | To ensure privacy compliance |
 | [10-security](workflows/10-security.md) | **Related** | To secure personal data |
 
-## Output
-
-Use: `templates/privacy-impact-assessment.md` | Capability: `capabilities/privacy-data-protection.md`

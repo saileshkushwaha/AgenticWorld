@@ -67,6 +67,3 @@ Use: `templates/technical-debt-register.md` | Capability: `capabilities/technica
 | [04-implement](workflows/04-implement.md) | **Related** | To track debt during implementation |
 | [08-modernize](workflows/08-modernize.md) | **Related** | To address debt through modernization |
 
-## Output
-
-Use: `templates/technical-debt-register.md` | Capability: `capabilities/technical-debt.md`

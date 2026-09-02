@@ -89,6 +89,3 @@ Use: `templates/process-audit-report.md` | Capability: `capabilities/process-aud
 | [45-configuration-audit](workflows/45-configuration-audit.md) | **Related** | To audit configuration processes |
 | [41-internal-audit](workflows/41-internal-audit.md) | **Related** | To audit through internal audit |
 
-## Output
-
-Use: `templates/process-audit-report.md` | Capability: `capabilities/process-audit.md`

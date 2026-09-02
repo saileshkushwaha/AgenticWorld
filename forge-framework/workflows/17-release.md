@@ -75,10 +75,6 @@ Use: `templates/release-plan.md` | Capability: `capabilities/release-management.
 - No existing template → Adapt from similar project
 - Technical reviewer unavailable → Use peer review
 
-## Output
-
-Use: `templates/release-plan.md` | Capability: `capabilities/release-management.md`
-
 ## Related Workflows
 
 | Workflow | Relationship | When to Use |

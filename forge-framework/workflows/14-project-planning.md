@@ -75,10 +75,6 @@ Use: `templates/project-plan.md` | Capability: `capabilities/project-planning.md
 - No security team → Use automated tools and external audits
 - Zero-day vulnerabilities → Have incident response plan ready
 
-## Output
-
-Use: `templates/project-plan.md` | Capability: `capabilities/project-planning.md`
-
 ## Related Workflows
 
 | Workflow | Relationship | When to Use |

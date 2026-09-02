@@ -1,3 +1,7 @@
+# Onboarding Guide - Forge Engineering Lifecycle Framework
+
+## Overview
+This guide provides procedures for onboarding new users and AI agents to the Forge Engineering Lifecycle Framework. It covers quick start, workflow selection, and best practices.
 # Updated Onboarding Guide - Forge Engineering Lifecycle Framework
 
 ## Prerequisites

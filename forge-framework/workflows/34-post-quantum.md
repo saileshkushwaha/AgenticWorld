@@ -73,10 +73,6 @@ Use: `templates/post-quantum-report.md` | Capability: `capabilities/post-quantum
 - No security team → Use automated tools
 - Compliance conflicts → Consult legal team
 
-## Output
-
-Use: `templates/post-quantum-report.md` | Capability: `capabilities/post-quantum.md`
-
 ## Related Workflows
 
 | Workflow | Relationship | When to Use |

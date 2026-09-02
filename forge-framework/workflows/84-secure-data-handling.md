@@ -77,6 +77,3 @@ Use: `templates/data-handling-procedures.md` | Capability: `capabilities/secure-
 | [44-data-audit](workflows/44-data-audit.md) | **Related** | To audit data handling practices |
 | [10-security](workflows/10-security.md) | **Related** | To secure data handling |
 
-## Output
-
-Use: `templates/data-handling-procedures.md` | Capability: `capabilities/secure-data-handling.md`

@@ -73,10 +73,6 @@ Use: `templates/finops-report.md` | Capability: `capabilities/finops.md`
 - Schema mismatch → Create transformation layer
 - Downtime constraints → Use blue-green deployment
 
-## Output
-
-Use: `templates/finops-report.md` | Capability: `capabilities/finops.md`
-
 ## Related Workflows
 
 | Workflow | Relationship | When to Use |

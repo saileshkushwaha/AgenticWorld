@@ -70,7 +70,3 @@ Use: `templates/telemetry-log.md` | Artifact: `artifacts/telemetry.md`
 | [24-monitoring](workflows/24-monitoring.md) | **Related** | To monitor system metrics |
 | [11-performance](workflows/11-performance.md) | **Related** | To track performance metrics |
 | [33-multi-agent](workflows/33-multi-agent.md) | **Related** | To track agent performance |
-
-## Output
-
-Use: `templates/telemetry-log.md` | Artifact: `artifacts/telemetry.md`

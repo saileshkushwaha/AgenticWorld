@@ -73,10 +73,6 @@ Use: `templates/data-migration-report.md` | Capability: `capabilities/data-migra
 - Schema mismatch → Create transformation layer
 - Downtime constraints → Use blue-green deployment
 
-## Output
-
-Use: `templates/data-migration-report.md` | Capability: `capabilities/data-migration.md`
-
 ## Related Workflows
 
 | Workflow | Relationship | When to Use |

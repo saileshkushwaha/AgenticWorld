@@ -75,10 +75,6 @@ Use: `templates/performance-report.md` | Capability: `capabilities/performance.m
 - No security team → Use automated tools and external audits
 - Zero-day vulnerabilities → Have incident response plan ready
 
-## Output
-
-Use: `templates/performance-report.md` | Capability: `capabilities/performance.md`
-
 ## Related Workflows
 
 | Workflow | Relationship | When to Use |

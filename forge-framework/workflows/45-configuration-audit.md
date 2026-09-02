@@ -89,6 +89,3 @@ Use: `templates/configuration-audit-report.md` | Capability: `capabilities/confi
 | [43-process-audit](workflows/88-process-audit.md) | **Related** | To audit configuration processes |
 | [10-security](workflows/10-security.md) | **Related** | To audit security configurations |
 
-## Output
-
-Use: `templates/configuration-audit-report.md` | Capability: `capabilities/configuration-audit.md`

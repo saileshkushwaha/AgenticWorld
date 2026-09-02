@@ -71,6 +71,3 @@ Use: `templates/monitoring-report.md` | Capability: `capabilities/monitoring.md`
 | [12-incident](workflows/12-incident.md) | **Related** | To detect incidents |
 | [37-telemetry](workflows/37-telemetry.md) | **Related** | To collect telemetry data |
 | [23-finops](workflows/23-finops.md) | **Related** | To monitor cloud costs |
-## Output
-
-Use: `templates/monitoring-report.md` | Capability: `capabilities/monitoring.md`

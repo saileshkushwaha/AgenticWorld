@@ -1,3 +1,7 @@
+# Research Mode Selection Guide - Forge Engineering Lifecycle Framework
+
+## Overview
+This guide provides procedures for selecting the appropriate research mode within the Forge framework. It covers quick research vs deep research comparison and selection criteria.
 # Research Mode Selection - Forge Engineering Lifecycle Framework
 
 ## Mode Comparison

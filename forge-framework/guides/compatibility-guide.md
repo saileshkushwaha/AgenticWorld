@@ -1,3 +1,7 @@
+# Compatibility Guide - Forge Engineering Lifecycle Framework
+
+## Overview
+This guide provides procedures for ensuring compatibility across models, tools, and platforms within the Forge framework. It covers model-agnostic design, tool integration, and fallback mechanisms.
 # Model & Tool Compatibility Guide - Forge Engineering Lifecycle Framework
 
 ## Model-Agnostic Compatibility

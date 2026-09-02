@@ -73,10 +73,6 @@ Use: `templates/stakeholder-plan.md` | Capability: `capabilities/stakeholder-man
 - No stakeholder availability → Use async communication
 - Resistance to change → Provide training and support
 
-## Output
-
-Use: `templates/stakeholder-plan.md` | Capability: `capabilities/stakeholder-management.md`
-
 ## Related Workflows
 
 | Workflow | Relationship | When to Use |

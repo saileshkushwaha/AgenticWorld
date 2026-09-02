@@ -73,10 +73,6 @@ Use: `templates/devsecops-plan.md` | Capability: `capabilities/devsecops.md`
 - No security team → Use automated tools
 - Compliance conflicts → Consult legal team
 
-## Output
-
-Use: `templates/devsecops-plan.md` | Capability: `capabilities/devsecops.md`
-
 ## Related Workflows
 
 | Workflow | Relationship | When to Use |

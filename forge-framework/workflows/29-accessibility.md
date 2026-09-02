@@ -73,10 +73,6 @@ Use: `templates/accessibility-report.md` | Capability: `capabilities/accessibili
 - No stakeholder availability → Use async communication
 - Resistance to change → Provide training and support
 
-## Output
-
-Use: `templates/accessibility-report.md` | Capability: `capabilities/accessibility.md`
-
 ## Related Workflows
 
 | Workflow | Relationship | When to Use |

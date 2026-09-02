@@ -73,10 +73,6 @@ Use: `templates/green-coding-report.md` | Capability: `capabilities/green-coding
 - No security team → Use automated tools
 - Compliance conflicts → Consult legal team
 
-## Output
-
-Use: `templates/green-coding-report.md` | Capability: `capabilities/green-coding.md`
-
 ## Related Workflows
 
 | Workflow | Relationship | When to Use |

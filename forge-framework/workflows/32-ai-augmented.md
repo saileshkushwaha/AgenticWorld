@@ -73,10 +73,6 @@ Use: `templates/ai-augmented-plan.md` | Capability: `capabilities/ai-augmented.m
 - No security team → Use automated tools
 - Compliance conflicts → Consult legal team
 
-## Output
-
-Use: `templates/ai-augmented-plan.md` | Capability: `capabilities/ai-augmented.md`
-
 ## Related Workflows
 
 | Workflow | Relationship | When to Use |

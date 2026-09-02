@@ -269,9 +269,6 @@ Current task: [specific implementation task]
   - verbosity: detailed
 ```
 
-## Output
-
-Use: `templates/project-scaffold.md` for initiation, then follow individual workflow templates for each phase.
 ## Edge Cases
 
 - Very large projects → Break into sub-projects, each with own master workflow

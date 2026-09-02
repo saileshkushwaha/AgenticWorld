@@ -73,10 +73,6 @@ Use: `templates/knowledge-base.md` | Capability: `capabilities/knowledge-managem
 - No stakeholder availability → Use async communication
 - Resistance to change → Provide training and support
 
-## Output
-
-Use: `templates/knowledge-base.md` | Capability: `capabilities/knowledge-management.md`
-
 ## Related Workflows
 
 | Workflow | Relationship | When to Use |

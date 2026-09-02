@@ -1,5 +1,9 @@
 # Troubleshooting Guide - Forge Engineering Lifecycle Framework
 
+## Overview
+This guide provides procedures for diagnosing and resolving issues that arise when using the Forge Engineering Lifecycle Framework. It covers common error patterns, debugging strategies, and escalation procedures.
+# Troubleshooting Guide - Forge Engineering Lifecycle Framework
+
 ## General Issues
 
 | Issue | Cause | Solution |

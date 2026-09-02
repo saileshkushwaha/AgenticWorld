@@ -75,10 +75,6 @@ Use: `templates/configuration-report.md` | Capability: `capabilities/configurati
 - No existing template → Adapt from similar project
 - Technical reviewer unavailable → Use peer review
 
-## Output
-
-Use: `templates/configuration-report.md` | Capability: `capabilities/configuration-management.md`
-
 ## Related Workflows
 
 | Workflow | Relationship | When to Use |

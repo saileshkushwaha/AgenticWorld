@@ -96,6 +96,3 @@ Use: `templates/data-audit-report.md` | Capability: `capabilities/data-audit.md`
 | [39-secure-data-handling](workflows/84-secure-data-handling.md) | **Related** | To audit data handling security |
 | [41-internal-audit](workflows/41-internal-audit.md) | **Related** | To audit data through internal audit |
 
-## Output
-
-Use: `templates/data-audit-report.md` | Capability: `capabilities/data-audit.md`

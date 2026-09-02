@@ -1,5 +1,9 @@
 # Migration Guide - Forge Engineering Lifecycle Framework
 
+## Overview
+This guide provides procedures for migrating from ad-hoc prompting or other frameworks to the Forge Engineering Lifecycle Framework. It covers assessment, planning, and phased migration approaches.
+# Migration Guide - Forge Engineering Lifecycle Framework
+
 ## Migrating from Ad-hoc Prompting
 
 ### Assessment

@@ -1,3 +1,8 @@
+# Deployment Strategies Guide - Forge Engineering Lifecycle Framework
+
+## Overview
+This guide provides procedures for planning and executing deployments within the Forge framework. It covers CI/CD integration, deployment patterns, rollback strategies, and environment management.
+
 ## Deployment Strategies
 
 ### CI/CD Pipeline Integration

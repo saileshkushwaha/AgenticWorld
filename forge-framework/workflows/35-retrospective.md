@@ -67,6 +67,3 @@ Use: `templates/retrospective-report.md` | Capability: `capabilities/retrospecti
 | [27-knowledge](workflows/27-knowledge.md) | **Related** | To capture knowledge |
 | [36-technical-debt](workflows/36-technical-debt.md) | **Related** | To identify technical debt |
 
-## Output
-
-Use: `templates/retrospective-report.md` | Capability: `capabilities/retrospective.md`

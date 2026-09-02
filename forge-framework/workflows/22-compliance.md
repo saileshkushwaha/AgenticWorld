@@ -73,10 +73,6 @@ Use: `templates/compliance-report.md` | Capability: `capabilities/compliance.md`
 - Schema mismatch → Create transformation layer
 - Downtime constraints → Use blue-green deployment
 
-## Output
-
-Use: `templates/compliance-report.md` | Capability: `capabilities/compliance.md`
-
 ## Related Workflows
 
 | Workflow | Relationship | When to Use |

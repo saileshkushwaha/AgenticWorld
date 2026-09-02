@@ -68,10 +68,6 @@ Use: `templates/mentoring-plan.md` | Capability: `capabilities/mentoring.md`
 - No stakeholder availability → Use async communication
 - Resistance to change → Provide training and support
 
-## Output
-
-Use: `templates/mentoring-plan.md` | Capability: `capabilities/mentoring.md`
-
 ## Related Workflows
 
 | Workflow | Relationship | When to Use |
