@@ -6,6 +6,7 @@ interface OrderState {
   orders: Order[]
   createOrder: (items: CartItem[], shippingAddress: Address, paymentMethod: string) => Order
   getOrder: (orderId: string) => Order | undefined
+  updateOrderStatus: (orderId: string, status: Order['status']) => void
   clearOrders: () => void
 }
 
@@ -17,7 +18,7 @@ export const useOrderStore = create<OrderState>()(
         const order: Order = {
           id: 'ORD-' + Date.now().toString(36).toUpperCase(),
           userId: 'current-user',
-          status: 'confirmed',
+          status: 'pending',
           total: items.reduce((sum, item) => {
             const price = item.product.salePrice ?? item.product.price
             return sum + price * item.quantity
@@ -41,6 +42,13 @@ export const useOrderStore = create<OrderState>()(
       },
       getOrder: (orderId) => {
         return get().orders.find((order) => order.id === orderId)
+      },
+      updateOrderStatus: (orderId, status) => {
+        set((state) => ({
+          orders: state.orders.map((order) =>
+            order.id === orderId ? { ...order, status } : order
+          ),
+        }))
       },
       clearOrders: () => set({ orders: [] }),
     }),
