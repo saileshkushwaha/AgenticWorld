@@ -47,9 +47,9 @@ export function ProductDetailPage() {
   })
 
   const { data: relatedProducts } = useQuery({
-    queryKey: ['related-products', product?.category],
-    queryFn: () => api.products.getAll({ category: product?.category, limit: 4 }),
-    enabled: !!product?.category,
+    queryKey: ['related-products', product?.category?.slug],
+    queryFn: () => api.products.getAll({ category: product?.category?.slug, limit: 4 }),
+    enabled: !!product?.category?.slug,
   })
 
   if (isLoading) {
