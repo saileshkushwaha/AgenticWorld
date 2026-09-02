@@ -57,11 +57,12 @@ export function CouponInput() {
 
 export function ShippingSelector() {
   const { options, selectedOption, setSelectedOption } = useShippingStore()
+  const enabledOptions = options.filter((o) => o.isEnabled)
 
   return (
     <div className="space-y-2">
       <h3 className="font-medium text-gray-900">Shipping Method</h3>
-      {options.map((option) => (
+      {enabledOptions.map((option) => (
         <label
           key={option.id}
           className={`flex items-center justify-between p-3 border rounded-lg cursor-pointer transition-colors ${
