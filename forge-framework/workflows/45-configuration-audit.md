@@ -86,7 +86,7 @@ Use: `templates/configuration-audit-report.md` | Capability: `capabilities/confi
 | Workflow | Relationship | When to Use |
 |----------|-------------|-------------|
 | [16-configuration](workflows/16-configuration.md) | **Related** | To audit configuration management |
-| [43-process-audit](workflows/43-process-audit.md) | **Related** | To audit configuration processes |
+| [43-process-audit](workflows/88-process-audit.md) | **Related** | To audit configuration processes |
 | [10-security](workflows/10-security.md) | **Related** | To audit security configurations |
 
 ## Output

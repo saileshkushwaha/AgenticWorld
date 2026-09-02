@@ -70,7 +70,7 @@ Use: `templates/privacy-impact-assessment.md` | Capability: `capabilities/privac
 
 | Workflow | Relationship | When to Use |
 |----------|-------------|-------------|
-| [39-secure-data-handling](workflows/39-secure-data-handling.md) | **Related** | To implement data handling procedures |
+| [39-secure-data-handling](workflows/84-secure-data-handling.md) | **Related** | To implement data handling procedures |
 | [22-compliance](workflows/22-compliance.md) | **Related** | To ensure privacy compliance |
 | [10-security](workflows/10-security.md) | **Related** | To secure personal data |
 

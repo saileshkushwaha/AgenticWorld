@@ -94,7 +94,7 @@ Use: `templates/quality-audit-report.md` | Capability: `capabilities/quality-aud
 |----------|-------------|-------------|
 | [18-qa](workflows/18-qa.md) | **Related** | To audit QA processes |
 | [41-internal-audit](workflows/41-internal-audit.md) | **Related** | To audit quality through internal audit |
-| [43-process-audit](workflows/43-process-audit.md) | **Related** | To audit quality processes |
+| [43-process-audit](workflows/88-process-audit.md) | **Related** | To audit quality processes |
 
 ## Output
 

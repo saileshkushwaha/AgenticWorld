@@ -73,7 +73,7 @@ Use: `templates/data-handling-procedures.md` | Capability: `capabilities/secure-
 
 | Workflow | Relationship | When to Use |
 |----------|-------------|-------------|
-| [38-privacy-data-protection](workflows/38-privacy-data-protection.md) | **Related** | To protect privacy in data handling |
+| [38-privacy-data-protection](workflows/83-privacy-data-protection.md) | **Related** | To protect privacy in data handling |
 | [44-data-audit](workflows/44-data-audit.md) | **Related** | To audit data handling practices |
 | [10-security](workflows/10-security.md) | **Related** | To secure data handling |
 

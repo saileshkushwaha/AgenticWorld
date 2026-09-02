@@ -82,5 +82,5 @@ Use: `templates/finops-report.md` | Capability: `capabilities/finops.md`
 | Workflow | Relationship | When to Use |
 |----------|-------------|-------------|
 | [24-monitoring](workflows/24-monitoring.md) | **Related** | To monitor cloud costs |
-| [40-risk-assessment](workflows/40-risk-assessment.md) | **Related** | To assess financial risks |
+| [40-risk-assessment](workflows/85-risk-assessment.md) | **Related** | To assess financial risks |
 | [14-project-planning](workflows/14-project-planning.md) | **Related** | To plan cloud budgets |

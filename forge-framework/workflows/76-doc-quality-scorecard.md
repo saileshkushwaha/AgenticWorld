@@ -95,4 +95,4 @@ Use: `templates/doc-quality-scorecard.md` | Capability: `capabilities/documentat
 | [75-autodoc-generate](workflows/75-autodoc-generate.md) | **Related** | To assess quality of generated documentation |
 | [09-communication](workflows/09-communication.md) | **Related** | To communicate quality findings |
 | [27-knowledge](workflows/27-knowledge.md) | **Related** | To integrate with knowledge base quality |
-| [42-quality-audit](workflows/42-quality-audit.md) | **Related** | As part of broader quality audit program |
+| [42-quality-audit](workflows/87-quality-audit.md) | **Related** | As part of broader quality audit program |

@@ -86,4 +86,4 @@ Use: `templates/performance-report.md` | Capability: `capabilities/performance.m
 | [10-security](workflows/10-security.md) | **Related** | To ensure performance doesn't compromise security |
 | [12-incident](workflows/12-incident.md) | **Related** | To investigate performance incidents |
 | [24-monitoring](workflows/24-monitoring.md) | **Related** | To monitor performance metrics |
-| [40-risk-assessment](workflows/40-risk-assessment.md) | **Related** | To assess performance risks |
+| [40-risk-assessment](workflows/85-risk-assessment.md) | **Related** | To assess performance risks |

@@ -82,5 +82,5 @@ Use: `templates/compliance-report.md` | Capability: `capabilities/compliance.md`
 | Workflow | Relationship | When to Use |
 |----------|-------------|-------------|
 | [10-security](workflows/10-security.md) | **Related** | To ensure security compliance |
-| [38-privacy-data-protection](workflows/38-privacy-data-protection.md) | **Related** | To ensure privacy compliance |
+| [38-privacy-data-protection](workflows/83-privacy-data-protection.md) | **Related** | To ensure privacy compliance |
 | [41-internal-audit](workflows/41-internal-audit.md) | **Related** | To audit compliance |

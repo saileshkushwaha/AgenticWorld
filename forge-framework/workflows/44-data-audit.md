@@ -93,7 +93,7 @@ Use: `templates/data-audit-report.md` | Capability: `capabilities/data-audit.md`
 | Workflow | Relationship | When to Use |
 |----------|-------------|-------------|
 | [20-data-migration](workflows/20-data-migration.md) | **Related** | To audit data during migration |
-| [39-secure-data-handling](workflows/39-secure-data-handling.md) | **Related** | To audit data handling security |
+| [39-secure-data-handling](workflows/84-secure-data-handling.md) | **Related** | To audit data handling security |
 | [41-internal-audit](workflows/41-internal-audit.md) | **Related** | To audit data through internal audit |
 
 ## Output

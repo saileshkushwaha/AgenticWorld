@@ -85,7 +85,7 @@ Use: `templates/process-audit-report.md` | Capability: `capabilities/process-aud
 
 | Workflow | Relationship | When to Use |
 |----------|-------------|-------------|
-| [42-quality-audit](workflows/42-quality-audit.md) | **Related** | To audit quality processes |
+| [42-quality-audit](workflows/87-quality-audit.md) | **Related** | To audit quality processes |
 | [45-configuration-audit](workflows/45-configuration-audit.md) | **Related** | To audit configuration processes |
 | [41-internal-audit](workflows/41-internal-audit.md) | **Related** | To audit through internal audit |
 

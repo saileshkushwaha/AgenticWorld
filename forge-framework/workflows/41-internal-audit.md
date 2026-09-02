@@ -92,9 +92,9 @@ Use: `templates/internal-audit-report.md` | Capability: `capabilities/internal-a
 
 | Workflow | Relationship | When to Use |
 |----------|-------------|-------------|
-| [40-risk-assessment](workflows/40-risk-assessment.md) | **Related** | To audit risk management |
+| [40-risk-assessment](workflows/85-risk-assessment.md) | **Related** | To audit risk management |
 | [22-compliance](workflows/22-compliance.md) | **Related** | To audit compliance |
-| [42-quality-audit](workflows/42-quality-audit.md) | **Related** | To audit quality processes |
+| [42-quality-audit](workflows/87-quality-audit.md) | **Related** | To audit quality processes |
 
 ## Output
 

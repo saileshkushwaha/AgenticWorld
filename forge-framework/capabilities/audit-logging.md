@@ -1,35 +1,47 @@
 # Audit Logging Capability
 
 ## Definition
-The ability to capture, store, and analyze logs for security monitoring and compliance.
+The ability to capture, store, and analyze logs for security monitoring, compliance, and operational insight.
 
-## Proficiency Levels
+## Capabilities
 
-| Level | Title | Description |
-|-------|-------|-------------|
-| 1 | Novice | Can implement basic logging |
-| 2 | Competent | Can configure log storage |
-| 3 | Proficient | Can analyze logs for security events |
-| 4 | Expert | Can design comprehensive audit systems |
-| 5 | Master | Can establish organizational audit culture |
+### Log Capture
+- Application log collection
+- System event logging
+- Security event logging
+- Network traffic logging
+- Database activity logging
 
-## Scope
-**In Scope**: Security event logging, access logging, error logging, compliance logging
-**Out of Scope**: Log analysis tools, SIEM integration (consult security team)
+### Log Storage
+- Centralized log aggregation
+- Secure log retention
+- Encrypted storage
+- Compression and archival
+- Multi-region replication
 
-## Skills
-- **Log Collection**: Implement logging across systems
-- **Log Analysis**: Analyze logs for security events
-- **Compliance Logging**: Ensure regulatory compliance logging
-- **Security Monitoring**: Monitor logs for security events
+### Log Analysis
+- Real-time monitoring
+- Pattern detection
+- Anomaly identification
+- Correlation analysis
+- Trend reporting
 
-## Quality Criteria
-- Logs properly configured
-- Audit trail maintained
-- Compliance requirements met
-- Security events detected
+### Compliance
+- Audit trail maintenance
+- Regulatory reporting
+- Evidence preservation
+- Access control
+- Retention policy enforcement
 
 ## Integration
-Reference: `artifacts/telemetry.md`
-Template: `templates/telemetry-log.md`
-Workflow: `workflows/38-privacy-data-protection.md`, `workflows/39-secure-data-handling.md`
+- **Workflows**: 48-audit-logging, 44-data-audit, 45-configuration-audit, 83-privacy-data-protection
+- **Templates**: audit-logging-report, compliance-report
+- **Guides**: audit-logging, data-audit, configuration-audit
+
+## Key Metrics
+| Metric | Target | Measurement |
+|--------|--------|-------------|
+| Log Coverage | 100% | System inventory |
+| Storage Availability | 99.9% | Uptime monitoring |
+| Query Performance | < 5s | Search logs |
+| Retention Compliance | 100% | Audit checks |
