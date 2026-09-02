@@ -1,12 +1,14 @@
 import { Link, useNavigate } from 'react-router-dom'
 import { TrashIcon } from '@heroicons/react/24/outline'
 import { useCartStore } from '../../stores/cart'
+import { useConfigStore } from '../../stores/config'
 import { Button } from '../../components/ui/Button'
 import { QuantitySelector } from '../../components/ui/QuantitySelector'
 import { EmptyState } from '../../components/ui/EmptyState'
 
 export function CartPage() {
   const { items, removeItem, updateQuantity, getTotal, getItemCount } = useCartStore()
+  const { tax } = useConfigStore()
   const navigate = useNavigate()
 
   if (items.length === 0) {
@@ -25,9 +27,10 @@ export function CartPage() {
     )
   }
 
-  const tax = getTotal() * 0.08
+  const taxRate = tax.enabled ? tax.rate / 100 : 0
+  const taxAmount = getTotal() * taxRate
   const shipping = 0
-  const total = getTotal() + tax + shipping
+  const total = getTotal() + taxAmount + shipping
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -87,8 +90,8 @@ export function CartPage() {
               <span className="text-green-600">Free</span>
             </div>
             <div className="flex justify-between">
-              <span className="text-gray-600">Tax (8%)</span>
-              <span>${tax.toFixed(2)}</span>
+              <span className="text-gray-600">Tax ({tax.rate}%)</span>
+              <span>${taxAmount.toFixed(2)}</span>
             </div>
             <div className="border-t pt-2 mt-2 flex justify-between font-bold text-lg">
               <span>Total</span>
