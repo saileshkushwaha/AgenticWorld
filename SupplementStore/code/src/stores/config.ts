@@ -1,13 +1,6 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
-import {
-  PaymentMethod,
-  CurrencyConfig,
-  TaxConfig,
-  defaultPaymentMethods,
-  defaultCurrencyConfig,
-  defaultTaxConfig,
-} from '../config/paymentConfig'
+import { PaymentMethod, CurrencyConfig, TaxConfig, defaultPaymentMethods, defaultCurrencyConfig, defaultTaxConfig } from '../config/paymentConfig'
 
 interface ShippingMethod {
   id: string
@@ -41,25 +34,12 @@ export const useConfigStore = create<ConfigState>()(
         { id: 'express', name: 'Express Shipping', description: 'Priority handling and delivery', price: 9.99, estimatedDays: '1-2 business days', isEnabled: true },
         { id: 'overnight', name: 'Overnight Shipping', description: 'Next business day delivery', price: 19.99, estimatedDays: '1 business day', isEnabled: true },
       ],
-      updatePaymentMethod: (id, updates) =>
-        set((state) => ({
-          paymentMethods: state.paymentMethods.map((m) => (m.id === id ? { ...m, ...updates } : m)),
-        })),
+      updatePaymentMethod: (id, updates) => set((state) => ({ paymentMethods: state.paymentMethods.map((m) => (m.id === id ? { ...m, ...updates } : m)) })),
       updateCurrency: (currency) => set({ currency }),
       updateTax: (tax) => set({ tax }),
-      updateShippingMethod: (id, updates) =>
-        set((state) => ({
-          shippingMethods: state.shippingMethods.map((m) => (m.id === id ? { ...m, ...updates } : m)),
-        })),
-      resetToDefaults: () =>
-        set({
-          paymentMethods: defaultPaymentMethods,
-          currency: defaultCurrencyConfig,
-          tax: defaultTaxConfig,
-        }),
+      updateShippingMethod: (id, updates) => set((state) => ({ shippingMethods: state.shippingMethods.map((m) => (m.id === id ? { ...m, ...updates } : m)) })),
+      resetToDefaults: () => set({ paymentMethods: defaultPaymentMethods, currency: defaultCurrencyConfig, tax: defaultTaxConfig }),
     }),
-    {
-      name: 'supplement-store-config',
-    }
+    { name: 'supplement-store-config' }
   )
 )
