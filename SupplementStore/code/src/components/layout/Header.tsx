@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { ShoppingCartIcon, MagnifyingGlassIcon, Bars3Icon, XMarkIcon, SunIcon, MoonIcon } from '@heroicons/react/24/outline'
 import { useCartStore } from '../../stores/cart'
@@ -14,6 +14,8 @@ export function Header() {
   const navigate = useNavigate()
   const [searchQuery, setSearchQuery] = useState('')
   const [isSearchOpen, setIsSearchOpen] = useState(false)
+  const [userMenuOpen, setUserMenuOpen] = useState(false)
+  const userMenuRef = useRef<HTMLDivElement>(null)
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault()
@@ -23,6 +25,16 @@ export function Header() {
       setSearchQuery('')
     }
   }
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (userMenuRef.current && !userMenuRef.current.contains(event.target as Node)) {
+        setUserMenuOpen(false)
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => document.removeEventListener('mousedown', handleClickOutside)
+  }, [])
 
   return (
     <header className="surface shadow-sm sticky top-0 z-50 border-b border-default">
@@ -71,29 +83,31 @@ export function Header() {
             </button>
 
             {isAuthenticated ? (
-              <div className="relative group">
-                <button data-testid="user-menu" className="flex items-center gap-2 p-1.5 rounded-full hover:opacity-80 transition-colors">
+              <div className="relative" ref={userMenuRef}>
+                <button onClick={() => setUserMenuOpen(!userMenuOpen)} className="flex items-center gap-2 p-1.5 rounded-full hover:opacity-80 transition-colors">
                   <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
                     <span className="text-white text-xs font-bold">{user?.firstName?.[0]}{user?.lastName?.[0]}</span>
                   </div>
                 </button>
-                <div className="absolute right-0 top-full mt-2 w-56 surface rounded-xl shadow-lg border border-default py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
-                  <div className="px-4 py-3 border-b border-default">
-                    <p className="font-medium text-default text-sm">{user?.firstName} {user?.lastName}</p>
-                    <p className="text-xs text-secondary">{user?.email}</p>
+                {userMenuOpen && (
+                  <div className="absolute right-0 top-full mt-2 w-56 surface rounded-xl shadow-lg border border-default py-2 z-50">
+                    <div className="px-4 py-3 border-b border-default">
+                      <p className="font-medium text-default text-sm">{user?.firstName} {user?.lastName}</p>
+                      <p className="text-xs text-secondary">{user?.email}</p>
+                      {user?.role === 'admin' && (
+                        <span className="inline-block mt-1 px-2 py-0.5 bg-purple-100 text-purple-700 rounded-full text-xs font-medium">Admin</span>
+                      )}
+                    </div>
                     {user?.role === 'admin' && (
-                      <span className="inline-block mt-1 px-2 py-0.5 bg-purple-100 text-purple-700 rounded-full text-xs font-medium">Admin</span>
+                      <Link to="/admin" className="block px-4 py-2.5 text-sm text-primary hover:opacity-80 font-medium" onClick={() => setUserMenuOpen(false)}>Admin Panel</Link>
                     )}
+                    <Link to="/account" className="block px-4 py-2.5 text-sm text-default hover:opacity-80" onClick={() => setUserMenuOpen(false)}>My Account</Link>
+                    <Link to="/account/orders" className="block px-4 py-2.5 text-sm text-default hover:opacity-80" onClick={() => setUserMenuOpen(false)}>Orders</Link>
+                    <Link to="/account/wishlist" className="block px-4 py-2.5 text-sm text-default hover:opacity-80" onClick={() => setUserMenuOpen(false)}>Wishlist</Link>
+                    <hr className="my-1 border-default" />
+                    <button onClick={() => { logout(); navigate('/'); setUserMenuOpen(false) }} className="block w-full text-left px-4 py-2.5 text-sm text-red-500 hover:opacity-80">Sign Out</button>
                   </div>
-                  {user?.role === 'admin' && (
-                    <Link to="/admin" className="block px-4 py-2.5 text-sm text-primary hover:opacity-80 font-medium" onClick={() => setIsSearchOpen(false)}>Admin Panel</Link>
-                  )}
-                  <Link to="/account" className="block px-4 py-2.5 text-sm text-default hover:opacity-80" onClick={() => setIsSearchOpen(false)}>My Account</Link>
-                  <Link to="/account/orders" className="block px-4 py-2.5 text-sm text-default hover:opacity-80" onClick={() => setIsSearchOpen(false)}>Orders</Link>
-                  <Link to="/account/wishlist" className="block px-4 py-2.5 text-sm text-default hover:opacity-80" onClick={() => setIsSearchOpen(false)}>Wishlist</Link>
-                  <hr className="my-1 border-default" />
-                  <button onClick={() => { logout(); navigate('/') }} className="block w-full text-left px-4 py-2.5 text-sm text-red-500 hover:opacity-80">Sign Out</button>
-                </div>
+                )}
               </div>
             ) : (
               <button onClick={() => setAuthModalOpen(true)} className="px-5 py-2 btn-primary">Sign In</button>
