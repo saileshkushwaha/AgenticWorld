@@ -18,7 +18,7 @@ export function CategoryDetailPage() {
     enabled: !!slug,
   })
 
-  const categoryName = slug?.replace('-', ' ').replace(/\b\w/g, (l) => l.toUpperCase() || '')
+  const categoryName = slug?.replace(/-/g, ' ').replace(/\b\w/g, (l) => l.toUpperCase() || '')
   const totalPages = productsData ? Math.ceil(productsData.total / limit) : 0
 
   return (

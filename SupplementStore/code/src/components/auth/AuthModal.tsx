@@ -56,7 +56,7 @@ export function AuthModal() {
         email: email,
         firstName: isAdmin ? 'Admin' : 'Alex',
         lastName: isAdmin ? 'User' : 'Strong',
-        role: isAdmin ? 'admin' as const : 'customer' as const,
+        role: isAdmin ? 'admin' as const : 'user' as const,
         createdAt: new Date().toISOString(),
       }
       login(user, 'mock-token-' + crypto.randomUUID())
@@ -72,7 +72,7 @@ export function AuthModal() {
         email: regData.email,
         firstName: regData.firstName,
         lastName: regData.lastName,
-        role: 'customer' as const,
+        role: 'user' as const,
         createdAt: new Date().toISOString(),
       }
       login(user, 'mock-token-' + crypto.randomUUID())
