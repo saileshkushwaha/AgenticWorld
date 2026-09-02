@@ -3,6 +3,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { Layout } from './components/layout/Layout'
 import { AdminLayout } from './components/admin/AdminLayout'
 import { AdminGuard } from './components/auth/AdminGuard'
+import { ErrorBoundary } from './components/error/ErrorBoundary'
 import { HomePage } from './pages/Home/HomePage'
 import { ProductsPage } from './pages/Products/ProductsPage'
 import { ProductDetailPage } from './pages/Products/ProductDetailPage'
@@ -82,8 +83,10 @@ function AppContent() {
 
 export default function App() {
   return (
-    <QueryClientProvider client={queryClient}>
-      <AppContent />
-    </QueryClientProvider>
+    <ErrorBoundary>
+      <QueryClientProvider client={queryClient}>
+        <AppContent />
+      </QueryClientProvider>
+    </ErrorBoundary>
   )
 }
