@@ -5,6 +5,7 @@ import { ProductCard } from '../../components/product/ProductCard'
 import { ProductGridSkeleton } from '../../components/ui/LoadingSkeleton'
 import { useRecentlyViewedStore } from '../../stores/recentlyViewed'
 import { NewsletterSignup } from '../../components/newsletter/NewsletterSignup'
+import { Product } from '../../types'
 
 export function HomePage() {
   const { data: featuredProducts, isLoading } = useQuery({
@@ -16,12 +17,12 @@ export function HomePage() {
 
   const { data: recentlyViewedProducts } = useQuery({
     queryKey: ['recently-viewed', recentlyViewedIds],
-    queryFn: async () => {
+    queryFn: async (): Promise<Product[]> => {
       if (recentlyViewedIds.length === 0) return []
       const products = await Promise.all(
         recentlyViewedIds.slice(0, 4).map((id) => api.products.getById(id))
       )
-      return products.filter(Boolean)
+      return products.filter((p): p is Product => p != null)
     },
     enabled: recentlyViewedIds.length > 0,
   })
