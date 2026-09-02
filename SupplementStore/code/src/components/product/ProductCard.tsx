@@ -25,7 +25,7 @@ export function ProductCard({ product }: ProductCardProps) {
     e.preventDefault()
     e.stopPropagation()
     addItem(product)
-    addToast(`${product.name} added to cart', 'success')
+    addToast(`${product.name} added to cart`, 'success')
   }
 
   const handleWishlistToggle = (e: React.MouseEvent) => {
