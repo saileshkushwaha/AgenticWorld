@@ -75,6 +75,8 @@ export function ProductsPage() {
                 <option value="vitamins">Vitamins</option>
                 <option value="amino-acids">Amino Acids</option>
                 <option value="weight-loss">Weight Loss</option>
+                <option value="mass-gainers">Mass Gainers</option>
+                <option value="recovery">Recovery</option>
               </select>
             </div>
             <div>
