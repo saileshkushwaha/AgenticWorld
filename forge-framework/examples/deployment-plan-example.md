@@ -1,5 +1,8 @@
 # Deployment Plan Example - Forge Engineering Lifecycle Framework
 
+**Created**: 2024-03-15T00:00:00Z | **Phase**: Deployment | **Status**: approved
+**Template**: `templates/deployment-plan.md` | **Version**: 1.0.0
+
 ## Overview
 This document provides a comprehensive example of a deployment plan for an e-commerce platform using the Forge framework. It demonstrates the structure, content, and level of detail expected in deployment planning artifacts.
 

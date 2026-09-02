@@ -1,5 +1,7 @@
-# Debug Report Example (Filled)
-*Complete example showing the debug report template in use*
+# Debug Report Example - Forge Engineering Lifecycle Framework
+
+**Created**: 2026-08-25T15:30:00Z | **Phase**: Debugging | **Status**: resolved
+**Template**: `templates/debug-report.md` | **Version**: 1.0.0
 
 ---
 

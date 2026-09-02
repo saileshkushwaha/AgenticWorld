@@ -1,5 +1,8 @@
 # Quality Audit Example - Forge Engineering Lifecycle Framework
 
+**Created**: 2024-04-15T00:00:00Z | **Phase**: Quality Audit | **Status**: approved
+**Template**: `templates/quality-audit-report.md` | **Version**: 1.0.0
+
 ## Overview
 This document provides a comprehensive example of a quality audit following the Forge Engineering Lifecycle Framework. It demonstrates the structure, content, and level of detail expected in quality audit artifacts, including audit planning, methodology, findings, recommendations, and action tracking.
 

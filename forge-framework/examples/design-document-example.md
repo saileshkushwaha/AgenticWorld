@@ -1,5 +1,8 @@
 # Design Document Example - Forge Engineering Lifecycle Framework
 
+**Created**: 2024-03-10T00:00:00Z | **Phase**: Design | **Status**: approved
+**Template**: `templates/design-document.md` | **Version**: 2.1.0
+
 ## Overview
 This document provides a comprehensive example of a system design document following the Forge Engineering Lifecycle Framework. It demonstrates the structure, content, and level of detail expected in design documentation, including architectural decisions, data models, API specifications, and implementation considerations.
 

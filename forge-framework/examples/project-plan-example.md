@@ -1,5 +1,8 @@
 # Project Plan Example - Forge Engineering Lifecycle Framework
 
+**Created**: 2024-03-25T00:00:00Z | **Phase**: Planning | **Status**: approved
+**Template**: `templates/project-plan.md` | **Version**: 1.0.0
+
 ## Overview
 This document provides a comprehensive example of a project plan following the Forge Engineering Lifecycle Framework. It demonstrates the structure, content, and level of detail expected in project planning artifacts.
 

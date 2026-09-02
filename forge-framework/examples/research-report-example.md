@@ -1,5 +1,8 @@
 # Research Report Example - Forge Engineering Lifecycle Framework
 
+**Created**: 2024-03-20T00:00:00Z | **Phase**: Research | **Status**: approved
+**Template**: `templates/research-report.md` | **Version**: 1.2.0
+
 ## Overview
 This document provides a comprehensive example of a research report following the Forge Engineering Lifecycle Framework. It demonstrates the structure, content, and level of detail expected in research reporting artifacts, including methodology, findings, recommendations, and strategic implications.
 

@@ -1,6 +1,7 @@
-# Example: Analysis Report (Filled)
+# Analysis Report Example - Forge Engineering Lifecycle Framework
 
-*This is a complete example of a filled analysis report for a real-world scenario.*
+**Created**: 2026-08-28T15:00:00Z | **Phase**: Analysis | **Status**: review
+**Template**: `templates/analysis-report.md` | **Version**: 1.0.0
 
 ---
 

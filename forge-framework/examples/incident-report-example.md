@@ -1,5 +1,8 @@
 # Incident Report Example - Forge Engineering Lifecycle Framework
 
+**Created**: 2024-03-15T14:32:00Z | **Phase**: Incident Response | **Status**: resolved
+**Template**: `templates/incident-report.md` | **Version**: 1.0.0
+
 ## Overview
 This document provides a comprehensive example of an incident report following the Forge Engineering Lifecycle Framework. It demonstrates the structure, content, and level of detail expected in incident reporting artifacts, including root cause analysis, impact assessment, and improvement recommendations.
 

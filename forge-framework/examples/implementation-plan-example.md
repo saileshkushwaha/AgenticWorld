@@ -1,5 +1,8 @@
 # Implementation Plan Example - Forge Engineering Lifecycle Framework
 
+**Created**: 2024-03-15T00:00:00Z | **Phase**: Implementation | **Status**: approved
+**Template**: `templates/implementation-plan.md` | **Version**: 1.0.0
+
 ## Overview
 This document provides a comprehensive example of an implementation plan following the Forge Engineering Lifecycle Framework. It demonstrates the structure, content, and level of detail expected in implementation planning artifacts, including task breakdown, resource allocation, timeline, risk mitigation, and tracking mechanisms.
 
