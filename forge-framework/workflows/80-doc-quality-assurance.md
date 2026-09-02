@@ -1,175 +1,83 @@
-# Technical Documentation Quality Assurance - Forge Engineering Lifecycle Framework
+# Workflow 80: Documentation Quality Assurance
 
-## Overview
-This workflow ensures that all technical documentation produced within the Forge framework meets quality standards before publication. It incorporates automated quality checks, peer reviews, and structured improvement processes to maintain high-quality, accurate, and useful documentation.
+**Duration**: 4-8h | **Outputs**: Quality report, peer review feedback, improvement recommendations, approval documentation
 
-## Prerequisites
-- Forge documentation templates applied
-- Content draft prepared
-- Review criteria defined
+## Trigger
 
-## Workflow Steps
+- Documentation ready for quality review
+- New or updated technical documentation
+- Documentation compliance audit required
+- Peer review needed for accuracy
+- Pre-publication quality gate
+
+## Steps
 
 ### Step 1: Documentation Quality Review
-**Objective**: Verify documentation meets quality standards
-
-```bash
-# Run documentation quality checks
-forge doc-quality-check --all --format=html
-```
-
-Quality checks performed:
-- [ ] Completeness (no placeholders or TODOs)
-- [ ] Clarity and readability
-- [ ] Technical accuracy
-- [ ] Consistency with style guide
-- [ ] Proper formatting and structure
-- [ ] Correct diagrams and examples
-- [ ] Up-to-date with latest changes
+**Actions**: Verify documentation meets quality standards, check completeness, accuracy, clarity, and consistency.
+**Tools**: Quality check scripts, spell checkers, grammar checkers, link validators
+**Output**: Quality review report | **Time**: 1-2h | **Tools**: Documentation quality tools
+**Edge Cases**: Missing sections → flag for completion; unclear content → request clarification; outdated info → update before review
 
 ### Step 2: Peer Review
-**Objective**: Gather feedback from subject matter experts
-
-```bash
-# Assign reviewers
-forge doc-review --assign --reviewers=domain-experts,technical-writers
-```
-
-Peer review checklist:
-- [ ] Technical accuracy verified by SME
-- [ ] Content clarity reviewed by technical writer
-- [ ] Cross-references checked for accuracy
-- [ ] Examples validated against codebase
-- [ ] Security considerations reviewed
+**Actions**: Assign subject matter experts, gather feedback, document review findings, track revision requests.
+**Output**: Peer review feedback | **Time**: 2-4h | **Tools**: Review platforms, collaboration tools
+**Edge Cases**: No available SME → schedule for later; conflicting feedback → reconcile with author; urgent deadline → prioritize critical feedback
 
 ### Step 3: Quality Metrics Collection
-**Objective**: Measure documentation quality trends
-
-```python
-# Example: Documentation quality metrics collection
-class DocQualityMetrics:
-    def collect(self, doc_path):
-        metrics = {
-            'word_count': self.count_words(doc_path),
-            'readability_score': self.calculate_readability(doc_path),
-            'link_validity': self.check_links(doc_path),
-            'completeness': self.check_completeness(doc_path),
-            'consistency_score': self.check_consistency(doc_path)
-        }
-        return metrics
-```
+**Actions**: Measure quality dimensions, calculate scores, compare against benchmarks, identify trends.
+**Output**: Quality metrics dashboard | **Time**: 1h | **Tools**: Metrics tools, analytics platforms
+**Edge Cases**: Insufficient data → collect baseline; benchmarks not applicable → define custom targets; metrics declining → investigate causes
 
 ### Step 4: Improvement Implementation
-**Objective**: Apply feedback and enhancements
-
-```bash
-# Update documentation based on feedback
-forge doc-update --apply-feedback --track-changes
-```
-
-Improvement categories:
-- Structural improvements
-- Content enhancements
-- Accuracy corrections
-- Readability improvements
-- Example updates
+**Actions**: Apply feedback, implement enhancements, update documentation, re-verify quality.
+**Output**: Updated documentation | **Time**: 2-4h | **Tools**: Documentation tools, version control
+**Edge Cases**: Major changes needed → extend timeline; conflicting improvements → prioritize by impact; no time for improvements → defer to next cycle
 
 ### Step 5: Final Quality Gate
-**Objective**: Approve documentation for publication
-
-```bash
-# Run final quality gate
-forge doc-quality-gate --threshold=80
-```
-
-Final approval checklist:
-- [ ] All quality issues resolved
-- [ ] All peer review feedback addressed
-- [ ] Quality score above threshold
-- [ ] Documentation tested by target audience
+**Actions**: Verify all issues resolved, confirm quality standards met, approve for publication, schedule next review.
+**Output**: Approval documentation | **Time**: 30 min | **Tools**: Approval workflows, notification systems
+**Edge Cases**: Issues remain unresolved → do not approve; stakeholder pressure → document rationale for conditional approval; quality standards changed → re-verify against current standards
 
 ## Quality Standards
 
-### Readability Standards
-| Metric | Target | Tool |
-|--------|--------|------|
-| Flesch Reading Ease | > 50 | readability-tools |
-| Grade Level | <= 10 | readability-tools |
-| Sentence Length | < 25 words | grammar-check |
+| Dimension | Target | Measurement |
+|-----------|--------|-------------|
+| Completeness | 100% | Section checklist |
+| Accuracy | 99% | Fact verification |
+| Readability | Grade 8-10 | Flesch Reading Ease |
+| Consistency | 100% | Style guide compliance |
 
-### Completeness Standards
-- All sections present and filled
-- No empty placeholders
-- All TODO/FIXME comments resolved
-- Examples are complete and runnable
+## Decision Points
 
-### Accuracy Standards
-- Code examples pass syntax checks
-- API references match actual interfaces
-- Diagrams are accurate and up-to-date
-- All links are valid and reachable
+| Point | Options | Criteria |
+|-------|---------|----------|
+| DP1: Review depth? | Full / Partial / Automated | Documentation criticality, time available |
+| DP2: Peer reviewer count? | 1 / 2 / 3+ | Topic complexity, risk level |
+| DP3: Quality threshold? | 80% / 90% / 95% | Documentation type, audience |
 
-## Automation Tools
+## Anti-Patterns
 
-### Static Analysis
-```yaml
-# .doc-quality-config.yaml
-checks:
-  spell_check: true
-  grammar_check: true
-  broken_links: true
-  readability: true
-  placeholder_detection: true
-  example_validation: true
-  security_mentions: true
+1. **Skip review for "simple" docs** — All documentation needs review
+2. **Automated checks only** — Human review adds critical context
+3. **One-and-done quality** — Quality is ongoing, not one-time
+4. **Ignore feedback** — Peer review exists to improve quality
 
-thresholds:
-  min_score: 80
-  max_reading_grade: 10
-  max_broken_links: 0
-  max_placeholders: 0
-```
+## Edge Cases
 
-### CI/CD Integration
-```yaml
-# GitHub Actions for documentation quality
-name: Documentation Quality
-on:
-  pull_request:
-    paths:
-      - 'docs/**'
-      - 'forge-framework/**/*.md'
+- No subject matter expert available: Use cross-functional review or defer
+- Documentation is outdated: Update before review, not after
+- Urgent publication needed: Conduct abbreviated review, document rationale
+- Conflicting feedback: Reconcile with documentation author and stakeholders
 
-jobs:
-  doc-quality:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Install doc quality tools
-        run: forge install doc-quality-tools
-      - name: Run quality checks
-        run: forge doc-quality-check --ci
-      - name: Comment on PR
-        run: forge doc-quality-report --comment
-```
+## Output
 
-## Artifact Outputs
-- Documentation quality report
-- Peer review feedback document
-- Quality metrics dashboard
-- Improvement recommendations
-- Final approval documentation
+Use: `templates/doc-quality-scorecard.md` | Capability: `capabilities/doc-quality-assurance.md`
 
-## Integration with Forge Workflows
-- **15-documentation.md**: Primary integration point
-- **13-code-review.md**: Review process alignment
-- **50-compliance.md**: Documentation compliance requirements
-- **67-compliance-checklist.md**: Quality checklist items
+## Related Workflows
 
-## Key Metrics
-| Metric | Target | Measurement |
-|--------|--------|-------------|
-| Documentation Quality Score | >= 80 | Automated quality scoring |
-| Review Cycle Time | <= 3 days | Time from review start to approval |
-| Defect Rate | <= 2% | Percentage of docs with issues post-publication |
-| Peer Review Coverage | 100% | All significant docs receive peer review |
+| Workflow | Relationship | When to Use |
+|----------|-------------|-------------|
+| [75-autodoc-generate](workflows/75-autodoc-generate.md) | **Related** | Generate documentation before quality review |
+| [76-doc-quality-scorecard](workflows/76-doc-quality-scorecard.md) | **Related** | Score documentation quality after review |
+| [13-code-review](workflows/13-code-review.md) | **Parallel** | Review code alongside documentation |
+| [15-documentation](workflows/15-documentation.md) | **Parent** | Overall documentation workflow |
