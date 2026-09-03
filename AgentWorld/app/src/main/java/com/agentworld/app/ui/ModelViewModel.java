@@ -20,14 +20,14 @@ import androidx.lifecycle.MutableLiveData;
 public class ModelViewModel extends AndroidViewModel {
     private static final String TAG = "ModelViewModel";
 
-    private final LiveData<DetectionResult> detectionResult;
+    private final MutableLiveData<DetectionResult> detectionResult;
     private final List<ModelInfo> availableModels = new ArrayList<>();
     private String recommendedModel = "none";
     private boolean isDetecting = false;
 
     public ModelViewModel(Application application) {
         super(application);
-        detectionResult = new mutableLiveData<>();
+        detectionResult = new MutableLiveData<>();
         detectModels();
     }
 
@@ -46,7 +46,7 @@ public class ModelViewModel extends AndroidViewModel {
                 result.availableFreeModels = available;
                 result.recommendedModel = FreeModelManager.getRecommendedModel(result);
 
-                ((MutableLiveData<DetectionResult>) detectionResult).setValue(result);
+                detectionResult.postValue(result);
                 this.availableModels.clear();
                 this.availableModels.addAll(available);
                 this.recommendedModel = result.recommendedModel;
@@ -58,6 +58,10 @@ public class ModelViewModel extends AndroidViewModel {
                 isDetecting = false;
             }
         }).start();
+    }
+
+    public LiveData<DetectionResult> getDetectionResult() {
+        return detectionResult;
     }
 
     public String getRecommendedModel() {

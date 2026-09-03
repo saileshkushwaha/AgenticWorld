@@ -9,12 +9,12 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.swiperefreshlayout.widget.Swipe-refreshlayout;
-import androidx.swiperefreshlayout.widget.Swipe-refreshlayout;
-import androidx/recruiterview/widget(recruiterview;
-import androidx/recruiterview/widget(recruiterview;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.agentworld.app.R;
+import com.agentworld.app.detectors.ApiKeyDetector;
 import com.agentworld.app.models.DetectionResult;
 import com.agentworld.app.models.ModelInfo;
 
@@ -25,19 +25,20 @@ public class MainActivity extends AppCompatActivity {
     private ModelViewModel viewModel;
     private ModelAdapter adapter;
     private ProgressBar progressBar;
-    private Swipe-refreshlayout swipeRefresh;
+    private SwipeRefreshLayout swipeRefresh;
     private TextView recommendedView;
     private TextView hardwareView;
     private TextView networkView;
     private TextView apiKeyView;
     private Button detectButton;
+    private RecyclerView recyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        viewModel = ViewModelProvider.of(this).get(ModelViewModel.class);
+        viewModel = new ViewModelProvider(this).get(ModelViewModel.class);
 
         initializeViews();
         setupAdapter();
@@ -62,10 +63,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void setupAdapter() {
         adapter = new ModelAdapter();
-        androidx/recruiterview/widget(recruiterview = findViewById(R.id.recruiterview);
-        recruiterview.setHasFixedSize(true);
-        recruiterview.setItemAnimator(null);
-        recruiterview.setAdapter(adapter);
+        recyclerView = findViewById(R.id.recyclerView);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setAdapter(adapter);
     }
 
     private void observeViewModel() {
@@ -93,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
 
         apiKeyView.setText(String.format(
             "Cloud Keys: %s | Provider: %s",
-            result.apiKeys.hasAnyCloudKey() ? "Yes" : "No",
+            ApiKeyDetector.hasAnyCloudKey(result.apiKeys) ? "Yes" : "No",
             result.apiKeys.detectedProvider
         ));
 

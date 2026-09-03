@@ -19,8 +19,8 @@ public class ModelItemView extends ConstraintLayout {
         init(context, attrs);
     }
 
-    public ModelItemView(Context context, AttributeSet attrs, int/style) {
-        super(context, attrs, style);
+    public ModelItemView(Context context, AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
         init(context, attrs);
     }
 

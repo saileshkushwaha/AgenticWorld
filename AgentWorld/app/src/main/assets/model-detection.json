@@ -1,0 +1,53 @@
+{
+  "app_name": "AgentWorld",
+  "version": "1.0.0",
+  "detection_methods": [
+    "hardware_capability_check",
+    "memory_availability_check",
+    "network_connectivity_check",
+    "api_key_detection"
+  ],
+  "free_models": [
+    {
+      "name": "llama-2-70b",
+      "type": "local",
+      "free": true,
+      "endpoint": "http://localhost:8080",
+      "minRamMb": 16,
+      "minCores": 4,
+      "description": "Free local model - high performance"
+    },
+    {
+      "name": "mistral-7b",
+      "type": "local",
+      "free": true,
+      "endpoint": "http://localhost:8081",
+      "minRamMb": 8,
+      "minCores": 2,
+      "description": "Free local model - fast and efficient"
+    },
+    {
+      "name": "phi-3",
+      "type": "local",
+      "free": true,
+      "endpoint": "http://localhost:8082",
+      "minRamMb": 4,
+      "minCores": 1,
+      "description": "Free lightweight local model"
+    },
+    {
+      "name": "gemma-2",
+      "type": "local",
+      "free": true,
+      "endpoint": "http://localhost:8083",
+      "minRamMb": 6,
+      "minCores": 2,
+      "description": "Free Google local model"
+    }
+  ],
+  "cloud_free_tiers": [
+    "huggingface",
+    "groq",
+    "together"
+  ]
+}

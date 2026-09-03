@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AgentWorld</string>
+    <string name="recommended_title">Recommended Model</string>
+    <string name="hardware_title">Hardware Detection</string>
+    <string name="network_title">Network Detection</string>
+    <string name="api_key_title">API Key Detection</string>
+    <string name="available_models_title">Available Free Models</string>
+    <string name="no_models_detected">No models detected yet. Tap to detect.</string>
+    <string name="analyzing">Analyzing...</string>
+    <string name="detect_again">Detect Models</string>
+</resources>

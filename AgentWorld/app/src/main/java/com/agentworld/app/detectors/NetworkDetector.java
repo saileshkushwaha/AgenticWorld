@@ -2,7 +2,10 @@ package com.agentworld.app.detectors;
 
 import android.content.Context;
 import android.net.ConnectivityManager;
-import android.os.NetworkInfo;
+import android.net.NetworkCapabilities;
+import android.os.Build;
+
+import androidx.annotation.RequiresApi;
 
 public class NetworkDetector {
     public static class NetworkInfo {
@@ -26,28 +29,51 @@ public class NetworkDetector {
         }
     }
 
+    @SuppressWarnings("deprecation")
     public static NetworkInfo detectNetwork(Context context) {
         ConnectivityManager manager = (ConnectivityManager) context
             .getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo info = manager.getActiveNetworkInfo();
-        boolean hasInternet = info != null && info.isConnected();
+
+        boolean hasInternet = false;
         String networkType = "unknown";
         int signalStrength = 0;
         int latencyMs = -1;
 
-        if (info != null && info.isConnected()) {
-            switch (info.getType()) {
-                case ConnectivityManager.TYPE_WIFI:
-                    networkType = "wifi";
-                    break;
-                case ConnectivityManager.TYPE_MOBILE:
-                    networkType = "mobile";
-                    break;
-                case ConnectivityManager.TYPE_ETHERNET:
-                    networkType = "ethernet";
-                    break;
-                default:
-                    networkType = "other";
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            android.net.Network activeNetwork = manager.getActiveNetwork();
+            if (activeNetwork != null) {
+                NetworkCapabilities caps = manager.getNetworkCapabilities(activeNetwork);
+                if (caps != null) {
+                    if (caps.hasTransport(NetworkCapabilities.TRANSPORT_WIFI)) {
+                        networkType = "wifi";
+                    } else if (caps.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR)) {
+                        networkType = "mobile";
+                    } else if (caps.hasTransport(NetworkCapabilities.TRANSPORT_ETHERNET)) {
+                        networkType = "ethernet";
+                    }
+                    if (caps.hasCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET)) {
+                        hasInternet = true;
+                    }
+                }
+            }
+        } else {
+            android.net.NetworkInfo info = manager.getActiveNetworkInfo();
+            boolean connected = info != null && info.isConnected();
+            hasInternet = connected;
+            if (connected) {
+                switch (info.getType()) {
+                    case ConnectivityManager.TYPE_WIFI:
+                        networkType = "wifi";
+                        break;
+                    case ConnectivityManager.TYPE_MOBILE:
+                        networkType = "mobile";
+                        break;
+                    case ConnectivityManager.TYPE_ETHERNET:
+                        networkType = "ethernet";
+                        break;
+                    default:
+                        networkType = "other";
+                }
             }
         }
 
@@ -64,8 +90,8 @@ public class NetworkDetector {
 
     public static boolean canReachEndpoint(NetworkInfo info, String endpoint) {
         if (!info.hasInternet) return false;
-        if (info.latencyMs < 0) return true; // Unknown latency, assume reachable
-        return info.latencyMs < 500; // Reasonable threshold
+        if (info.latencyMs < 0) return true;
+        return info.latencyMs < 500;
     }
 
     public static boolean isCloudReachable(NetworkInfo info) {

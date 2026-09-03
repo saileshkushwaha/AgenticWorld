@@ -1,8 +1,8 @@
 package com.agentworld.app.detectors;
 
+import android.app.ActivityManager;
 import android.content.Context;
 import android.os.Build;
-import android.os.Debug;
 
 public class HardwareDetector {
     public static class HardwareInfo {
@@ -43,17 +43,17 @@ public class HardwareDetector {
     }
 
     private static long getTotalRam(Context context) {
-        android.app.ActivityManager manager = (android.app.ActivityManager) context
-            .getApplicationContext().getActivityManager();
-        android.app.ActivityManager.MemoryInfo info = new android.app.ActivityManager.MemoryInfo();
+        ActivityManager manager = (ActivityManager) context
+            .getApplicationContext().getSystemService(Context.ACTIVITY_SERVICE);
+        ActivityManager.MemoryInfo info = new ActivityManager.MemoryInfo();
         manager.getMemoryInfo(info);
         return info.totalMem / (1024 * 1024);
     }
 
     private static long getAvailableRam(Context context) {
-        android.app.ActivityManager manager = (android.app.ActivityManager) context
-            .getApplicationContext().getActivityManager();
-        android.app.ActivityManager.MemoryInfo info = new android.app.ActivityManager.MemoryInfo();
+        ActivityManager manager = (ActivityManager) context
+            .getApplicationContext().getSystemService(Context.ACTIVITY_SERVICE);
+        ActivityManager.MemoryInfo info = new ActivityManager.MemoryInfo();
         manager.getMemoryInfo(info);
         return info.availMem / (1024 * 1024);
     }
@@ -72,29 +72,22 @@ public class HardwareDetector {
         if (manufacturer.contains("mediatek") || model.contains("dimensity")) return "dimensity";
         if (manufacturer.contains("samsung") || model.contains("exynos")) return "exynos";
         if (manufacturer.contains("google") || model.contains("tensor")) return "tensor";
-        if (manufacturer.contains("apple") || model.contains("a") || model.contains("b") || model.contains("chip")) return "apple_silicon";
 
         return "unknown";
     }
 
     private static boolean detectNpu() {
-        // Check for NPUs via supported ABIs and hardware features
-        String[] abis = Build.SUPPORTED_ABIs;
+        String[] abis = Build.SUPPORTED_ABIS;
         for (String abi : abis) {
             if (abi.contains("apu") || abi.contains("npu") || abi.contains("ai")) return true;
         }
-        // Check for specific SoCs known to have NPUs
         String soc = getSoC();
         return soc.equals("snapdragon") || soc.equals("dimensity") ||
                soc.equals("exynos") || soc.equals("tensor");
     }
 
     private static boolean detectGpu() {
-        String[] abis = Build.SUPPORTED_ABIs;
-        for (String abi : abis) {
-            if (abi.contains("gpu") || abi.contains("vulkan") || abi.contains("opengl")) return true;
-        }
-        return true; // Most modern Android devices have GPUs
+        return true;
     }
 
     public static boolean canRunModel(HardwareInfo info, int minRamMb, int minCores) {
